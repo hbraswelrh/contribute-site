@@ -8,9 +8,9 @@ controls:
       guideline-mappings:
         - reference-id: NIST-800-53
           entries:
-            - reference-id: SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
+            - reference-id: SI-7 Software, Firmware, and information integrity
               strength: 5
-              remarks: Reference to SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
+              remarks: Reference to SI-7 Software, Firmware, and information integrity
     - id: CNSWP-183
       title: Enforce full attestation and verification for protected branches
       recommendations:
@@ -18,58 +18,58 @@ controls:
       guideline-mappings:
         - reference-id: NIST-800-53
           entries:
-            - reference-id: AC-6(3) LEAST PRIVILEGE
+            - reference-id: AC-6(3) Least Privilege
               strength: 5
-              remarks: Reference to AC-6(3) LEAST PRIVILEGE
-            - reference-id: NETWORK ACCESS TO PRIVILEGED COMMANDS
+              remarks: Reference to AC-6(3) Least Privilege
+            - reference-id: Network Access to Privileged Commands
               strength: 5
-              remarks: Reference to NETWORK ACCESS TO PRIVILEGED COMMANDS
+              remarks: Reference to Network Access to Privileged Commands
     - id: CNSWP-184
       title: Secrets are not committed to the source code repository unless encrypted
       objective: |
-        SC-12(2) CRYPTOGRAPHIC KEY ESTABLISHMENT AND MANAGEMENT | SYMMETRIC & ASYMMETRIC KEYS
+        SC-12(2) Cryptographic Key Establishment and Management | Symmetric and Asymmeric Keys
       recommendations:
         - Implement tooling to detect secrets or to prevent certain files from being pushed which may contain plaintext sensitive materials, such as via a .gitignore and/or .gitattributes file, client-side hook (pre-commit), server-side hook (pre-receive or update), and/or as a step in the CI process
       guideline-mappings:
         - reference-id: NIST-800-53
           entries:
-            - reference-id: SC-12(3) SYSTEMS & COMMUNICATION PROTECTION
+            - reference-id: SC-12(3) Systems and Communication Protection
               strength: 5
-              remarks: Reference to SC-12(3) SYSTEMS & COMMUNICATION PROTECTION
+              remarks: Reference to SC-12(3) Systems and Communication Protection
     - id: CNSWP-185
       title: The individuals or teams with write access to a repository are defined
       objective: |
-        AC-3 ACCESS ENFORCEMENT
+        AC-3 Access Enforcement
       recommendations:
-        - Implement codeowners (or equivalent)
+        - Implement CODEOWNERS (or equivalent)
       guideline-mappings:
         - reference-id: NIST-800-53
           entries:
-            - reference-id: PL-1 POLICY AND PROCEDURES
+            - reference-id: PL-1 Policy and Procedures
               strength: 5
-              remarks: Reference to PL-1 POLICY AND PROCEDURES
+              remarks: Reference to PL-1 Policy and Procedures
     - id: CNSWP-186
       title: Automate software security scanning and testing
       objective: |
-        SA-3 SYSTEM DEVELOPMENT LIFE CYCLE
+        SA-3 System Development Life Cycle
       recommendations:
         - Security specific scans should be performed, including Static Application Security Tests (SAST) and Dynamic Application Security Tests (DAST). Both the coverage and results of these tests should be published as part of the repository information to help downstream consumers of software better assess the stability, reliability, and/or suitability of a product or library.
       guideline-mappings:
         - reference-id: NIST-800-53
           entries:
-            - reference-id: RA-5 VULNERABILITY MONITORING AND SCANNING
+            - reference-id: RA-5 Vulnerability Monitoring and Scanning
               strength: 5
-              remarks: Reference to RA-5 VULNERABILITY MONITORING AND SCANNING
+              remarks: Reference to RA-5 Vulnerability Monitoring and Scanning
     - id: CNSWP-187
       title: Establish and adhere to contribution policies
       recommendations:
-        - Define configuration options or configuration rules witthin SCM platforms allow repository administrators to enforce security, hygiene and operational policies.
+        - Define configuration options or configuration rules within SCM platforms allow repository administrators to enforce security, hygiene and operational policies.
       guideline-mappings:
         - reference-id: NIST-800-53
           entries:
-            - reference-id: PL-1 POLICY AND PROCEDURES
+            - reference-id: PL-1 Policy and Procedures
               strength: 5
-              remarks: Reference to PL-1 POLICY AND PROCEDURES
+              remarks: Reference to PL-1 Policy and Procedures
     - id: CNSWP-188
       title: Define roles aligned to functional responsibilities
       recommendations:
@@ -77,9 +77,9 @@ controls:
       guideline-mappings:
         - reference-id: NIST-800-53
           entries:
-            - reference-id: PL-1 POLICY AND PROCEDURES
+            - reference-id: PL-1 Policy and Procedures
               strength: 5
-              remarks: Reference to PL-1 POLICY AND PROCEDURES
+              remarks: Reference to PL-1 Policy and Procedures
     - id: CNSWP-189
       title: Enforce an independent four-eyes principle
       recommendations:
@@ -87,9 +87,9 @@ controls:
       guideline-mappings:
         - reference-id: NIST-800-53
           entries:
-            - reference-id: SA-11 DEVELOPER TESTING AND EVALUATION
+            - reference-id: SA-11 Developer Testing and Evaluation
               strength: 5
-              remarks: Reference to SA-11 DEVELOPER TESTING AND EVALUATION
+              remarks: Reference to SA-11 Developer Testing and Evaluation
     - id: CNSWP-190
       title: Use branch protection rules
       recommendations:
@@ -97,9 +97,9 @@ controls:
       guideline-mappings:
         - reference-id: NIST-800-53
           entries:
-            - reference-id: SA-8 SECURITY ENGINEERING PRINCIPLES
+            - reference-id: SA-8 Security Engineering Principles
               strength: 5
-              remarks: Reference to SA-8 SECURITY ENGINEERING PRINCIPLES
+              remarks: Reference to SA-8 Security Engineering Principles
     - id: CNSWP-191
       title: Enforce MFA for accessing source code repositories
       guideline-mappings:
@@ -108,17 +108,17 @@ controls:
             - reference-id: IA-2(1) Identification and Authentication (organizational Users)
               strength: 5
               remarks: Reference to IA-2(1) Identification and Authentication (organizational Users)
-            - reference-id: Multi-Factor Authenticaiton to Priviledged Accounts
+            - reference-id: Multi-Factor Authentication to Privileged Accounts
               strength: 5
-              remarks: Reference to Multi-Factor Authenticaiton to Priviledged Accounts
+              remarks: Reference to Multi-Factor Authentication to Privileged Accounts
     - id: CNSWP-192
       title: Use SSH keys to provide developers access to source code repositories
       guideline-mappings:
         - reference-id: NIST-800-53
           entries:
-            - reference-id: AC-1 REMOTE ACCESS
+            - reference-id: AC-1 Remote Access
               strength: 5
-              remarks: Reference to AC-1 REMOTE ACCESS
+              remarks: Reference to AC-1 Remote Access
     - id: CNSWP-193
       title: Have a key rotation policy
       recommendations:
@@ -126,12 +126,12 @@ controls:
       guideline-mappings:
         - reference-id: NIST-800-53
           entries:
-            - reference-id: AC-2(1) ACCOUNT MANAGEMENT
+            - reference-id: AC-2(1) Account Management
               strength: 5
-              remarks: Reference to AC-2(1) ACCOUNT MANAGEMENT
-            - reference-id: AUTOMATED SYSTEM ACCOUNT MANAGEMENT
+              remarks: Prerequisites and criteria for group and role membership are defined.
+            - reference-id: Automated System Account Management
               strength: 5
-              remarks: Reference to AUTOMATED SYSTEM ACCOUNT MANAGEMENT
+              remarks: Reference to Automated System Account Management
     - id: CNSWP-194
       title: Use short-lived/ephemeral credentials for machine/service access
       recommendations:
@@ -139,9 +139,9 @@ controls:
       guideline-mappings:
         - reference-id: NIST-800-53
           entries:
-            - reference-id: AC-2(1) ACCOUNT MANAGEMENT
+            - reference-id: AC-2(1) Account Management
               strength: 5
-              remarks: Reference to AC-2(1) ACCOUNT MANAGEMENT
-            - reference-id: AUTOMATED SYSTEM ACCOUNT MANAGEMENT
+              remarks: Usage of automated mechanisms to create, enable, modify, disable, and remove accounts.
+            - reference-id: Automated System Account Management
               strength: 5
-              remarks: Reference to AUTOMATED SYSTEM ACCOUNT MANAGEMENT
+              remarks: Reference to Automated System Account Management
