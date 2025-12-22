@@ -1,147 +1,323 @@
+metadata:
+  id: CNSWP-securing-source-code
+  description: Guidelines for securing source code repositories and ensuring code integrity throughout the development lifecycle.
+  author:
+    id: tag-sc
+    name: TAG Security and Compliance
+    type: Software-Assisted
+  version: 1.0.0
+  mapping-references:
+    - id: NIST-800-53
+      title: NIST SP 800-53r5
+      version: rev5
+      url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
 title: Securing the Source Code
-description: Securing the Source Code
-controls:
-    - id: CNSWP-182
-      title: Commits and tags are signed
-      recommendations:
-        - GPG keys or S/MIME certificates are used to sign the source code
-      guideline-mappings:
-        - reference-id: NIST-800-53
-          entries:
-            - reference-id: SI-7 Software, Firmware, and information integrity
-              strength: 5
-              remarks: Reference to SI-7 Software, Firmware, and information integrity
-    - id: CNSWP-183
-      title: Enforce full attestation and verification for protected branches
-      recommendations:
-        - Branch protection is enabled on the mainline and release branches with force push disabled
-      guideline-mappings:
-        - reference-id: NIST-800-53
-          entries:
-            - reference-id: AC-6(3) Least Privilege
-              strength: 5
-              remarks: Reference to AC-6(3) Least Privilege
-            - reference-id: Network Access to Privileged Commands
-              strength: 5
-              remarks: Reference to Network Access to Privileged Commands
-    - id: CNSWP-184
-      title: Secrets are not committed to the source code repository unless encrypted
-      objective: |
-        SC-12(2) Cryptographic Key Establishment and Management | Symmetric and Asymmeric Keys
-      recommendations:
-        - Implement tooling to detect secrets or to prevent certain files from being pushed which may contain plaintext sensitive materials, such as via a .gitignore and/or .gitattributes file, client-side hook (pre-commit), server-side hook (pre-receive or update), and/or as a step in the CI process
-      guideline-mappings:
-        - reference-id: NIST-800-53
-          entries:
-            - reference-id: SC-12(3) Systems and Communication Protection
-              strength: 5
-              remarks: Reference to SC-12(3) Systems and Communication Protection
-    - id: CNSWP-185
-      title: The individuals or teams with write access to a repository are defined
-      objective: |
-        AC-3 Access Enforcement
-      recommendations:
-        - Implement CODEOWNERS (or equivalent)
-      guideline-mappings:
-        - reference-id: NIST-800-53
-          entries:
-            - reference-id: PL-1 Policy and Procedures
-              strength: 5
-              remarks: Reference to PL-1 Policy and Procedures
-    - id: CNSWP-186
-      title: Automate software security scanning and testing
-      objective: |
-        SA-3 System Development Life Cycle
-      recommendations:
-        - Security specific scans should be performed, including Static Application Security Tests (SAST) and Dynamic Application Security Tests (DAST). Both the coverage and results of these tests should be published as part of the repository information to help downstream consumers of software better assess the stability, reliability, and/or suitability of a product or library.
-      guideline-mappings:
-        - reference-id: NIST-800-53
-          entries:
-            - reference-id: RA-5 Vulnerability Monitoring and Scanning
-              strength: 5
-              remarks: Reference to RA-5 Vulnerability Monitoring and Scanning
-    - id: CNSWP-187
-      title: Establish and adhere to contribution policies
-      recommendations:
-        - Define configuration options or configuration rules within SCM platforms allow repository administrators to enforce security, hygiene and operational policies.
-      guideline-mappings:
-        - reference-id: NIST-800-53
-          entries:
-            - reference-id: PL-1 Policy and Procedures
-              strength: 5
-              remarks: Reference to PL-1 Policy and Procedures
-    - id: CNSWP-188
-      title: Define roles aligned to functional responsibilities
-      recommendations:
-        - Maintainer, Owner, Reviewer, Approver, and Guest
-      guideline-mappings:
-        - reference-id: NIST-800-53
-          entries:
-            - reference-id: PL-1 Policy and Procedures
-              strength: 5
-              remarks: Reference to PL-1 Policy and Procedures
-    - id: CNSWP-189
-      title: Enforce an independent four-eyes principle
-      recommendations:
-        - or greater expertise should review & approve the request.
-      guideline-mappings:
-        - reference-id: NIST-800-53
-          entries:
-            - reference-id: SA-11 Developer Testing and Evaluation
-              strength: 5
-              remarks: Reference to SA-11 Developer Testing and Evaluation
-    - id: CNSWP-190
-      title: Use branch protection rules
-      recommendations:
-        - Protection rules can be used to enforce the usage of pull requests with specified precondition and approval rules, ensuring that a human code review process is followed or an automated status checking of a branch occurs. Additionally, protected branches can be used to disallow dangerous use of force pushes26, preventing the overwrite of commit histories and potential obfuscation of code changes.
-      guideline-mappings:
-        - reference-id: NIST-800-53
-          entries:
-            - reference-id: SA-8 Security Engineering Principles
-              strength: 5
-              remarks: Reference to SA-8 Security Engineering Principles
-    - id: CNSWP-191
-      title: Enforce MFA for accessing source code repositories
-      guideline-mappings:
-        - reference-id: NIST-800-53
-          entries:
-            - reference-id: IA-2(1) Identification and Authentication (organizational Users)
-              strength: 5
-              remarks: Reference to IA-2(1) Identification and Authentication (organizational Users)
-            - reference-id: Multi-Factor Authentication to Privileged Accounts
-              strength: 5
-              remarks: Reference to Multi-Factor Authentication to Privileged Accounts
-    - id: CNSWP-192
-      title: Use SSH keys to provide developers access to source code repositories
-      guideline-mappings:
-        - reference-id: NIST-800-53
-          entries:
-            - reference-id: AC-1 Remote Access
-              strength: 5
-              remarks: Reference to AC-1 Remote Access
-    - id: CNSWP-193
-      title: Have a key rotation policy
-      recommendations:
-        - usable after a certain period of time. When a private key is known to have been compromised, it should be revoked and replaced immediately to shut off access for any unauthorized user. Organizations may also consider using short lived certificates or keys, which reduces the reliance on certificate revocation systems.
-      guideline-mappings:
-        - reference-id: NIST-800-53
-          entries:
-            - reference-id: AC-2(1) Account Management
-              strength: 5
-              remarks: Prerequisites and criteria for group and role membership are defined.
-            - reference-id: Automated System Account Management
-              strength: 5
-              remarks: Reference to Automated System Account Management
-    - id: CNSWP-194
-      title: Use short-lived/ephemeral credentials for machine/service access
-      recommendations:
-        - access tokens. For CI/CD pipeline agents, short-lived access tokens should be considered instead of password-based credentials. The use of very short-lived tokens like OAuth 2.0, OpenID Connect, etc., will help to implement more secure access and increase the security assurance.
-      guideline-mappings:
-        - reference-id: NIST-800-53
-          entries:
-            - reference-id: AC-2(1) Account Management
-              strength: 5
-              remarks: Usage of automated mechanisms to create, enable, modify, disable, and remove accounts.
-            - reference-id: Automated System Account Management
-              strength: 5
-              remarks: Reference to Automated System Account Management
+document-type: Best Practice
+categories:
+  - id: code-integrity
+    title: Code Integrity and Signing
+    description: Guidelines for ensuring code integrity through cryptographic signing and verification.
+    guidelines:
+      - id: CNSWP-182
+        title: Commits and tags are signed
+        objective: Ensure code integrity through cryptographic signing of all commits and tags.
+        rationale:
+          risks: []
+          outcomes:
+            - title: Code Authenticity
+              description: Verifies that code changes originate from authorized developers
+            - title: Integrity Protection
+              description: Prevents unauthorized modification of code history
+        guideline-parts:
+          - id: CNSWP-182.1
+            title: Signing Implementation
+            text: GPG keys or S/MIME certificates are used to sign the source code.
+            recommendations:
+              - "Configure developers to use GPG keys or S/MIME certificates for signing commits"
+              - "Enable required commit signing on protected branches"
+        guideline-mappings:
+          - reference-id: NIST-800-53
+            entries:
+              - reference-id: SI-7 Software, Firmware, and information integrity
+                strength: 5
+                remarks: Reference to SI-7 Software, Firmware, and information integrity
+      - id: CNSWP-183
+        title: Enforce full attestation and verification for protected branches
+        objective: Ensure that protected branches require full attestation and verification before accepting changes.
+        rationale:
+          risks: []
+          outcomes:
+            - title: Branch Protection
+              description: Prevents unauthorized or accidental changes to critical branches
+        guideline-parts:
+          - id: CNSWP-183.1
+            title: Branch Protection Configuration
+            text: Branch protection is enabled on the mainline and release branches with force push disabled.
+            recommendations:
+              - "Enable branch protection on main and release branches"
+              - "Disable force push to protected branches"
+              - "Require pull request reviews before merging"
+        guideline-mappings:
+          - reference-id: NIST-800-53
+            entries:
+              - reference-id: AC-6(3) Least Privilege
+                strength: 5
+                remarks: Reference to AC-6(3) Least Privilege
+              - reference-id: Network Access to Privileged Commands
+                strength: 5
+                remarks: Reference to Network Access to Privileged Commands
+  - id: secrets-management
+    title: Secrets Management
+    description: Guidelines for preventing secrets from being committed to source code repositories.
+    guidelines:
+      - id: CNSWP-184
+        title: Secrets are not committed to the source code repository unless encrypted
+        objective: SC-12(2) Cryptographic Key Establishment and Management | Symmetric and Asymmetric Keys
+        rationale:
+          risks: []
+          outcomes:
+            - title: Secret Protection
+              description: Prevents exposure of sensitive credentials in version control
+        guideline-parts:
+          - id: CNSWP-184.1
+            title: Secret Detection and Prevention
+            text: Implement tooling to detect secrets or to prevent certain files from being pushed which may contain plaintext sensitive materials.
+            recommendations:
+              - "Use .gitignore and/or .gitattributes to exclude sensitive files"
+              - "Implement client-side hooks (pre-commit) to scan for secrets"
+              - "Implement server-side hooks (pre-receive or update) to block commits with secrets"
+              - "Add secret scanning as a step in the CI process"
+        guideline-mappings:
+          - reference-id: NIST-800-53
+            entries:
+              - reference-id: SC-12(3) Systems and Communication Protection
+                strength: 5
+                remarks: Reference to SC-12(3) Systems and Communication Protection
+  - id: access-control
+    title: Access Control and Authorization
+    description: Guidelines for managing access to source code repositories and defining roles and responsibilities.
+    guidelines:
+      - id: CNSWP-185
+        title: The individuals or teams with write access to a repository are defined
+        objective: AC-3 Access Enforcement
+        rationale:
+          risks: []
+          outcomes:
+            - title: Access Accountability
+              description: Ensures clear ownership and responsibility for code changes
+        guideline-parts:
+          - id: CNSWP-185.1
+            title: Access Definition
+            text: Implement CODEOWNERS (or equivalent) to define who has write access and responsibility for different parts of the codebase.
+            recommendations:
+              - "Implement CODEOWNERS (or equivalent) file"
+              - "Document access control policies"
+              - "Regularly review and update access permissions"
+        guideline-mappings:
+          - reference-id: NIST-800-53
+            entries:
+              - reference-id: PL-1 Policy and Procedures
+                strength: 5
+                remarks: Reference to PL-1 Policy and Procedures
+      - id: CNSWP-188
+        title: Define roles aligned to functional responsibilities
+        rationale:
+          risks: []
+          outcomes:
+            - title: Role Clarity
+              description: Ensures clear separation of responsibilities and appropriate access levels
+        guideline-parts:
+          - id: CNSWP-188.1
+            title: Role Definitions
+            text: Define and document roles with specific responsibilities and access levels.
+            recommendations:
+              - "Define roles: Maintainer, Owner, Reviewer, Approver, and Guest"
+              - "Document responsibilities for each role"
+              - "Align access permissions with role responsibilities"
+        guideline-mappings:
+          - reference-id: NIST-800-53
+            entries:
+              - reference-id: PL-1 Policy and Procedures
+                strength: 5
+                remarks: Reference to PL-1 Policy and Procedures
+      - id: CNSWP-191
+        title: Enforce MFA for accessing source code repositories
+        rationale:
+          risks: []
+          outcomes:
+            - title: Enhanced Authentication
+              description: Reduces risk of unauthorized access through compromised credentials
+        guideline-mappings:
+          - reference-id: NIST-800-53
+            entries:
+              - reference-id: IA-2(1) Identification and Authentication (organizational Users)
+                strength: 5
+                remarks: Reference to IA-2(1) Identification and Authentication (organizational Users)
+              - reference-id: Multi-Factor Authentication to Privileged Accounts
+                strength: 5
+                remarks: Reference to Multi-Factor Authentication to Privileged Accounts
+      - id: CNSWP-192
+        title: Use SSH keys to provide developers access to source code repositories
+        rationale:
+          risks: []
+          outcomes:
+            - title: Secure Authentication
+              description: Provides stronger authentication than password-based access
+        guideline-mappings:
+          - reference-id: NIST-800-53
+            entries:
+              - reference-id: AC-1 Remote Access
+                strength: 5
+                remarks: Reference to AC-1 Remote Access
+  - id: security-testing
+    title: Security Testing and Scanning
+    description: Guidelines for automated security scanning and testing in the development workflow.
+    guidelines:
+      - id: CNSWP-186
+        title: Automate software security scanning and testing
+        objective: SA-3 System Development Life Cycle
+        rationale:
+          risks: []
+          outcomes:
+            - title: Early Vulnerability Detection
+              description: Identifies security issues early in the development process
+            - title: Transparency
+              description: Provides visibility into security posture for downstream consumers
+        guideline-parts:
+          - id: CNSWP-186.1
+            title: Security Scanning Implementation
+            text: Security specific scans should be performed, including Static Application Security Tests (SAST) and Dynamic Application Security Tests (DAST).
+            recommendations:
+              - "Perform Static Application Security Tests (SAST)"
+              - "Perform Dynamic Application Security Tests (DAST)"
+              - "Publish coverage and results of security tests as part of repository information"
+              - "Help downstream consumers assess stability, reliability, and suitability of products or libraries"
+        guideline-mappings:
+          - reference-id: NIST-800-53
+            entries:
+              - reference-id: RA-5 Vulnerability Monitoring and Scanning
+                strength: 5
+                remarks: Reference to RA-5 Vulnerability Monitoring and Scanning
+  - id: contribution-governance
+    title: Contribution Governance
+    description: Guidelines for establishing and enforcing contribution policies and review processes.
+    guidelines:
+      - id: CNSWP-187
+        title: Establish and adhere to contribution policies
+        rationale:
+          risks: []
+          outcomes:
+            - title: Policy Enforcement
+              description: Ensures consistent security, hygiene and operational practices across contributions
+        guideline-parts:
+          - id: CNSWP-187.1
+            title: Policy Definition
+            text: Define configuration options or configuration rules within SCM platforms allow repository administrators to enforce security, hygiene and operational policies.
+            recommendations:
+              - "Define contribution policies and procedures"
+              - "Configure SCM platform rules to enforce policies"
+              - "Document policies for contributors"
+        guideline-mappings:
+          - reference-id: NIST-800-53
+            entries:
+              - reference-id: PL-1 Policy and Procedures
+                strength: 5
+                remarks: Reference to PL-1 Policy and Procedures
+      - id: CNSWP-189
+        title: Enforce an independent four-eyes principle
+        rationale:
+          risks: []
+          outcomes:
+            - title: Quality Assurance
+              description: Ensures code changes are reviewed by independent reviewers with appropriate expertise
+        guideline-parts:
+          - id: CNSWP-189.1
+            title: Review Requirements
+            text: Require independent review and approval by reviewers with equal or greater expertise.
+            recommendations:
+              - "Require at least two independent reviewers"
+              - "Ensure reviewers have appropriate expertise"
+              - "Enforce review requirements through branch protection rules"
+        guideline-mappings:
+          - reference-id: NIST-800-53
+            entries:
+              - reference-id: SA-11 Developer Testing and Evaluation
+                strength: 5
+                remarks: Reference to SA-11 Developer Testing and Evaluation
+      - id: CNSWP-190
+        title: Use branch protection rules
+        rationale:
+          risks: []
+          outcomes:
+            - title: Change Control
+              description: Ensures proper review and approval process for code changes
+            - title: History Protection
+              description: Prevents unauthorized modification of commit history
+        guideline-parts:
+          - id: CNSWP-190.1
+            title: Branch Protection Configuration
+            text: Protection rules can be used to enforce the usage of pull requests with specified precondition and approval rules.
+            recommendations:
+              - "Enforce pull requests with specified preconditions and approval rules"
+              - "Ensure human code review process is followed"
+              - "Enable automated status checking of branches"
+              - "Disallow dangerous use of force pushes to prevent overwrite of commit histories"
+              - "Prevent potential obfuscation of code changes"
+        guideline-mappings:
+          - reference-id: NIST-800-53
+            entries:
+              - reference-id: SA-8 Security Engineering Principles
+                strength: 5
+                remarks: Reference to SA-8 Security Engineering Principles
+  - id: credential-management
+    title: Credential and Key Management
+    description: Guidelines for managing credentials, keys, and authentication tokens for repository access.
+    guidelines:
+      - id: CNSWP-193
+        title: Have a key rotation policy
+        rationale:
+          risks: []
+          outcomes:
+            - title: Key Security
+              description: Reduces risk from compromised or stale credentials
+        guideline-parts:
+          - id: CNSWP-193.1
+            title: Key Rotation Requirements
+            text: Keys should be rotated after a certain period of time or when compromised.
+            recommendations:
+              - "Define key rotation schedule and policies"
+              - "Revoke and replace compromised keys immediately"
+              - "Consider using short-lived certificates or keys to reduce reliance on certificate revocation systems"
+        guideline-mappings:
+          - reference-id: NIST-800-53
+            entries:
+              - reference-id: AC-2(1) Account Management
+                strength: 5
+                remarks: Prerequisites and criteria for group and role membership are defined.
+              - reference-id: Automated System Account Management
+                strength: 5
+                remarks: Reference to Automated System Account Management
+      - id: CNSWP-194
+        title: Use short-lived/ephemeral credentials for machine/service access
+        rationale:
+          risks: []
+          outcomes:
+            - title: Reduced Attack Surface
+              description: Limits exposure window for compromised credentials
+        guideline-parts:
+          - id: CNSWP-194.1
+            title: Ephemeral Credential Implementation
+            text: Use short-lived access tokens for CI/CD pipeline agents and service access.
+            recommendations:
+              - "Use short-lived access tokens instead of password-based credentials for CI/CD pipeline agents"
+              - "Consider OAuth 2.0, OpenID Connect, or similar protocols for very short-lived tokens"
+              - "Implement automated mechanisms to create, enable, modify, disable, and remove accounts"
+        guideline-mappings:
+          - reference-id: NIST-800-53
+            entries:
+              - reference-id: AC-2(1) Account Management
+                strength: 5
+                remarks: Usage of automated mechanisms to create, enable, modify, disable, and remove accounts.
+              - reference-id: Automated System Account Management
+                strength: 5
+                remarks: Reference to Automated System Account Management

@@ -1,25 +1,96 @@
+metadata:
+  id: CNSWP-securing-deployments
+  description: Guidelines for securing software deployments, ensuring artifact verification, freshness validation, and secure update management.
+  author:
+    id: tag-sc
+    name: TAG Security and Compliance
+    type: Software-Assisted
+  version: 1.0.0
+  mapping-references:
+    - id: NIST-800-53
+      title: NIST SP 800-53r5
+      version: rev5
+      url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
 title: Securing Deployments
-description: Securing Deployments
-controls:
-    - id: CNSWP-170
-      title: Ensure clients can perform verification of artefacts and associated metadata
-      guideline-mappings:
-        - reference-id: NIST-800-53
-          entries:
-            - reference-id: SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
-              strength: 5
-              remarks: Reference to SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
-    - id: CNSWP-171
-      title: Ensure clients can verify the “freshness” of files
-      recommendations:
-        - Ensure clients can access latest versions and can veriify if the provided files are out of date
-      guideline-mappings:
-        - reference-id: NIST-800-53
-          entries:
-            - reference-id: SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
-              strength: 5
-              remarks: Reference to SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
-    - id: CNSWP-172
-      title: Use a framework for managing software updates
-      recommendations:
-        - software updates in a secure, reliable and trusted way
+document-type: Best Practice
+categories:
+  - id: deployment-verification
+    title: Deployment Verification and Integrity
+    description: Guidelines for ensuring clients can verify artifacts, metadata, and file freshness during deployment.
+    guidelines:
+      - id: CNSWP-170
+        title: Ensure clients can perform verification of artefacts and associated metadata
+        objective: Enable clients to verify the integrity and authenticity of artifacts and their associated metadata during deployment.
+        rationale:
+          risks: []
+          outcomes:
+            - title: Artifact Integrity
+              description: Ensures deployed artifacts have not been tampered with
+            - title: Authenticity Verification
+              description: Allows clients to verify the source and authenticity of artifacts
+        guideline-parts:
+          - id: CNSWP-170.1
+            title: Verification Capabilities
+            text: Provide mechanisms for clients to verify artifacts and associated metadata.
+            recommendations:
+              - "Provide cryptographic signatures for artifacts"
+              - "Include metadata with artifact verification information"
+              - "Enable clients to verify artifact integrity before deployment"
+              - "Support verification of metadata authenticity"
+        guideline-mappings:
+          - reference-id: NIST-800-53
+            entries:
+              - reference-id: SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
+                strength: 5
+                remarks: Reference to SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
+      - id: CNSWP-171
+        title: Ensure clients can verify the "freshness" of files
+        objective: Enable clients to verify that files are current and not outdated.
+        rationale:
+          risks: []
+          outcomes:
+            - title: Version Currency
+              description: Ensures clients deploy current versions of software
+            - title: Security Updates
+              description: Prevents deployment of outdated versions with known vulnerabilities
+        guideline-parts:
+          - id: CNSWP-171.1
+            title: Freshness Verification
+            text: Ensure clients can access latest versions and can verify if the provided files are out of date.
+            recommendations:
+              - "Provide version information with artifacts"
+              - "Enable clients to check for latest versions"
+              - "Implement mechanisms to detect outdated files"
+              - "Support automated freshness verification"
+        guideline-mappings:
+          - reference-id: NIST-800-53
+            entries:
+              - reference-id: SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
+                strength: 5
+                remarks: Reference to SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
+  - id: update-management
+    title: Software Update Management
+    description: Guidelines for managing software updates in a secure and reliable manner.
+    guidelines:
+      - id: CNSWP-172
+        title: Use a framework for managing software updates
+        objective: Implement a structured framework for managing software updates securely and reliably.
+        rationale:
+          risks: []
+          outcomes:
+            - title: Secure Updates
+              description: Ensures software updates are delivered securely
+            - title: Update Reliability
+              description: Provides reliable mechanisms for software update distribution
+            - title: Trusted Updates
+              description: Maintains trust in the update process
+        guideline-parts:
+          - id: CNSWP-172.1
+            title: Update Framework Implementation
+            text: Use a framework for managing software updates in a secure, reliable and trusted way.
+            recommendations:
+              - "Implement a standardized update framework"
+              - "Ensure updates are delivered securely"
+              - "Provide reliable update distribution mechanisms"
+              - "Maintain trust in the update process"
+              - "Support rollback capabilities for updates"
