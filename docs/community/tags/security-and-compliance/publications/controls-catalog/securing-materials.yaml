@@ -7,233 +7,239 @@ metadata:
     type: Software-Assisted
   version: 1.0.0
   mapping-references:
-    - id: NIST-800-53
-      title: NIST SP 800-53r5
-      version: rev5
-      url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+  - id: NIST-800-53
+    title: NIST SP 800-53r5
+    version: rev5
+    url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
 title: Securing Materials
 document-type: Best Practice
-categories:
-  - id: third-party-verification
-    title: Third-Party Verification and Validation
-    description: Guidelines for verifying and validating third-party artifacts and open source libraries before use.
-    guidelines:
-      - id: CNSWP-173
-        title: Verify third party artefacts and open source libraries
-        objective: Ensure the integrity and security of third-party artifacts and open source libraries before integration.
-        rationale:
-          risks: []
-          outcomes:
-            - title: Supply Chain Security
-              description: Prevents integration of compromised or vulnerable third-party components
-            - title: Integrity Assurance
-              description: Ensures third-party components have not been tampered with
-        guideline-parts:
-          - id: CNSWP-173.1
-            title: Verification Process
-            text: Verify third-party artifacts and open source libraries as part of the continuous integration pipeline by validating their checksums against a known good source and validating any cryptographic signatures.
-            recommendations:
-              - "Validate checksums against known good sources"
-              - "Validate cryptographic signatures of third-party components"
-              - "Scan ingested software using Software Composition Analysis (SCA) tools"
-              - "Use pentesting tools to detect vulnerable open-source software in the final product"
-        guideline-mappings:
-          - reference-id: NIST-800-53
-            entries:
-              - reference-id: SA-11 DEVELOPER TESTING AND EVALUATION
-                strength: 5
-                remarks: Reference to SA-11 DEVELOPER TESTING AND EVALUATION
-      - id: CNSWP-176
-        title: Build libraries based upon source code
-        objective: Ensure libraries are built from verified source code rather than pre-compiled binaries.
-        rationale:
-          risks: []
-          outcomes:
-            - title: Source Transparency
-              description: Provides visibility into the actual source code being used
-            - title: Build Control
-              description: Enables verification of build process and dependencies
-        guideline-parts:
-          - id: CNSWP-176.1
-            title: Source-Based Building
-            text: Build libraries from source code to ensure integrity and enable verification of the build process.
-            recommendations:
-              - "Build libraries from verified source code"
-              - "Maintain build reproducibility"
-              - "Document build processes and dependencies"
-      - id: CNSWP-177
-        title: Define and prioritize trusted package managers and repositories
-        objective: Establish and maintain a list of trusted sources for software dependencies.
-        rationale:
-          risks: []
-          outcomes:
-            - title: Source Trust
-              description: Reduces risk from untrusted or compromised package sources
-            - title: Supply Chain Control
-              description: Provides centralized control over dependency sources
-        guideline-parts:
-          - id: CNSWP-177.1
-            title: Trusted Sources Management
-            text: Define and prioritize trusted package managers and repositories to pull from only those sources.
-            recommendations:
-              - "Maintain a list of approved package managers and repositories"
-              - "Configure build systems to only pull from trusted sources"
-              - "Regularly review and update the list of trusted sources"
-  - id: sbom-management
-    title: SBOM Management
-    description: Guidelines for creating, maintaining, and using Software Bill of Materials (SBOM) for software components.
-    guidelines:
-      - id: CNSWP-174
-        title: Require SBOM from third party suppliers
-        objective: Ensure third-party suppliers provide detailed SBOM information for their products.
-        rationale:
-          risks: []
-          outcomes:
-            - title: Supply Chain Transparency
-              description: Provides visibility into third-party component dependencies
-            - title: Vulnerability Tracking
-              description: Enables tracking of vulnerabilities across the supply chain
-        guideline-parts:
-          - id: CNSWP-174.1
-            title: SBOM Requirements
-            text: Require SBOM from third-party suppliers with explicit details of the software and versions used within the supplied product.
-            recommendations:
-              - "Require SBOM from all third-party suppliers"
-              - "Specify SBOM format requirements (SPDX or CycloneDX)"
-              - "Verify SBOM completeness and accuracy"
-              - "Use SBOM to establish clear and direct links to dependencies"
-        guideline-mappings:
-          - reference-id: NIST-800-53
-            entries:
-              - reference-id: CM-8 INFORMATION SYSTEM COMPONENT INVENTORY
-                strength: 5
-                remarks: Reference to CM-8 INFORMATION SYSTEM COMPONENT INVENTORY
-      - id: CNSWP-178
-        title: Generate an immutable SBOM of the code
-        objective: Create and maintain immutable SBOMs for all software artifacts.
-        rationale:
-          risks: []
-          outcomes:
-            - title: Artifact Traceability
-              description: Provides immutable record of software components
-            - title: Compliance Support
-              description: Supports regulatory and compliance requirements
-        guideline-parts:
-          - id: CNSWP-178.1
-            title: SBOM Generation
-            text: Generate an immutable SBOM of the code for all software artifacts.
-            recommendations:
-              - "Generate SBOMs as part of the build process"
-              - "Use established SBOM specifications: SPDX or CycloneDX"
-              - "Ensure SBOMs are immutable and tamper-evident"
-              - "Store SBOMs alongside software artifacts"
-  - id: dependency-tracking
-    title: Dependency Tracking and Management
-    description: Guidelines for tracking and managing dependencies between open source components.
-    guidelines:
-      - id: CNSWP-175
-        title: Track dependencies between open source components
-        objective: Maintain visibility into dependency relationships and their vulnerabilities.
-        rationale:
-          risks: []
-          outcomes:
-            - title: Vulnerability Traceability
-              description: Enables rapid identification of affected components when vulnerabilities are discovered
-            - title: Dependency Visibility
-              description: Provides complete picture of software component relationships
-        guideline-parts:
-          - id: CNSWP-175.1
-            title: Dependency Tracking Implementation
-            text: Track dependencies between open source components to help trace any deployed artifacts with new vulnerabilities.
-            recommendations:
-              - "Implement dependency tracking system"
-              - "Use tools like OWASP Dependency-Track for open source inventory"
-              - "Maintain up-to-date dependency maps"
-              - "Automate dependency tracking in CI/CD pipelines"
-        guideline-mappings:
-          - reference-id: NIST-800-53
-            entries:
-              - reference-id: CM-10 SOFTWARE USAGE RESTRICTIONS
-                strength: 5
-                remarks: Reference to CM-10 SOFTWARE USAGE RESTRICTIONS
-  - id: security-scanning
-    title: Security and Compliance Scanning
-    description: Guidelines for scanning software for vulnerabilities and license compliance issues.
-    guidelines:
-      - id: CNSWP-179
-        title: Scan software for vulnerabilities
-        objective: Identify and remediate security vulnerabilities in software components.
-        rationale:
-          risks: []
-          outcomes:
-            - title: Vulnerability Detection
-              description: Identifies security issues before deployment
-            - title: Risk Reduction
-              description: Reduces risk from known vulnerabilities
-        guideline-parts:
-          - id: CNSWP-179.1
-            title: Vulnerability Scanning Process
-            text: Scan software for vulnerabilities as part of the development and build process.
-            recommendations:
-              - "Integrate vulnerability scanning into CI/CD pipelines"
-              - "Scan all dependencies and third-party components"
-              - "Use multiple scanning tools for comprehensive coverage"
-              - "Prioritize and remediate identified vulnerabilities"
-        guideline-mappings:
-          - reference-id: NIST-800-53
-            entries:
-              - reference-id: RA-5 VULNERABILITY MONITORING AND SCANNING
-                strength: 5
-                remarks: Reference to RA-5 VULNERABILITY MONITORING AND SCANNING
-      - id: CNSWP-180
-        title: Scan software for license implications
-        objective: Ensure software components comply with legal and regulatory license requirements.
-        rationale:
-          risks: []
-          outcomes:
-            - title: License Compliance
-              description: Prevents legal issues from license violations
-            - title: Regulatory Compliance
-              description: Ensures software meets legal and regulatory requirements
-        guideline-parts:
-          - id: CNSWP-180.1
-            title: License Scanning Implementation
-            text: Scan software for license implications to ensure released software meets legal and regulatory compliance requirements.
-            recommendations:
-              - "Use tools from the Open Compliance Program for license scanning"
-              - "Identify all license types in software components"
-              - "Assess license compatibility and compliance"
-              - "Document license decisions and approvals"
-        guideline-mappings:
-          - reference-id: NIST-800-53
-            entries:
-              - reference-id: CM-10 SOFTWARE USAGE RESTRICTIONS
-                strength: 5
-                remarks: Reference to CM-10 SOFTWARE USAGE RESTRICTIONS
-      - id: CNSWP-181
-        title: Run software composition analysis on ingested software
-        objective: Analyze software composition to identify components, dependencies, and vulnerabilities.
-        rationale:
-          risks: []
-          outcomes:
-            - title: Component Visibility
-              description: Provides complete visibility into software composition
-            - title: SBOM Verification
-              description: Verifies SBOM content accuracy
-            - title: Vulnerability Identification
-              description: Identifies vulnerabilities in dependent packages
-        guideline-parts:
-          - id: CNSWP-181.1
-            title: Software Composition Analysis Process
-            text: Run software composition analysis on ingested software to identify components and verify SBOM content.
-            recommendations:
-              - "Perform software composition analysis on all ingested software"
-              - "Use analysis results to verify SBOM content"
-              - "Match analysis data against vulnerability data feeds"
-              - "Highlight vulnerabilities in dependent packages"
-        guideline-mappings:
-          - reference-id: NIST-800-53
-            entries:
-              - reference-id: SA-11 (1) (8) & (9) DEVELOPER TESTING AND EVALUATION
-                strength: 5
-                remarks: Reference to SA-11 (1) (8) & (9) DEVELOPER TESTING AND EVALUATION
+families:
+- id: third-party-verification
+  title: Third-Party Verification and Validation
+  description: Guidelines for verifying and validating third-party artifacts and open source libraries before use.
+- id: sbom-management
+  title: SBOM Management
+  description: Guidelines for creating, maintaining, and using Software Bill of Materials (SBOM) for software components.
+- id: dependency-tracking
+  title: Dependency Tracking and Management
+  description: Guidelines for tracking and managing dependencies between open source components.
+- id: security-scanning
+  title: Security and Compliance Scanning
+  description: Guidelines for scanning software for vulnerabilities and license compliance issues.
+guidelines:
+- id: CNSWP-173
+  title: Verify third party artefacts and open source libraries
+  objective: Ensure the integrity and security of third-party artifacts and open source libraries before integration.
+  rationale:
+    risks: []
+    outcomes:
+    - title: Supply Chain Security
+      description: Prevents integration of compromised or vulnerable third-party components
+    - title: Integrity Assurance
+      description: Ensures third-party components have not been tampered with
+  guideline-parts:
+  - id: CNSWP-173.1
+    title: Verification Process
+    text: Verify third-party artifacts and open source libraries as part of the continuous integration pipeline by validating their checksums against a known good source and validating any cryptographic signatures.
+    recommendations:
+    - Validate checksums against known good sources
+    - Validate cryptographic signatures of third-party components
+    - Scan ingested software using Software Composition Analysis (SCA) tools
+    - Use pentesting tools to detect vulnerable open-source software in the final product
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-11 DEVELOPER TESTING AND EVALUATION
+      strength: 5
+      remarks: Reference to SA-11 DEVELOPER TESTING AND EVALUATION
+  family: third-party-verification
+- id: CNSWP-176
+  title: Build libraries based upon source code
+  objective: Ensure libraries are built from verified source code rather than pre-compiled binaries.
+  rationale:
+    risks: []
+    outcomes:
+    - title: Source Transparency
+      description: Provides visibility into the actual source code being used
+    - title: Build Control
+      description: Enables verification of build process and dependencies
+  guideline-parts:
+  - id: CNSWP-176.1
+    title: Source-Based Building
+    text: Build libraries from source code to ensure integrity and enable verification of the build process.
+    recommendations:
+    - Build libraries from verified source code
+    - Maintain build reproducibility
+    - Document build processes and dependencies
+  family: third-party-verification
+- id: CNSWP-177
+  title: Define and prioritize trusted package managers and repositories
+  objective: Establish and maintain a list of trusted sources for software dependencies.
+  rationale:
+    risks: []
+    outcomes:
+    - title: Source Trust
+      description: Reduces risk from untrusted or compromised package sources
+    - title: Supply Chain Control
+      description: Provides centralized control over dependency sources
+  guideline-parts:
+  - id: CNSWP-177.1
+    title: Trusted Sources Management
+    text: Define and prioritize trusted package managers and repositories to pull from only those sources.
+    recommendations:
+    - Maintain a list of approved package managers and repositories
+    - Configure build systems to only pull from trusted sources
+    - Regularly review and update the list of trusted sources
+  family: third-party-verification
+- id: CNSWP-174
+  title: Require SBOM from third party suppliers
+  objective: Ensure third-party suppliers provide detailed SBOM information for their products.
+  rationale:
+    risks: []
+    outcomes:
+    - title: Supply Chain Transparency
+      description: Provides visibility into third-party component dependencies
+    - title: Vulnerability Tracking
+      description: Enables tracking of vulnerabilities across the supply chain
+  guideline-parts:
+  - id: CNSWP-174.1
+    title: SBOM Requirements
+    text: Require SBOM from third-party suppliers with explicit details of the software and versions used within the supplied product.
+    recommendations:
+    - Require SBOM from all third-party suppliers
+    - Specify SBOM format requirements (SPDX or CycloneDX)
+    - Verify SBOM completeness and accuracy
+    - Use SBOM to establish clear and direct links to dependencies
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-8 INFORMATION SYSTEM COMPONENT INVENTORY
+      strength: 5
+      remarks: Reference to CM-8 INFORMATION SYSTEM COMPONENT INVENTORY
+  family: sbom-management
+- id: CNSWP-178
+  title: Generate an immutable SBOM of the code
+  objective: Create and maintain immutable SBOMs for all software artifacts.
+  rationale:
+    risks: []
+    outcomes:
+    - title: Artifact Traceability
+      description: Provides immutable record of software components
+    - title: Compliance Support
+      description: Supports regulatory and compliance requirements
+  guideline-parts:
+  - id: CNSWP-178.1
+    title: SBOM Generation
+    text: Generate an immutable SBOM of the code for all software artifacts.
+    recommendations:
+    - Generate SBOMs as part of the build process
+    - 'Use established SBOM specifications: SPDX or CycloneDX'
+    - Ensure SBOMs are immutable and tamper-evident
+    - Store SBOMs alongside software artifacts
+  family: sbom-management
+- id: CNSWP-175
+  title: Track dependencies between open source components
+  objective: Maintain visibility into dependency relationships and their vulnerabilities.
+  rationale:
+    risks: []
+    outcomes:
+    - title: Vulnerability Traceability
+      description: Enables rapid identification of affected components when vulnerabilities are discovered
+    - title: Dependency Visibility
+      description: Provides complete picture of software component relationships
+  guideline-parts:
+  - id: CNSWP-175.1
+    title: Dependency Tracking Implementation
+    text: Track dependencies between open source components to help trace any deployed artifacts with new vulnerabilities.
+    recommendations:
+    - Implement dependency tracking system
+    - Use tools like OWASP Dependency-Track for open source inventory
+    - Maintain up-to-date dependency maps
+    - Automate dependency tracking in CI/CD pipelines
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-10 SOFTWARE USAGE RESTRICTIONS
+      strength: 5
+      remarks: Reference to CM-10 SOFTWARE USAGE RESTRICTIONS
+  family: dependency-tracking
+- id: CNSWP-179
+  title: Scan software for vulnerabilities
+  objective: Identify and remediate security vulnerabilities in software components.
+  rationale:
+    risks: []
+    outcomes:
+    - title: Vulnerability Detection
+      description: Identifies security issues before deployment
+    - title: Risk Reduction
+      description: Reduces risk from known vulnerabilities
+  guideline-parts:
+  - id: CNSWP-179.1
+    title: Vulnerability Scanning Process
+    text: Scan software for vulnerabilities as part of the development and build process.
+    recommendations:
+    - Integrate vulnerability scanning into CI/CD pipelines
+    - Scan all dependencies and third-party components
+    - Use multiple scanning tools for comprehensive coverage
+    - Prioritize and remediate identified vulnerabilities
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: RA-5 VULNERABILITY MONITORING AND SCANNING
+      strength: 5
+      remarks: Reference to RA-5 VULNERABILITY MONITORING AND SCANNING
+  family: security-scanning
+- id: CNSWP-180
+  title: Scan software for license implications
+  objective: Ensure software components comply with legal and regulatory license requirements.
+  rationale:
+    risks: []
+    outcomes:
+    - title: License Compliance
+      description: Prevents legal issues from license violations
+    - title: Regulatory Compliance
+      description: Ensures software meets legal and regulatory requirements
+  guideline-parts:
+  - id: CNSWP-180.1
+    title: License Scanning Implementation
+    text: Scan software for license implications to ensure released software meets legal and regulatory compliance requirements.
+    recommendations:
+    - Use tools from the Open Compliance Program for license scanning
+    - Identify all license types in software components
+    - Assess license compatibility and compliance
+    - Document license decisions and approvals
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-10 SOFTWARE USAGE RESTRICTIONS
+      strength: 5
+      remarks: Reference to CM-10 SOFTWARE USAGE RESTRICTIONS
+  family: security-scanning
+- id: CNSWP-181
+  title: Run software composition analysis on ingested software
+  objective: Analyze software composition to identify components, dependencies, and vulnerabilities.
+  rationale:
+    risks: []
+    outcomes:
+    - title: Component Visibility
+      description: Provides complete visibility into software composition
+    - title: SBOM Verification
+      description: Verifies SBOM content accuracy
+    - title: Vulnerability Identification
+      description: Identifies vulnerabilities in dependent packages
+  guideline-parts:
+  - id: CNSWP-181.1
+    title: Software Composition Analysis Process
+    text: Run software composition analysis on ingested software to identify components and verify SBOM content.
+    recommendations:
+    - Perform software composition analysis on all ingested software
+    - Use analysis results to verify SBOM content
+    - Match analysis data against vulnerability data feeds
+    - Highlight vulnerabilities in dependent packages
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-11 (1) (8) & (9) DEVELOPER TESTING AND EVALUATION
+      strength: 5
+      remarks: Reference to SA-11 (1) (8) & (9) DEVELOPER TESTING AND EVALUATION
+  family: security-scanning

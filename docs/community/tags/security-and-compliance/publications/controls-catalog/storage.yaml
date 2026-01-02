@@ -7,262 +7,283 @@ metadata:
     type: Software-Assisted
   version: 1.0.0
   mapping-references:
-    - id: NIST-800-53
-      title: NIST SP 800-53r5
-      version: rev5
-      url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+  - id: NIST-800-53
+    title: NIST SP 800-53r5
+    version: rev5
+    url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
 title: Storage
 document-type: Best Practice
-categories:
-  - id: storage-control-plane
-    title: Storage Control Plane Security
-    description: Guidelines for securing storage control plane management interfaces.
-    guidelines:
-      - id: CNSWP-127
-        title: Storage control plane management interface requires mutual authentication and TLS for connections
-        objective: Storage control plane management interface requires mutual authentication and TLS for connections
-        rationale:
-          risks: []
-          outcomes:
-            - title: Secure Communication
-              description: Ensures secure communication with storage control plane
-            - title: Mutual Authentication
-              description: Provides bidirectional authentication
-        guideline-mappings:
-          - reference-id: NIST-800-53
-            entries:
-              - reference-id: SC-8 TRANSMISSION CONFIDENTIALITY AND INTEGRITY
-                strength: 5
-                remarks: Reference to SC-8 TRANSMISSION CONFIDENTIALITY AND INTEGRITY
-  - id: data-availability-integrity
-    title: Data Availability and Integrity
-    description: Guidelines for ensuring data availability and integrity.
-    guidelines:
-      - id: CNSWP-128
-        title: Data availability is achieved through parity or mirroring, erasure coding or replicas
-        objective: Data availability is achieved through parity or mirroring, erasure coding or replicas
-        rationale:
-          risks: []
-          outcomes:
-            - title: High Availability
-              description: Ensures data remains available despite failures
-            - title: Failure Prevention
-              description: Prevents data loss from component failures
-        guideline-mappings:
-          - reference-id: NIST-800-53
-            entries:
-              - reference-id: SI-13 PREDICTABLE FAILURE PREVENTION
-                strength: 5
-                remarks: Reference to SI-13 PREDICTABLE FAILURE PREVENTION
-      - id: CNSWP-129
-        title: Hashing and checksums are added to blocks, objects or files
-        objective: |
-          SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
-        rationale:
-          risks: []
-          outcomes:
-            - title: Data Integrity
-              description: Enables detection of data tampering
-            - title: Integrity Verification
-              description: Provides means to verify data integrity
-        guideline-parts:
-          - id: CNSWP-129.1
-            title: Integrity Protection
-            text: Add hashing and checksums to blocks, objects or files to detect tampering of data.
-            recommendations:
-              - "Add hashes and checksums to all data blocks, objects, or files"
-              - "Verify integrity regularly"
-        guideline-mappings:
-          - reference-id: NIST-800-53
-            entries:
-              - reference-id: CM-7 LEAST FUNCTIONALITY
-                strength: 5
-                remarks: Reference to CM-7 LEAST FUNCTIONALITY
-  - id: backup-encryption
-    title: Backup and Encryption
-    description: Guidelines for backup storage and encryption at rest.
-    guidelines:
-      - id: CNSWP-130
-        title: Data backup storage locations employ like access controls and security policies to that of the data storage source
-        objective: |
-          SC-30 CONCEALMENT AND MISDIRECTION
-        rationale:
-          risks: []
-          outcomes:
-            - title: Backup Security
-              description: Ensures backups are protected with equivalent security
-            - title: Consistent Security
-              description: Maintains consistent security across primary and backup storage
-        guideline-mappings:
-          - reference-id: NIST-800-53
-            entries:
-              - reference-id: SA-9 EXTERNAL SYSTEM SERVICES
-                strength: 5
-                remarks: Reference to SA-9 EXTERNAL SYSTEM SERVICES
-      - id: CNSWP-131
-        title: Secure erasure adhering to OPAL standards is employed for returned or non-functional devices
-        objective: |
-          MP-6 MEDIA SANITIZATION
-        rationale:
-          risks: []
-          outcomes:
-            - title: Data Sanitization
-              description: Ensures data is securely erased from storage devices
-            - title: Compliance
-              description: Meets standards for media sanitization
-        guideline-mappings:
-          - reference-id: NIST-800-53
-            entries:
-              - reference-id: CP-9 SYSTEM BACKUP
-                strength: 5
-                remarks: Reference to CP-9 SYSTEM BACKUP
-      - id: CNSWP-132
-        title: Encryption at rest considers data path, size, and frequency of access when determing additional security protections and cryptographic algorithms to employ
-        objective: Encryption at rest considers data path, size, and frequency of access when determining additional security protections and cryptographic algorithms to employ
-        rationale:
-          risks: []
-          outcomes:
-            - title: Appropriate Encryption
-              description: Ensures encryption is appropriate for data characteristics
-            - title: Performance Optimization
-              description: Balances security and performance requirements
-        guideline-parts:
-          - id: CNSWP-132.1
-            title: Encryption Strategy
-            text: Consider data path, size, and frequency of access when determining encryption approach.
-            recommendations:
-              - "Consider data path, size, and frequency of access"
-              - "Select appropriate cryptographic algorithms"
-              - "Vary encryption approach by system (e.g. per volume, per group or global keys)"
-        guideline-mappings:
-          - reference-id: NIST-800-53
-            entries:
-              - reference-id: SC-28 PROTECTION OF INFORMATION AT REST
-                strength: 5
-                remarks: Reference to SC-28 PROTECTION OF INFORMATION AT REST
-      - id: CNSWP-133
-        title: Caching is considered for determining encryption requirements in archictures
-        objective: Caching is considered for determining encryption requirements in architectures
-        rationale:
-          risks: []
-          outcomes:
-            - title: Cache Security
-              description: Ensures cached data is appropriately protected
-            - title: Architecture Security
-              description: Considers security implications of caching in architecture design
-  - id: volume-access-control
-    title: Volume Access Control
-    description: Guidelines for controlling access to volumes and namespaces.
-    guidelines:
-      - id: CNSWP-134
-        title: Namespaces have defined trust boundaries to cordon access to volumes
-        objective: Namespaces have defined trust boundaries to cordon access to volumes
-        rationale:
-          risks: []
-          outcomes:
-            - title: Access Isolation
-              description: Isolates access to volumes by namespace
-            - title: Trust Boundaries
-              description: Establishes clear trust boundaries for volume access
-      - id: CNSWP-135
-        title: Security policies are used to prevent containers from accessing volume mounts on worker nodes
-        objective: |
-          SA-8 SECURITY AND PRIVACY ENGINEERING PRINCIPLES
-          CM-6 CONFIGURATION SETTINGS
-        rationale:
-          risks: []
-          outcomes:
-            - title: Volume Protection
-              description: Prevents unauthorized container access to worker node volumes
-            - title: Boundary Protection
-              description: Protects boundaries between containers and worker nodes
-        guideline-mappings:
-          - reference-id: NIST-800-53
-            entries:
-              - reference-id: SC-7 BOUNDARY PROTECTION
-                strength: 5
-                remarks: Reference to SC-7 BOUNDARY PROTECTION
-      - id: CNSWP-136
-        title: Security policies are used enforce authorized worker node access to volumes
-        objective: |
-          SA-8 SECURITY AND PRIVACY ENGINEERING PRINCIPLES
-          CM-6 CONFIGURATION SETTINGS
-        rationale:
-          risks: []
-          outcomes:
-            - title: Authorized Access
-              description: Ensures only authorized worker nodes can access volumes
-            - title: Access Control
-              description: Enforces access control policies for volume access
-        guideline-mappings:
-          - reference-id: NIST-800-53
-            entries:
-              - reference-id: SC-7 BOUNDARY PROTECTION
-                strength: 5
-                remarks: Reference to SC-7 BOUNDARY PROTECTION
-      - id: CNSWP-137
-        title: Volume UID and GID are inaccessible to containers
-        objective: |
-          AC-16 SECURITY AND PRIVACY ATTRIBUTES
-          SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
-        rationale:
-          risks: []
-          outcomes:
-            - title: Attribute Protection
-              description: Prevents containers from accessing volume ownership attributes
-            - title: Information Flow Control
-              description: Controls information flow regarding volume attributes
-        guideline-mappings:
-          - reference-id: NIST-800-53
-            entries:
-              - reference-id: AC-4 INFORMATION FLOW ENFORCEMENT
-                strength: 5
-                remarks: Reference to AC-4 INFORMATION FLOW ENFORCEMENT
-  - id: artifact-registry
-    title: Artifact Registry
-    description: Guidelines for artifact registries and artifact verification.
-    guidelines:
-      - id: CNSWP-138
-        title: Artifact registry supports OCI artifacts
-        objective: Artifact registry supports OCI artifacts
-        rationale:
-          risks: []
-          outcomes:
-            - title: OCI Compliance
-              description: Ensures registry supports OCI artifact standards
-            - title: Standardization
-              description: Enables use of standardized artifact formats
-      - id: CNSWP-139
-        title: Artifact registry supports signed artifacts
-        objective: Artifact registry supports signed artifacts
-        rationale:
-          risks: []
-          outcomes:
-            - title: Artifact Integrity
-              description: Enables verification of artifact integrity through signatures
-            - title: Signed Components
-              description: Supports use of signed components
-        guideline-mappings:
-          - reference-id: NIST-800-53
-            entries:
-              - reference-id: CM-14 SIGNED COMPONENTS
-                strength: 5
-                remarks: Reference to CM-14 SIGNED COMPONENTS
-      - id: CNSWP-140
-        title: Artifact registry verifies artifacts against organizational policies
-        objective: |
-          Artifact registry verifies artifacts against organizational policies
-          CM-6 CONFIGURATION SETTINGS
-        rationale:
-          risks: []
-          outcomes:
-            - title: Policy Compliance
-              description: Ensures artifacts comply with organizational policies
-            - title: Non-Repudiation
-              description: Provides proof of policy verification
-        guideline-mappings:
-          - reference-id: NIST-800-53
-            entries:
-              - reference-id: AU-10 NON-REPUDIATION
-                strength: 5
-                remarks: Reference to AU-10 NON-REPUDIATION
+families:
+- id: storage-control-plane
+  title: Storage Control Plane Security
+  description: Guidelines for securing storage control plane management interfaces.
+- id: data-availability-integrity
+  title: Data Availability and Integrity
+  description: Guidelines for ensuring data availability and integrity.
+- id: backup-encryption
+  title: Backup and Encryption
+  description: Guidelines for backup storage and encryption at rest.
+- id: volume-access-control
+  title: Volume Access Control
+  description: Guidelines for controlling access to volumes and namespaces.
+- id: artifact-registry
+  title: Artifact Registry
+  description: Guidelines for artifact registries and artifact verification.
+guidelines:
+- id: CNSWP-127
+  title: Storage control plane management interface requires mutual authentication and TLS for connections
+  objective: Storage control plane management interface requires mutual authentication and TLS for connections
+  rationale:
+    risks: []
+    outcomes:
+    - title: Secure Communication
+      description: Ensures secure communication with storage control plane
+    - title: Mutual Authentication
+      description: Provides bidirectional authentication
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-8 TRANSMISSION CONFIDENTIALITY AND INTEGRITY
+      strength: 5
+      remarks: Reference to SC-8 TRANSMISSION CONFIDENTIALITY AND INTEGRITY
+  family: storage-control-plane
+- id: CNSWP-128
+  title: Data availability is achieved through parity or mirroring, erasure coding or replicas
+  objective: Data availability is achieved through parity or mirroring, erasure coding or replicas
+  rationale:
+    risks: []
+    outcomes:
+    - title: High Availability
+      description: Ensures data remains available despite failures
+    - title: Failure Prevention
+      description: Prevents data loss from component failures
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-13 PREDICTABLE FAILURE PREVENTION
+      strength: 5
+      remarks: Reference to SI-13 PREDICTABLE FAILURE PREVENTION
+  family: data-availability-integrity
+- id: CNSWP-129
+  title: Hashing and checksums are added to blocks, objects or files
+  objective: 'SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
+
+    '
+  rationale:
+    risks: []
+    outcomes:
+    - title: Data Integrity
+      description: Enables detection of data tampering
+    - title: Integrity Verification
+      description: Provides means to verify data integrity
+  guideline-parts:
+  - id: CNSWP-129.1
+    title: Integrity Protection
+    text: Add hashing and checksums to blocks, objects or files to detect tampering of data.
+    recommendations:
+    - Add hashes and checksums to all data blocks, objects, or files
+    - Verify integrity regularly
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-7 LEAST FUNCTIONALITY
+      strength: 5
+      remarks: Reference to CM-7 LEAST FUNCTIONALITY
+  family: data-availability-integrity
+- id: CNSWP-130
+  title: Data backup storage locations employ like access controls and security policies to that of the data storage source
+  objective: 'SC-30 CONCEALMENT AND MISDIRECTION
+
+    '
+  rationale:
+    risks: []
+    outcomes:
+    - title: Backup Security
+      description: Ensures backups are protected with equivalent security
+    - title: Consistent Security
+      description: Maintains consistent security across primary and backup storage
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-9 EXTERNAL SYSTEM SERVICES
+      strength: 5
+      remarks: Reference to SA-9 EXTERNAL SYSTEM SERVICES
+  family: backup-encryption
+- id: CNSWP-131
+  title: Secure erasure adhering to OPAL standards is employed for returned or non-functional devices
+  objective: 'MP-6 MEDIA SANITIZATION
+
+    '
+  rationale:
+    risks: []
+    outcomes:
+    - title: Data Sanitization
+      description: Ensures data is securely erased from storage devices
+    - title: Compliance
+      description: Meets standards for media sanitization
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CP-9 SYSTEM BACKUP
+      strength: 5
+      remarks: Reference to CP-9 SYSTEM BACKUP
+  family: backup-encryption
+- id: CNSWP-132
+  title: Encryption at rest considers data path, size, and frequency of access when determing additional security protections and cryptographic algorithms to employ
+  objective: Encryption at rest considers data path, size, and frequency of access when determining additional security protections and cryptographic algorithms to employ
+  rationale:
+    risks: []
+    outcomes:
+    - title: Appropriate Encryption
+      description: Ensures encryption is appropriate for data characteristics
+    - title: Performance Optimization
+      description: Balances security and performance requirements
+  guideline-parts:
+  - id: CNSWP-132.1
+    title: Encryption Strategy
+    text: Consider data path, size, and frequency of access when determining encryption approach.
+    recommendations:
+    - Consider data path, size, and frequency of access
+    - Select appropriate cryptographic algorithms
+    - Vary encryption approach by system (e.g. per volume, per group or global keys)
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-28 PROTECTION OF INFORMATION AT REST
+      strength: 5
+      remarks: Reference to SC-28 PROTECTION OF INFORMATION AT REST
+  family: backup-encryption
+- id: CNSWP-133
+  title: Caching is considered for determining encryption requirements in archictures
+  objective: Caching is considered for determining encryption requirements in architectures
+  rationale:
+    risks: []
+    outcomes:
+    - title: Cache Security
+      description: Ensures cached data is appropriately protected
+    - title: Architecture Security
+      description: Considers security implications of caching in architecture design
+  family: backup-encryption
+- id: CNSWP-134
+  title: Namespaces have defined trust boundaries to cordon access to volumes
+  objective: Namespaces have defined trust boundaries to cordon access to volumes
+  rationale:
+    risks: []
+    outcomes:
+    - title: Access Isolation
+      description: Isolates access to volumes by namespace
+    - title: Trust Boundaries
+      description: Establishes clear trust boundaries for volume access
+  family: volume-access-control
+- id: CNSWP-135
+  title: Security policies are used to prevent containers from accessing volume mounts on worker nodes
+  objective: 'SA-8 SECURITY AND PRIVACY ENGINEERING PRINCIPLES
+
+    CM-6 CONFIGURATION SETTINGS
+
+    '
+  rationale:
+    risks: []
+    outcomes:
+    - title: Volume Protection
+      description: Prevents unauthorized container access to worker node volumes
+    - title: Boundary Protection
+      description: Protects boundaries between containers and worker nodes
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-7 BOUNDARY PROTECTION
+      strength: 5
+      remarks: Reference to SC-7 BOUNDARY PROTECTION
+  family: volume-access-control
+- id: CNSWP-136
+  title: Security policies are used enforce authorized worker node access to volumes
+  objective: 'SA-8 SECURITY AND PRIVACY ENGINEERING PRINCIPLES
+
+    CM-6 CONFIGURATION SETTINGS
+
+    '
+  rationale:
+    risks: []
+    outcomes:
+    - title: Authorized Access
+      description: Ensures only authorized worker nodes can access volumes
+    - title: Access Control
+      description: Enforces access control policies for volume access
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-7 BOUNDARY PROTECTION
+      strength: 5
+      remarks: Reference to SC-7 BOUNDARY PROTECTION
+  family: volume-access-control
+- id: CNSWP-137
+  title: Volume UID and GID are inaccessible to containers
+  objective: 'AC-16 SECURITY AND PRIVACY ATTRIBUTES
+
+    SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
+
+    '
+  rationale:
+    risks: []
+    outcomes:
+    - title: Attribute Protection
+      description: Prevents containers from accessing volume ownership attributes
+    - title: Information Flow Control
+      description: Controls information flow regarding volume attributes
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AC-4 INFORMATION FLOW ENFORCEMENT
+      strength: 5
+      remarks: Reference to AC-4 INFORMATION FLOW ENFORCEMENT
+  family: volume-access-control
+- id: CNSWP-138
+  title: Artifact registry supports OCI artifacts
+  objective: Artifact registry supports OCI artifacts
+  rationale:
+    risks: []
+    outcomes:
+    - title: OCI Compliance
+      description: Ensures registry supports OCI artifact standards
+    - title: Standardization
+      description: Enables use of standardized artifact formats
+  family: artifact-registry
+- id: CNSWP-139
+  title: Artifact registry supports signed artifacts
+  objective: Artifact registry supports signed artifacts
+  rationale:
+    risks: []
+    outcomes:
+    - title: Artifact Integrity
+      description: Enables verification of artifact integrity through signatures
+    - title: Signed Components
+      description: Supports use of signed components
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-14 SIGNED COMPONENTS
+      strength: 5
+      remarks: Reference to CM-14 SIGNED COMPONENTS
+  family: artifact-registry
+- id: CNSWP-140
+  title: Artifact registry verifies artifacts against organizational policies
+  objective: 'Artifact registry verifies artifacts against organizational policies
+
+    CM-6 CONFIGURATION SETTINGS
+
+    '
+  rationale:
+    risks: []
+    outcomes:
+    - title: Policy Compliance
+      description: Ensures artifacts comply with organizational policies
+    - title: Non-Repudiation
+      description: Provides proof of policy verification
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AU-10 NON-REPUDIATION
+      strength: 5
+      remarks: Reference to AU-10 NON-REPUDIATION
+  family: artifact-registry
