@@ -1,146 +1,68 @@
-metadata:
-  id: CNSWP-deploy
-  description: Guidelines for secure deployment including trust verification, policy enforcement, logging, and incident response.
-  author:
-    id: tag-sc
-    name: TAG Security and Compliance
-    type: Software-Assisted
-  version: 1.0.0
-  mapping-references:
-  - id: NIST-800-53
-    title: NIST SP 800-53r5
-    version: rev5
-    url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
 title: Deploy
 document-type: Best Practice
 families:
-- id: trust-verification
-  title: Trust and Verification
-  description: Guidelines for verifying trust, image integrity, and signatures before deployment.
-- id: policy-enforcement
-  title: Policy Enforcement
-  description: Guidelines for enforcing runtime policies before deployment.
-- id: logging-monitoring
-  title: Logging and Monitoring
-  description: Guidelines for application logging and monitoring.
-- id: incident-response
-  title: Incident Response
-  description: Guidelines for incident response and forensics capabilities.
-- id: behavioral-analysis
-  title: Behavioral Analysis
-  description: Guidelines for behavioral and heuristic environment analysis.
+- id: Deploy
+  title: Deploy
+  description: Guidelines for securing software deployments, ensuring artifact verification, freshness validation, and secure update management.
 guidelines:
 - id: CNSWP-57
   title: trust confirmation verifies the image has a valid signature from an authorized source
-  objective: SR-4 (4)
-  rationale:
-    risks: []
-    outcomes:
-    - title: Trust Verification
-      description: Ensures images are from authorized sources
-    - title: Provenance
-      description: Verifies image provenance and authenticity
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SR-4 (3) PROVENANCE
-      strength: 5
-      remarks: Reference to SR-4 (3) PROVENANCE
-    - reference-id: VALIDATE AS GENUINE AND NOT ALTERED
-      strength: 5
-      remarks: Reference to VALIDATE AS GENUINE AND NOT ALTERED
-  family: trust-verification
+    - reference-id: SR-4(3)
+      remarks: (3) Provenance
+  family: Deploy
+  statements:
+  - id: CNSWP-57.1
+    text: Sign images and artifacts to ensure integrity and authenticity.
 - id: CNSWP-59
   title: Image integrity and signature are verifying prior to deployment
-  objective: SR-4 (4)
-  rationale:
-    risks: []
-    outcomes:
-    - title: Integrity Verification
-      description: Ensures images have not been tampered with
-    - title: Signature Validation
-      description: Validates image signatures before deployment
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SR-4 (3) PROVENANCE
-      strength: 5
-      remarks: Reference to SR-4 (3) PROVENANCE
-    - reference-id: VALIDATE AS GENUINE AND NOT ALTERED
-      strength: 5
-      remarks: Reference to VALIDATE AS GENUINE AND NOT ALTERED
-  family: trust-verification
+    - reference-id: SR-4(3)
+      remarks: (3) Provenance
+  family: Deploy
+  statements:
+  - id: CNSWP-59.1
+    text: Sign images and artifacts to ensure integrity and authenticity.
 - id: CNSWP-58
   title: Image runtime policies are enforced prior to deployment
-  objective: Image runtime policies are enforced prior to deployment
-  rationale:
-    risks: []
-    outcomes:
-    - title: Policy Compliance
-      description: Ensures images comply with runtime policies
-    - title: Runtime Protection
-      description: Provides runtime application self-protection
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SI-7 (17) SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
-      strength: 5
-      remarks: Reference to SI-7 (17) SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
-    - reference-id: RUNTIME APPLICATION SELF-PROTECTION
-      strength: 5
-      remarks: Reference to RUNTIME APPLICATION SELF-PROTECTION
-  family: policy-enforcement
+    - reference-id: SI-7(17)
+      remarks: (17) Software, Firmware, and Information Integrity
+  family: Deploy
+  statements:
+  - id: CNSWP-58.1
+    text: Implement image runtime policies are enforced prior to deployment.
 - id: CNSWP-60
   title: Applications provide logs regarding authentication, authorization, actions, and failures
-  objective: Applications provide logs regarding authentication, authorization, actions, and failures
-  rationale:
-    risks: []
-    outcomes:
-    - title: Audit Trail
-      description: Provides comprehensive audit trail of application activities
-    - title: Security Monitoring
-      description: Enables monitoring of security-relevant events
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: CM-3 CONFIGURATION CHANGE CONTROL
-      strength: 5
-      remarks: Reference to CM-3 CONFIGURATION CHANGE CONTROL
-  family: logging-monitoring
+    - reference-id: CM-3
+      remarks: Configuration Change Control
+  family: Deploy
+  statements:
+  - id: CNSWP-60.1
+    text: Implement applications provide logs regarding authentication, authorization, actions, and failures.
 - id: CNSWP-61
   title: Forensics capabilities are integrated into an incident response plan and procedures
-  objective: Forensics capabilities are integrated into an incident response plan and procedures
-  rationale:
-    risks: []
-    outcomes:
-    - title: Incident Handling
-      description: Ensures proper handling of security incidents
-    - title: Forensic Analysis
-      description: Enables forensic analysis of security incidents
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: INCIDENT HANDLING
-      strength: 5
-      remarks: Reference to INCIDENT HANDLING
-    - reference-id: MALICIOUS CODE AND FORENSIC ANALYSIS
-      strength: 5
-      remarks: Reference to MALICIOUS CODE AND FORENSIC ANALYSIS
-  family: incident-response
+  family: Deploy
+  statements:
+  - id: CNSWP-61.1
+    text: Integrate forensics capabilities into incident response plans and procedures.
 - id: CNSWP-62
   title: AI, ML, or statistical modeling are used for behavioural and heuristic environment analysis
-  objective: AI, ML, or statistical modeling are used for behavioural and heuristic environment analysis
-  rationale:
-    risks: []
-    outcomes:
-    - title: Anomaly Detection
-      description: Enables detection of anomalous behavior
-    - title: Threat Detection
-      description: Identifies threats through behavioral analysis
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SI-3 SYSTEM AND INFORMATION INTEGRITY
-      strength: 5
-      remarks: Reference to SI-3 SYSTEM AND INFORMATION INTEGRITY
-  family: behavioral-analysis
+    - reference-id: SI-3
+      remarks: System and Information Integrity
+  family: Deploy
+  statements:
+  - id: CNSWP-62.1
+    text: Implement ai, ml, or statistical modeling are used for behavioural and heuristic environment analysis.

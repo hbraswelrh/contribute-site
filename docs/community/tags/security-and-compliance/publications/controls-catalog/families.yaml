@@ -1,0 +1,49 @@
+metadata:
+  id: CNSWP
+  description: Guidelines for access control, authentication, authorization, secrets management, and key management.
+  author:
+    id: tag-sc
+    name: TAG Security and Compliance
+    type: Software-Assisted
+  version: 1.0.0
+  mapping-references:
+  - id: NIST-800-53
+    title: NIST SP 800-53r5
+    version: rev5
+    url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+title: Cloud Native Security Controls Catalog
+document-type: Best Practice
+families:
+- id: Access
+  title: Access Control
+  description: Guidelines for access control models and identity forwarding.
+- id: Compute
+  title: Compute
+  description: Guidelines for securing compute infrastructure including bootstrapping, isolation, monitoring, and runtime security.
+- id: Deploy
+  title: Deploy
+  description: Guidelines for securing software deployments, ensuring artifact verification, freshness validation, and secure update management.
+- id: Distribute
+  title: Distribute
+  description: Guidelines for secure distribution of container images, packages, and artifacts including signing, scanning, and registry security.
+- id: Securing Artefacts
+  title: Securing Artefacts
+  description: Guidelines for securing artefacts, including signing, verification, and freshness validation.
+- id: Securing Build Pipelines
+  title: Securing Build Pipelines
+  description: Guidelines for securing build pipelines, ensuring cryptographic guarantees, validation, and secure build environments.
+- id: Securing Deployments
+  title: Securing Deployments
+  description: Guidelines for securing software deployments, ensuring artifact verification, freshness validation, and secure update management.
+- id: Securing Materials
+  title: Securing Materials
+  description: Guidelines for securing materials, including signing, verification, and freshness validation.
+- id: Securing the Source Code
+  title: Securing the Source Code
+  description: Guidelines for securing the source code, including signing, verification, and freshness validation.
+- id: Security Assurance
+  title: Security Assurance
+  description: Guidelines for security assurance, including signing, verification, and freshness validation.
+- id: Storage
+  title: Storage
+  description: Guidelines for securing storage, including signing, verification, and freshness validation.

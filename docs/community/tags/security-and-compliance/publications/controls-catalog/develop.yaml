@@ -1,298 +1,176 @@
-metadata:
-  id: CNSWP-develop
-  description: Guidelines for secure development practices including environment management, testing, and code review.
-  author:
-    id: tag-sc
-    name: TAG Security and Compliance
-    type: Software-Assisted
-  version: 1.0.0
-  mapping-references:
-  - id: NIST-800-53
-    title: NIST SP 800-53r5
-    version: rev5
-    url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
 title: Develop
 document-type: Best Practice
 families:
-- id: environment-management
-  title: Environment Management
-  description: Guidelines for managing development, testing, and production environments.
-- id: deployment-strategies
-  title: Deployment Strategies
-  description: Guidelines for deployment strategies and vulnerability scanning.
-- id: testing-practices
-  title: Testing Practices
-  description: Guidelines for testing business-critical code and infrastructure.
-- id: code-review
-  title: Code Review
-  description: Guidelines for code review and code quality.
-- id: ci-isolation
-  title: CI Isolation
-  description: Guidelines for isolating CI servers and infrastructure.
-- id: threat-modeling
-  title: Threat Modeling
-  description: Guidelines for using threat modeling to inform testing.
+- id: Develop
+  title: Develop
+  description: Guidelines for secure development practices including environment management, testing, and code review.
 guidelines:
 - id: CNSWP-63
   title: Establish a dedicated Production environment
-  objective: Establish a dedicated Production environment
-  rationale:
-    risks: []
-    outcomes:
-    - title: Environment Isolation
-      description: Ensures production environment is isolated from other environments
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SA-3(1) SYSTEM DEVELOPMENT LIFE CYCLE
-      strength: 5
-      remarks: Reference to SA-3(1) SYSTEM DEVELOPMENT LIFE CYCLE
-    - reference-id: MANAGE PREPRODUCTION ENVIRONMENT
-      strength: 5
-      remarks: Reference to MANAGE PREPRODUCTION ENVIRONMENT
-  family: environment-management
+    - reference-id: SA-3(1)
+      remarks: System Development Life Cycle
+  family: Develop
+  statements:
+  - id: CNSWP-63.1
+    text: Implement establish a dedicated production environment.
 - id: CNSWP-66
   title: Establish dedicated development, testing, and production environment
-  objective: Establish dedicated development, testing, and production environment
-  rationale:
-    risks: []
-    outcomes:
-    - title: Environment Separation
-      description: Ensures clear separation between development, testing, and production
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SA-15 DEVELOPMENT PROCESS, STANDARDS, AND TOOLS
-      strength: 5
-      remarks: Reference to SA-15 DEVELOPMENT PROCESS, STANDARDS, AND TOOLS
-  family: environment-management
+    - reference-id: SA-15
+      remarks: Development Process, Standards, and Tools
+  family: Develop
+  statements:
+  - id: CNSWP-66.1
+    text: Implement establish dedicated development, testing, and production environment.
 - id: CNSWP-76
   title: Establish a dedicated Testing environment
-  objective: Establish a dedicated Testing environment
-  rationale:
-    risks: []
-    outcomes:
-    - title: Testing Isolation
-      description: Ensures testing environment is isolated from other environments
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SA-3(1) SYSTEM DEVELOPMENT LIFE CYCLE
-      strength: 5
-      remarks: Reference to SA-3(1) SYSTEM DEVELOPMENT LIFE CYCLE
-    - reference-id: MANAGE PREPRODUCTION ENVIRONMENT
-      strength: 5
-      remarks: Reference to MANAGE PREPRODUCTION ENVIRONMENT
-  family: environment-management
+    - reference-id: SA-3(1)
+      remarks: System Development Life Cycle
+  family: Develop
+  statements:
+  - id: CNSWP-76.1
+    text: Implement establish a dedicated testing environment.
 - id: CNSWP-64
   title: Leverage Dynamic deployments
-  objective: Leverage Dynamic deployments
-  rationale:
-    risks: []
-    outcomes:
-    - title: Deployment Flexibility
-      description: Enables flexible deployment strategies
-    - title: Risk Reduction
-      description: Reduces risk through gradual deployments
-  guideline-parts:
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-8(31)
+      remarks: Security and Privacy Engineering Principles
+  family: Develop
+  statements:
   - id: CNSWP-64.1
     title: Dynamic Deployment Strategies
     text: Use dynamic deployment strategies for safer deployments.
-    recommendations:
-    - Use Blue/Green deployments
-    - Use Alpha/Beta deployments
-    - Use Canary deployments
-    - Use red-black deployments
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: SA-8(31) SECURITY AND PRIVACY ENGINEERING PRINCIPLES
-      strength: 5
-      remarks: Reference to SA-8(31) SECURITY AND PRIVACY ENGINEERING PRINCIPLES
-    - reference-id: SECURE SYSTEM MODIFICATION
-      strength: 5
-      remarks: Reference to SECURE SYSTEM MODIFICATION
-  family: deployment-strategies
 - id: CNSWP-65
   title: Integrate vulnerability and configuration scanning in the IDE or at the pull request
-  objective: Integrate vulnerability and configuration scanning in the IDE or at the pull request
-  rationale:
-    risks: []
-    outcomes:
-    - title: Early Detection
-      description: Identifies vulnerabilities and configuration issues early in development
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SA-11(1) DEVELOPER TESTING AND EVALUATION
-      strength: 5
-      remarks: Reference to SA-11(1) DEVELOPER TESTING AND EVALUATION
-    - reference-id: STATIC CODE ANALYSIS
-      strength: 5
-      remarks: Reference to STATIC CODE ANALYSIS
-  family: deployment-strategies
+    - reference-id: SA-11(1)
+      remarks: Developer Testing and Evaluation
+  family: Develop
+  statements:
+  - id: CNSWP-65.1
+    text: Scan artifacts for vulnerabilities before distribution or deployment.
 - id: CNSWP-67
   title: Build tests for business-critical code
-  objective: Build tests for business-critical code
-  rationale:
-    risks: []
-    outcomes:
-    - title: Code Quality
-      description: Ensures business-critical code is thoroughly tested
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SA-11 DEVELOPER TESTING AND EVALUATION
-      strength: 5
-      remarks: Reference to SA-11 DEVELOPER TESTING AND EVALUATION
-  family: testing-practices
+    - reference-id: SA-11
+      remarks: Developer Testing and Evaluation
+  family: Develop
+  statements:
+  - id: CNSWP-67.1
+    text: Implement build tests for business-critical code.
 - id: CNSWP-68
   title: Build tests for business-critical infrastructure
-  objective: Build tests for business-critical infrastructure
-  rationale:
-    risks: []
-    outcomes:
-    - title: Infrastructure Quality
-      description: Ensures business-critical infrastructure is thoroughly tested
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SA-11 DEVELOPER TESTING AND EVALUATION
-      strength: 5
-      remarks: Reference to SA-11 DEVELOPER TESTING AND EVALUATION
-  family: testing-practices
+    - reference-id: SA-11
+      remarks: Developer Testing and Evaluation
+  family: Develop
+  statements:
+  - id: CNSWP-68.1
+    text: Implement build tests for business-critical infrastructure.
 - id: CNSWP-69
   title: Test suite able to be ran locally
-  objective: Test suite able to be ran locally
-  rationale:
-    risks: []
-    outcomes:
-    - title: Developer Productivity
-      description: Enables developers to run tests locally before committing
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SA-11 DEVELOPER TESTING AND EVALUATION
-      strength: 5
-      remarks: Reference to SA-11 DEVELOPER TESTING AND EVALUATION
-  family: testing-practices
+    - reference-id: SA-11
+      remarks: Developer Testing and Evaluation
+  family: Develop
+  statements:
+  - id: CNSWP-69.1
+    text: Implement test suite able to be ran locally.
 - id: CNSWP-70
   title: Test suites should be available to run in a shared environment
-  objective: Test suites should be available to run in a shared environment
-  rationale:
-    risks: []
-    outcomes:
-    - title: Collaboration
-      description: Enables teams to run tests in shared environments
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SA-11 DEVELOPER TESTING AND EVALUATION
-      strength: 5
-      remarks: Reference to SA-11 DEVELOPER TESTING AND EVALUATION
-  family: testing-practices
+    - reference-id: SA-11
+      remarks: Developer Testing and Evaluation
+  family: Develop
+  statements:
+  - id: CNSWP-70.1
+    text: Implement test suites should be available to run in a shared environment.
 - id: CNSWP-73
   title: Full infrastructure tests are used
-  objective: Full infrastructure tests are used
-  rationale:
-    risks: []
-    outcomes:
-    - title: Infrastructure Testing
-      description: Ensures complete infrastructure is tested
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SA-11 DEVELOPER TESTING AND EVALUATION
-      strength: 5
-      remarks: Reference to SA-11 DEVELOPER TESTING AND EVALUATION
-  family: testing-practices
+    - reference-id: SA-11
+      remarks: Developer Testing and Evaluation
+  family: Develop
+  statements:
+  - id: CNSWP-73.1
+    text: Implement full infrastructure tests are used.
 - id: CNSWP-74
   title: Regression tests are used
-  objective: Regression tests are used
-  rationale:
-    risks: []
-    outcomes:
-    - title: Regression Prevention
-      description: Prevents regression of previously fixed issues
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SA-11 DEVELOPER TESTING AND EVALUATION
-      strength: 5
-      remarks: Reference to SA-11 DEVELOPER TESTING AND EVALUATION
-  family: testing-practices
+    - reference-id: SA-11
+      remarks: Developer Testing and Evaluation
+  family: Develop
+  statements:
+  - id: CNSWP-74.1
+    text: Implement regression tests are used.
 - id: CNSWP-75
   title: Test suites are updated against new and emerging threats and developed into security regressions tests
-  objective: Test suites are updated against new and emerging threats and developed into security regressions tests
-  rationale:
-    risks: []
-    outcomes:
-    - title: Threat Awareness
-      description: Ensures tests cover new and emerging threats
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SA-11 DEVELOPER TESTING AND EVALUATION
-      strength: 5
-      remarks: Reference to SA-11 DEVELOPER TESTING AND EVALUATION
-  family: testing-practices
+    - reference-id: SA-11
+      remarks: Developer Testing and Evaluation
+  family: Develop
+  statements:
+  - id: CNSWP-75.1
+    text: Implement test suites are updated against new and emerging threats and developed into security regressions tests.
 - id: CNSWP-71
   title: Implement two non-author reviewers/approvers prior to merging
-  objective: Implement two non-author reviewers/approvers prior to merging
-  rationale:
-    risks: []
-    outcomes:
-    - title: Quality Assurance
-      description: Ensures code is reviewed by multiple independent reviewers
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SA-11(4) DEVELOPER TESTING AND EVALUATION
-      strength: 5
-      remarks: Reference to SA-11(4) DEVELOPER TESTING AND EVALUATION
-    - reference-id: MANUAL CODE REVIEWS
-      strength: 5
-      remarks: Reference to MANUAL CODE REVIEWS
-  family: code-review
+    - reference-id: SA-11(4)
+      remarks: Developer Testing and Evaluation
+  family: Develop
+  statements:
+  - id: CNSWP-71.1
+    text: Implement implement two non-author reviewers/approvers prior to merging.
 - id: CNSWP-72
   title: Code should be clean and well commented
-  objective: Code should be clean and well commented
-  rationale:
-    risks: []
-    outcomes:
-    - title: Code Maintainability
-      description: Ensures code is maintainable and understandable
-  family: code-review
+  family: Develop
 - id: CNSWP-77
   title: Continuous integration server is isolated
-  objective: Continuous integration server is isolated
-  rationale:
-    risks: []
-    outcomes:
-    - title: CI Security
-      description: Isolates CI servers from other infrastructure
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SC-39 PROCESS ISOLATION
-      strength: 5
-      remarks: Reference to SC-39 PROCESS ISOLATION
-  family: ci-isolation
+    - reference-id: SC-39
+      remarks: Process Isolation
+  family: Develop
+  statements:
+  - id: CNSWP-77.1
+    text: Implement continuous integration server is isolated.
 - id: CNSWP-78
   title: Use threat model results to determine ROI for test development
-  objective: Use threat model results to determine ROI for test development
-  rationale:
-    risks: []
-    outcomes:
-    - title: Test Prioritization
-      description: Ensures tests are developed based on threat model priorities
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SA-11(2) DEVELOPER TESTING AND EVALUATION
-      strength: 5
-      remarks: Reference to SA-11(2) DEVELOPER TESTING AND EVALUATION
-    - reference-id: THREAT MODELING AND VULNERABILITY ANALYSES
-      strength: 5
-      remarks: Reference to THREAT MODELING AND VULNERABILITY ANALYSES
-  family: threat-modeling
+    - reference-id: SA-11(2)
+      remarks: Developer Testing and Evaluation
+  family: Develop
+  statements:
+  - id: CNSWP-78.1
+    text: Implement use threat model results to determine roi for test development.

@@ -1,250 +1,118 @@
-metadata:
-  id: CNSWP-security-assurance
-  description: Guidelines for security assurance including network policies, incident response, isolation, and authentication.
-  author:
-    id: tag-sc
-    name: TAG Security and Compliance
-    type: Software-Assisted
-  version: 1.0.0
-  mapping-references:
-  - id: NIST-800-53
-    title: NIST SP 800-53r5
-    version: rev5
-    url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
 title: Security Assurance
 document-type: Best Practice
 families:
-- id: network-security
-  title: Network Security and Policies
-  description: Guidelines for network policies and service mesh integration.
-- id: incident-response
-  title: Incident Response
-  description: Guidelines for incident response in cloud native environments.
-- id: workload-isolation
-  title: Workload Isolation
-  description: Guidelines for isolating workloads and deployments.
-- id: threat-modeling
-  title: Threat Modeling
-  description: Guidelines for threat modeling code and infrastructure.
-- id: authentication-identity
-  title: Authentication and Identity
-  description: Guidelines for entity authentication and identity verification.
-- id: orchestrator-security
-  title: Orchestrator Security
-  description: Guidelines for securing orchestrators and container verification.
+- id: Security Assurance
+  title: Security Assurance
+  description: Guidelines for security assurance, including signing, verification, and freshness validation.
 guidelines:
 - id: CNSWP-115
   title: Network policies enforce east-west network communication within the container deployment is limited to only that which is authorized for access
-  objective: Network policies enforce east-west network communication within the container deployment is limited to only that which is authorized for access
-  rationale:
-    risks: []
-    outcomes:
-    - title: Network Isolation
-      description: Limits network communication to authorized connections only
-    - title: Least Privilege
-      description: Ensures workloads only communicate with authorized services
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: AC-6(3) LEAST PRIVILEGE
-      strength: 5
-      remarks: Reference to AC-6(3) LEAST PRIVILEGE
-    - reference-id: NETWORK ACCESS TO PRIVILEGED COMMANDS
-      strength: 5
-      remarks: Reference to NETWORK ACCESS TO PRIVILEGED COMMANDS
-  family: network-security
+    - reference-id: AC-6(3)
+      remarks: Least Privilege
+  family: Security Assurance
+  statements:
+  - id: CNSWP-115.1
+    text: Implement network policies enforce east-west network communication within the container deployment is limited to only that which is authorized for access.
 - id: CNSWP-126
   title: Orchestrator network policies are used in conjunction with a service mesh
-  objective: Orchestrator network policies are used in conjunction with a service mesh
-  rationale:
-    risks: []
-    outcomes:
-    - title: Defense in Depth
-      description: Provides multiple layers of network security
-    - title: Enhanced Security
-      description: Combines orchestrator and service mesh security capabilities
-  family: network-security
+  family: Security Assurance
 - id: CNSWP-116
   title: Incident reponse considers cloud native workloads
-  objective: Ensure incident response processes account for cloud native workload characteristics.
-  rationale:
-    risks: []
-    outcomes:
-    - title: Cloud Native Awareness
-      description: Ensures incident response is appropriate for cloud native environments
-  guideline-parts:
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: IR-4
+      remarks: Incident Handling
+  family: Security Assurance
+  statements:
   - id: CNSWP-116.1
     title: Cloud Native Considerations
     text: Incident response must consider cloud native workload characteristics.
-    recommendations:
-    - Account for ephemeral nature of instances (instances could run on different servers)
-    - Consider dynamic networking (IP addresses are assigned dynamically)
-    - Account for immutability (runtime changes to containers are not persisted across restarts)
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: IR-4 INCIDENT HANDLING
-      strength: 5
-      remarks: Reference to IR-4 INCIDENT HANDLING
-    - reference-id: AUTOMATED INCIDENT HANDLING PROCESSES
-      strength: 5
-      remarks: Reference to AUTOMATED INCIDENT HANDLING PROCESSES
-  family: incident-response
 - id: CNSWP-117
   title: Incident response accounts for appropriate evidence handling and collection of coud native workloads
-  objective: Incident response accounts for appropriate evidence handling and collection of cloud native workloads
-  rationale:
-    risks: []
-    outcomes:
-    - title: Evidence Preservation
-      description: Ensures proper handling and collection of evidence from cloud native workloads
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: IR-5(1) INCIDENT MONITORING
-      strength: 5
-      remarks: Reference to IR-5(1) INCIDENT MONITORING
-    - reference-id: AUTOMATED TRACKING, DATA COLLECTION, AND ANALYSIS
-      strength: 5
-      remarks: Reference to AUTOMATED TRACKING, DATA COLLECTION, AND ANALYSIS
-  family: incident-response
+    - reference-id: IR-5(1)
+      remarks: Incident Monitoring
+  family: Security Assurance
+  statements:
+  - id: CNSWP-117.1
+    text: Implement incident response accounts for appropriate evidence handling and collection of coud native workloads.
 - id: CNSWP-118
   title: Rootless builds are employed
-  objective: Rootless builds are employed
-  rationale:
-    risks: []
-    outcomes:
-    - title: Privilege Reduction
-      description: Reduces risk from privilege escalation attacks
-    - title: Security Isolation
-      description: Provides additional security through non-root execution
-  family: workload-isolation
+  family: Security Assurance
 - id: CNSWP-119
   title: cgroups and system groups are used to isolate workloads and deployments
-  objective: cgroups and system groups are used to isolate workloads and deployments
-  rationale:
-    risks: []
-    outcomes:
-    - title: Resource Isolation
-      description: Provides resource isolation between workloads
-    - title: Security Isolation
-      description: Enhances security through process isolation
-  family: workload-isolation
+  family: Security Assurance
 - id: CNSWP-120
   title: MAC implementations are employed
-  objective: MAC implementations are employed
-  rationale:
-    risks: []
-    outcomes:
-    - title: Mandatory Access Control
-      description: Provides mandatory access control for workloads
-  guideline-parts:
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: AC-3(3)
+      remarks: Access Enforcement
+  family: Security Assurance
+  statements:
   - id: CNSWP-120.1
     title: MAC Implementation
     text: Use Mandatory Access Control (MAC) implementations for workload security.
-    recommendations:
-    - Implement SELinux or AppArmor for MAC
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: AC-3(3) ACCESS ENFORCEMENT
-      strength: 5
-      remarks: Reference to AC-3(3) ACCESS ENFORCEMENT
-    - reference-id: MANDATORY ACCESS CONTROL
-      strength: 5
-      remarks: Reference to MANDATORY ACCESS CONTROL
-  family: workload-isolation
 - id: CNSWP-121
   title: Threat model code and infrastructure
-  objective: Threat model code and infrastructure
-  rationale:
-    risks: []
-    outcomes:
-    - title: Risk Identification
-      description: Identifies potential threats and vulnerabilities
-    - title: Security Design
-      description: Informs security design decisions
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SA-11(2) DEVELOPER TESTING AND EVALUATION
-      strength: 5
-      remarks: Reference to SA-11(2) DEVELOPER TESTING AND EVALUATION
-    - reference-id: THREAT MODELING AND VULNERABILITY ANALYSES
-      strength: 5
-      remarks: Reference to THREAT MODELING AND VULNERABILITY ANALYSES
-  family: threat-modeling
+    - reference-id: SA-11(2)
+      remarks: Developer Testing and Evaluation
+  family: Security Assurance
+  statements:
+  - id: CNSWP-121.1
+    text: Implement threat model code and infrastructure.
 - id: CNSWP-122
   title: Entities are able to independently authenticate other identities
-  objective: Entities are able to independently authenticate other identities
-  rationale:
-    risks: []
-    outcomes:
-    - title: Mutual Authentication
-      description: Enables entities to verify each other's identities
-    - title: Trust Establishment
-      description: Establishes trust between entities
-  guideline-parts:
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: IA-9
+      remarks: Service Identification and Authentication
+  family: Security Assurance
+  statements:
   - id: CNSWP-122.1
     title: Independent Authentication
     text: Entities should be able to independently authenticate other identities.
-    recommendations:
-    - Use Public Key Infrastructure (PKI) for authentication
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: IA-9 SERVICE IDENTIFICATION AND AUTHENTICATION
-      strength: 5
-      remarks: Reference to IA-9 SERVICE IDENTIFICATION AND AUTHENTICATION
-  family: authentication-identity
 - id: CNSWP-123
   title: Each entity can create proof of who the identity is
-  objective: Each entity can create proof of who the identity is
-  rationale:
-    risks: []
-    outcomes:
-    - title: Identity Proof
-      description: Enables entities to prove their identity
-    - title: Non-Repudiation
-      description: Provides proof of identity for audit and compliance
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: IA-9 SERVICE IDENTIFICATION AND AUTHENTICATION
-      strength: 5
-      remarks: Reference to IA-9 SERVICE IDENTIFICATION AND AUTHENTICATION
-  family: authentication-identity
+    - reference-id: IA-9
+      remarks: Service Identification and Authentication
+  family: Security Assurance
+  statements:
+  - id: CNSWP-123.1
+    text: Implement each entity can create proof of who the identity is.
 - id: CNSWP-124
   title: Orchestrator is running on an a trusted OS, BIOS, etc
-  objective: Orchestrator is running on an a trusted OS, BIOS, etc
-  rationale:
-    risks: []
-    outcomes:
-    - title: Trusted Foundation
-      description: Ensures orchestrator runs on trusted hardware and software
-    - title: Security Foundation
-      description: Provides secure foundation for orchestrator operations
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: CM-14 SIGNED COMPONENTS
-      strength: 5
-      remarks: Reference to CM-14 SIGNED COMPONENTS
-  family: orchestrator-security
+    - reference-id: CM-14
+      remarks: Signed Components
+  family: Security Assurance
+  statements:
+  - id: CNSWP-124.1
+    text: Implement orchestrator is running on an a trusted os, bios, etc.
 - id: CNSWP-125
   title: Orchestrator verifies the claims of a container
-  objective: Orchestrator verifies the claims of a container
-  rationale:
-    risks: []
-    outcomes:
-    - title: Container Verification
-      description: Ensures containers meet their claimed security properties
-    - title: Security Verification
-      description: Verifies security functions of containers
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SI-6 SECURITY AND PRIVACY FUNCTION VERIFICATION
-      strength: 5
-      remarks: Reference to SI-6 SECURITY AND PRIVACY FUNCTION VERIFICATION
-  family: orchestrator-security
+    - reference-id: SI-6
+      remarks: Security and Privacy Function Verification
+  family: Security Assurance
+  statements:
+  - id: CNSWP-125.1
+    text: Implement orchestrator verifies the claims of a container.

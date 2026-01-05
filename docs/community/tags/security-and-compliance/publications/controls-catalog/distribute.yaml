@@ -1,593 +1,343 @@
-metadata:
-  id: CNSWP-distribute
-  description: Guidelines for secure distribution of container images, packages, and artifacts including signing, scanning, and registry security.
-  author:
-    id: tag-sc
-    name: TAG Security and Compliance
-    type: Software-Assisted
-  version: 1.0.0
-  mapping-references:
-  - id: NIST-800-53
-    title: NIST SP 800-53r5
-    version: rev5
-    url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
 title: Distribute
 document-type: Best Practice
 families:
-- id: registry-security
-  title: Registry Security
-  description: Guidelines for securing container registries and registry connections.
-- id: signing-integrity
-  title: Signing and Integrity
-  description: Guidelines for signing images, metadata, configurations, and packages, and verifying their integrity.
-- id: vulnerability-scanning
-  title: Vulnerability Scanning and Remediation
-  description: Guidelines for scanning images for vulnerabilities and acting on findings.
-- id: security-updates
-  title: Security Updates
-  description: Guidelines for prioritizing and managing security updates.
-- id: credential-protection
-  title: Credential Protection
-  description: Guidelines for protecting credentials and encryption keys.
-- id: compliance-policies
-  title: Compliance and Policies
-  description: Guidelines for enforcing organizational compliance rules and policies.
-- id: infrastructure-hardening
-  title: Infrastructure Hardening
-  description: Guidelines for hardening infrastructure and images.
-- id: security-testing
-  title: Security Testing
-  description: Guidelines for security testing in CI/CD pipelines.
-- id: test-practices
-  title: Test Practices
-  description: Guidelines for test practices and test suite management.
+- id: Distribute
+  title: Distribute
+  description: Guidelines for secure distribution of container images, packages, and artifacts including signing, scanning, and registry security.
 guidelines:
 - id: CNSWP-100
   title: Registries require mutually authenticated TLS for all registry connections
-  objective: Registries require mutually authenticated TLS for all registry connections
-  rationale:
-    risks: []
-    outcomes:
-    - title: Secure Communication
-      description: Ensures secure communication with registries
-    - title: Mutual Authentication
-      description: Provides bidirectional authentication
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: IA-3(1) CRYPTOGRAPHIC BIDIRECTIONAL AUTHENTICATION
-      strength: 5
-      remarks: Reference to IA-3(1) CRYPTOGRAPHIC BIDIRECTIONAL AUTHENTICATION
-  family: registry-security
+    - reference-id: IA-3(1)
+      remarks: Cryptographic Bidirectional Authentication
+  family: Distribute
+  statements:
+  - id: CNSWP-100.1
+    text: Require mutually authenticated TLS for all registry connections.
 - id: CNSWP-112
   title: pulls from public registries are controlled and only from authorized engineers or internal registries
-  objective: pulls from public registries are controlled and only from authorized engineers or internal registries
-  rationale:
-    risks: []
-    outcomes:
-    - title: Access Control
-      description: Limits access to public registries to authorized personnel
-    - title: Least Privilege
-      description: Ensures only authorized engineers can pull from public registries
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: AC-6(3) LEAST PRIVILEGE
-      strength: 5
-      remarks: Reference to AC-6(3) LEAST PRIVILEGE
-    - reference-id: NETWORK ACCESS TO PRIVILEGED COMMANDS
-      strength: 5
-      remarks: Reference to NETWORK ACCESS TO PRIVILEGED COMMANDS
-  family: registry-security
+    - reference-id: AC-6(3)
+      remarks: Least Privilege
+  family: Distribute
+  statements:
+  - id: CNSWP-112.1
+    text: Implement pulls from public registries are controlled and only from authorized engineers or internal registries.
 - id: CNSWP-79
   title: Trust is verified
-  objective: Trust is verified
-  rationale:
-    risks: []
-    outcomes:
-    - title: Trust Verification
-      description: Ensures trust relationships are properly verified
-  family: registry-security
+  family: Distribute
 - id: CNSWP-80
   title: Artifacts ready for deployment are managed in a staging or pre-prod registry
-  objective: Artifacts ready for deployment are managed in a staging or pre-prod registry
-  rationale:
-    risks: []
-    outcomes:
-    - title: Deployment Control
-      description: Provides controlled staging environment for artifacts
-    - title: Quality Assurance
-      description: Ensures artifacts are validated before production deployment
-  family: registry-security
+  family: Distribute
 - id: CNSWP-84
   title: Artifacts undergoing active development are held in a private registery
-  objective: Artifacts undergoing active development are held in a private registry
-  rationale:
-    risks: []
-    outcomes:
-    - title: Development Isolation
-      description: Isolates development artifacts from production
-    - title: Access Control
-      description: Provides controlled access to development artifacts
-  family: registry-security
+  family: Distribute
 - id: CNSWP-101
   title: image and metadata are signed
-  objective: image and metadata are signed
-  rationale:
-    risks: []
-    outcomes:
-    - title: Image Integrity
-      description: Ensures images and metadata are authentic and unmodified
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
-      strength: 5
-      remarks: Reference to SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
-  family: signing-integrity
+    - reference-id: SI-7
+      remarks: Software, Firmware, and Information Integrity
+  family: Distribute
+  statements:
+  - id: CNSWP-101.1
+    text: Sign images and artifacts to ensure integrity and authenticity.
 - id: CNSWP-102
   title: configuration is signed
-  objective: configuration is signed
-  rationale:
-    risks: []
-    outcomes:
-    - title: Configuration Integrity
-      description: Ensures configurations are authentic and unmodified
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
-      strength: 5
-      remarks: Reference to SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
-  family: signing-integrity
+    - reference-id: SI-7
+      remarks: Software, Firmware, and Information Integrity
+  family: Distribute
+  statements:
+  - id: CNSWP-102.1
+    text: Sign configuration files to ensure integrity.
 - id: CNSWP-103
   title: package is signed
-  objective: package is signed
-  rationale:
-    risks: []
-    outcomes:
-    - title: Package Integrity
-      description: Ensures packages are authentic and unmodified
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
-      strength: 5
-      remarks: Reference to SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
-  family: signing-integrity
+    - reference-id: SI-7
+      remarks: Software, Firmware, and Information Integrity
+  family: Distribute
+  statements:
+  - id: CNSWP-103.1
+    text: Sign packages to verify integrity and authenticity.
 - id: CNSWP-104
   title: Validate integrity of images
-  objective: Validate integrity of images
-  rationale:
-    risks: []
-    outcomes:
-    - title: Integrity Verification
-      description: Ensures images have not been tampered with
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SI-7 SYSTEM & INFORMATION INTEGRITY
-      strength: 5
-      remarks: Reference to SI-7 SYSTEM & INFORMATION INTEGRITY
-  family: signing-integrity
+    - reference-id: SI-7
+      remarks: System and Information Integrity
+  family: Distribute
+  statements:
+  - id: CNSWP-104.1
+    text: Implement validate integrity of images.
 - id: CNSWP-106
   title: Enable image signing key revokation in the event of compromise
-  objective: Enable image signing key revocation in the event of compromise
-  rationale:
-    risks: []
-    outcomes:
-    - title: Key Security
-      description: Enables response to compromised signing keys
-    - title: Integrity Protection
-      description: Prevents use of images signed with compromised keys
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SI-7 SYSTEM & INFORMATION INTEGRITY
-      strength: 5
-      remarks: Reference to SI-7 SYSTEM & INFORMATION INTEGRITY
-  family: signing-integrity
+    - reference-id: SI-7
+      remarks: System and Information Integrity
+  family: Distribute
+  statements:
+  - id: CNSWP-106.1
+    text: Implement enable image signing key revokation in the event of compromise.
 - id: CNSWP-89
   title: Sign pipeline metadata
-  objective: Sign pipeline metadata
-  rationale:
-    risks: []
-    outcomes:
-    - title: Metadata Integrity
-      description: Ensures pipeline metadata is authentic and unmodified
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
-      strength: 5
-      remarks: Reference to SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
-  family: signing-integrity
+    - reference-id: SI-7
+      remarks: Software, Firmware, and Information Integrity
+  family: Distribute
+  statements:
+  - id: CNSWP-89.1
+    text: Sign pipeline metadata to ensure integrity.
 - id: CNSWP-105
   title: Scan images for vulnerabilities and malware
-  objective: SA-3
-  rationale:
-    risks: []
-    outcomes:
-    - title: Vulnerability Detection
-      description: Identifies vulnerabilities and malware in images
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: RA-5 VULNERABILITY MONITORING AND SCANNING
-      strength: 5
-      remarks: Reference to RA-5 VULNERABILITY MONITORING AND SCANNING
-  family: vulnerability-scanning
+    - reference-id: RA-5
+      remarks: Vulnerability Monitoring and Scanning
+  family: Distribute
+  statements:
+  - id: CNSWP-105.1
+    text: Scan artifacts for vulnerabilities before distribution or deployment.
 - id: CNSWP-109
   title: Container image scanning findings are acted upon
-  objective: Container image scanning findings are acted upon
-  rationale:
-    risks: []
-    outcomes:
-    - title: Remediation
-      description: Ensures vulnerabilities are addressed
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SI-2(3) SYSTEM & INFORMATION INTEGRITY
-      strength: 5
-      remarks: Reference to SI-2(3) SYSTEM & INFORMATION INTEGRITY
-  family: vulnerability-scanning
+    - reference-id: SI-2(3)
+      remarks: System and Information Integrity
+  family: Distribute
+  statements:
+  - id: CNSWP-109.1
+    text: Scan artifacts for vulnerabilities before distribution or deployment.
 - id: CNSWP-114
   title: At-risk applications are prioritized for remediation by the exploit maturity and vulnerable path presence in addition to the CVSS score
-  objective: At-risk applications are prioritized for remediation by the exploit maturity and vulnerable path presence in addition to the CVSS score
-  rationale:
-    risks: []
-    outcomes:
-    - title: Risk-Based Prioritization
-      description: Ensures most critical vulnerabilities are addressed first
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SI-2(3) SYSTEM & INFORMATION INTEGRITY
-      strength: 5
-      remarks: Reference to SI-2(3) SYSTEM & INFORMATION INTEGRITY
-  family: vulnerability-scanning
+    - reference-id: SI-2(3)
+      remarks: System and Information Integrity
+  family: Distribute
+  statements:
+  - id: CNSWP-114.1
+    text: Implement at-risk applications are prioritized for remediation by the exploit maturity and vulnerable path presence in addition to the cvss score.
 - id: CNSWP-91
   title: Images are scanned within the CI pipeline
-  objective: SA-3
-  rationale:
-    risks: []
-    outcomes:
-    - title: Early Detection
-      description: Identifies vulnerabilities early in the development process
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: RA-5 VULNERABILITY MONITORING AND SCANNING
-      strength: 5
-      remarks: Reference to RA-5 VULNERABILITY MONITORING AND SCANNING
-  family: vulnerability-scanning
+    - reference-id: RA-5
+      remarks: Vulnerability Monitoring and Scanning
+  family: Distribute
+  statements:
+  - id: CNSWP-91.1
+    text: Scan artifacts for vulnerabilities before distribution or deployment.
 - id: CNSWP-107
   title: Security updates are prioritized
-  objective: Security updates are prioritized
-  rationale:
-    risks: []
-    outcomes:
-    - title: Timely Updates
-      description: Ensures security updates are applied promptly
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SI-2(3) SYSTEM & INFORMATION INTEGRITY
-      strength: 5
-      remarks: Reference to SI-2(3) SYSTEM & INFORMATION INTEGRITY
-  family: security-updates
+    - reference-id: SI-2(3)
+      remarks: System and Information Integrity
+  family: Distribute
+  statements:
+  - id: CNSWP-107.1
+    text: Implement security updates are prioritized.
 - id: CNSWP-108
   title: HSMs or credential managers should be used for protecting credentials
-  objective: HSMs or credential managers should be used for protecting credentials
-  rationale:
-    risks: []
-    outcomes:
-    - title: Credential Security
-      description: Provides secure storage for credentials
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SC-12(3) SYSTEMS & COMMUNICATION PROTECTION
-      strength: 5
-      remarks: Reference to SC-12(3) SYSTEMS & COMMUNICATION PROTECTION
-  family: credential-protection
+    - reference-id: SC-12(3)
+      remarks: Systems and Communication Protection
+  family: Distribute
+  statements:
+  - id: CNSWP-108.1
+    text: Use hardware security modules to physically protect cryptographic secrets.
 - id: CNSWP-113
   title: Image encryption is coupled with key management attestation and/or authorization and credential distribution
-  objective: SC-12(3)
-  rationale:
-    risks: []
-    outcomes:
-    - title: Encryption Management
-      description: Ensures proper key management for encrypted images
-  guideline-parts:
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SC-12(2)
+      remarks: Cryptographic Key Establishment and Management
+  family: Distribute
+  statements:
   - id: CNSWP-113.1
     title: Encryption and Key Management
     text: Couple image encryption with key management, attestation, and authorization.
-    recommendations:
-    - Useful for compliance use cases such as geo-fencing or export control and digital rights media management
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: SC-12(2) CRYPTOGRAPHIC KEY ESTABLISHMENT AND MANAGEMENT
-      strength: 5
-      remarks: Reference to SC-12(2) CRYPTOGRAPHIC KEY ESTABLISHMENT AND MANAGEMENT
-    - reference-id: SYMMETRIC & ASYMMETRIC KEYS
-      strength: 5
-      remarks: Reference to SYMMETRIC & ASYMMETRIC KEYS
-  family: credential-protection
 - id: CNSWP-110
   title: organizational compliance rules are enforced
-  objective: organizational compliance rules are enforced
-  rationale:
-    risks: []
-    outcomes:
-    - title: Compliance
-      description: Ensures organizational compliance requirements are met
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: PL-1 POLICY AND PROCEDURES
-      strength: 5
-      remarks: Reference to PL-1 POLICY AND PROCEDURES
-  family: compliance-policies
+    - reference-id: PL-1
+      remarks: Policy and Procedures
+  family: Distribute
+  statements:
+  - id: CNSWP-110.1
+    text: Implement organizational compliance rules are enforced.
 - id: CNSWP-92
   title: Vulnerability scans are coupled with pipeline compliance rules
-  objective: Vulnerability scans are coupled with pipeline compliance rules
-  rationale:
-    risks: []
-    outcomes:
-    - title: Policy Enforcement
-      description: Ensures compliance rules are enforced in the pipeline
-  guideline-parts:
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-1
+      remarks: Policy and Procedures
+  family: Distribute
+  statements:
   - id: CNSWP-92.1
     title: Compliance Integration
     text: Couple vulnerability scans with pipeline compliance rules.
-    recommendations:
-    - Prevent insecure images and artifacts from being deployed
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: SA-1 POLICY AND PROCEDURES
-      strength: 5
-      remarks: Reference to SA-1 POLICY AND PROCEDURES
-  family: compliance-policies
 - id: CNSWP-111
   title: Incremental hardening of the infrastructure is employed
-  objective: Incremental hardening of the infrastructure is employed
-  rationale:
-    risks: []
-    outcomes:
-    - title: Continuous Improvement
-      description: Continuously improves infrastructure security
-  family: infrastructure-hardening
+  family: Distribute
 - id: CNSWP-81
   title: container images are hardened following best practices
-  objective: container images are hardened following best practices
-  rationale:
-    risks: []
-    outcomes:
-    - title: Image Security
-      description: Ensures images follow security best practices
-  guideline-parts:
+  family: Distribute
+  statements:
   - id: CNSWP-81.1
     title: Image Hardening Practices
     text: Harden container images following security best practices.
-    recommendations:
-    - Images contain least permissions to remain functional
-    - Do not allow for shell access
-    - Do not include unnecessary libraries and dependencies
-    - Do not bind mount files in from the host
-  family: infrastructure-hardening
 - id: CNSWP-82
   title: Static application security testing (SAST) is performed
-  objective: Static application security testing (SAST) is performed
-  rationale:
-    risks: []
-    outcomes:
-    - title: Code Security
-      description: Identifies security issues in source code
-  guideline-parts:
+  family: Distribute
+  statements:
   - id: CNSWP-82.1
     title: SAST Implementation
     text: Perform static application security testing.
-    recommendations:
-    - Perform linting and fuzzing
-  family: security-testing
 - id: CNSWP-85
   title: Scan application manifests in CI pipeline
-  objective: Scan application manifests in CI pipeline
-  rationale:
-    risks: []
-    outcomes:
-    - title: Manifest Security
-      description: Identifies security issues in application manifests
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: RA-5 VULNERABILITY MONITORING AND SCANNING
-      strength: 5
-      remarks: Reference to RA-5 VULNERABILITY MONITORING AND SCANNING
-  family: security-testing
+    - reference-id: RA-5
+      remarks: Vulnerability Monitoring and Scanning
+  family: Distribute
+  statements:
+  - id: CNSWP-85.1
+    text: Scan artifacts for vulnerabilities before distribution or deployment.
 - id: CNSWP-86
   title: CI server's for sensitive workloads are isolated from other workloads
-  objective: CI server's for sensitive workloads are isolated from other workloads
-  rationale:
-    risks: []
-    outcomes:
-    - title: Workload Isolation
-      description: Isolates sensitive workloads from other workloads
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SC-39 PROCESS ISOLATION
-      strength: 5
-      remarks: Reference to SC-39 PROCESS ISOLATION
-  family: security-testing
+    - reference-id: SC-39
+      remarks: Process Isolation
+  family: Distribute
+  statements:
+  - id: CNSWP-86.1
+    text: Implement ci server's for sensitive workloads are isolated from other workloads.
 - id: CNSWP-87
   title: Builds requiring elevated privileges must run on dedicated servers
-  objective: Builds requiring elevated privileges must run on dedicated servers
-  rationale:
-    risks: []
-    outcomes:
-    - title: Privilege Isolation
-      description: Isolates privileged builds from other builds
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SC-39 PROCESS ISOLATION
-      strength: 5
-      remarks: Reference to SC-39 PROCESS ISOLATION
-  family: security-testing
+    - reference-id: SC-39
+      remarks: Process Isolation
+  family: Distribute
+  statements:
+  - id: CNSWP-87.1
+    text: Implement builds requiring elevated privileges must run on dedicated servers.
 - id: CNSWP-88
   title: Build policies are enforced on the CI pipeline
-  objective: Build policies are enforced on the CI pipeline
-  rationale:
-    risks: []
-    outcomes:
-    - title: Policy Enforcement
-      description: Ensures build policies are consistently enforced
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SA-1 POLICY AND PROCEDURES
-      strength: 5
-      remarks: Reference to SA-1 POLICY AND PROCEDURES
-  family: security-testing
+    - reference-id: SA-1
+      remarks: Policy and Procedures
+  family: Distribute
+  statements:
+  - id: CNSWP-88.1
+    text: Implement build policies are enforced on the ci pipeline.
 - id: CNSWP-90
   title: Build stages are verified prior to the next stage executing
-  objective: Build stages are verified prior to the next stage executing
-  rationale:
-    risks: []
-    outcomes:
-    - title: Stage Verification
-      description: Ensures each build stage is verified before proceeding
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
-      strength: 5
-      remarks: Reference to SI-7 SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
-  family: security-testing
+    - reference-id: SI-7
+      remarks: Software, Firmware, and Information Integrity
+  family: Distribute
+  statements:
+  - id: CNSWP-90.1
+    text: Implement build stages are verified prior to the next stage executing.
 - id: CNSWP-93
   title: Dynamic application security testing (DAST) is performed
-  objective: Dynamic application security testing (DAST) is performed
-  rationale:
-    risks: []
-    outcomes:
-    - title: Runtime Security
-      description: Identifies security issues in running applications
-  guideline-parts:
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SA-11(8)
+      remarks: (8) & (9) Interactive Application Security Testing
+  family: Distribute
+  statements:
   - id: CNSWP-93.1
     title: DAST Implementation
     text: Perform dynamic application security testing.
-    recommendations:
-    - Use mocking for testing
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: SA-11 (8) & (9) INTERACTIVE APPLICATION SECURITY TESTING
-      strength: 5
-      remarks: Reference to SA-11 (8) & (9) INTERACTIVE APPLICATION SECURITY TESTING
-  family: security-testing
 - id: CNSWP-94
   title: Application instrumentation is employed
-  objective: Application instrumentation is employed
-  rationale:
-    risks: []
-    outcomes:
-    - title: Monitoring
-      description: Enables monitoring of application behavior
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SI-4 SYSTEM MONITORING
-      strength: 5
-      remarks: Reference to SI-4 SYSTEM MONITORING
-  family: security-testing
+    - reference-id: SI-4
+      remarks: System Monitoring
+  family: Distribute
+  statements:
+  - id: CNSWP-94.1
+    text: Implement application instrumentation is employed.
 - id: CNSWP-95
   title: Automated test results map back to requirements
-  objective: Automated test results map back to requirements
-  rationale:
-    risks: []
-    outcomes:
-    - title: Requirement Traceability
-      description: Ensures tests cover all requirements
-  guideline-parts:
+  family: Distribute
+  statements:
   - id: CNSWP-95.1
     title: Test Mapping
     text: Map automated test results back to requirements.
-    recommendations:
-    - Requirements include feature, function, security, and compliance
-  family: security-testing
 - id: CNSWP-96
   title: Infrastructure security tests must be employed
-  objective: Infrastructure security tests must be employed
-  rationale:
-    risks: []
-    outcomes:
-    - title: Infrastructure Security
-      description: Identifies security issues in infrastructure
-  guideline-parts:
+  family: Distribute
+  statements:
   - id: CNSWP-96.1
     title: Infrastructure Testing
     text: Employ infrastructure security tests.
-    recommendations:
-    - Test for firewall rules open to the world
-    - Test for overprivileged Identity & Access Management (IAM) policies
-    - Test for unauthenticated endpoints
-  family: security-testing
 - id: CNSWP-97
   title: Tests to verify the security health are executed at time of build and at time of deploy
-  objective: Tests to verify the security health are executed at time of build and at time of deploy
-  rationale:
-    risks: []
-    outcomes:
-    - title: Continuous Security
-      description: Ensures security is verified throughout the lifecycle
-  guideline-parts:
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-4
+      remarks: System Monitoring
+  family: Distribute
+  statements:
   - id: CNSWP-97.1
     title: Security Health Testing
     text: Execute security health tests at build and deploy time.
-    recommendations:
-    - Evaluate any changes or regressions that may have occurred throughout the lifecycle
-  guideline-mappings:
-  - reference-id: NIST-800-53
-    entries:
-    - reference-id: SI-4 SYSTEM MONITORING
-      strength: 5
-      remarks: Reference to SI-4 SYSTEM MONITORING
-  family: security-testing
 - id: CNSWP-98
   title: IaC is subject to the same pipeline policy controls as application code
-  objective: IaC is subject to the same pipeline policy controls as application code
-  rationale:
-    risks: []
-    outcomes:
-    - title: Infrastructure as Code Security
-      description: Ensures infrastructure code is subject to same security controls
-  family: security-testing
+  family: Distribute
 - id: CNSWP-99
   title: Security testing is automated
-  objective: CA-8
-  rationale:
-    risks: []
-    outcomes:
-    - title: Automation
-      description: Ensures security testing is consistently performed
   guideline-mappings:
   - reference-id: NIST-800-53
     entries:
-    - reference-id: SA-11 DEVELOPER TESTING AND EVALUATION
-      strength: 5
-      remarks: Reference to SA-11 DEVELOPER TESTING AND EVALUATION
-  family: security-testing
+    - reference-id: SA-11
+      remarks: Developer Testing and Evaluation
+  family: Distribute
+  statements:
+  - id: CNSWP-99.1
+    text: Implement security testing is automated.
 - id: CNSWP-83
   title: Test suites follow the test pyramid
-  objective: Test suites follow the test pyramid
-  rationale:
-    risks: []
-    outcomes:
-    - title: Test Efficiency
-      description: Ensures efficient test coverage through test pyramid approach
-  family: test-practices
+  family: Distribute
