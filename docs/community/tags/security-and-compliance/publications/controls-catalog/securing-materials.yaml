@@ -1,9 +1,3 @@
-title: Securing Materials
-document-type: Best Practice
-families:
-- id: Securing Materials
-  title: Securing Materials
-  description: Guidelines for securing materials, including signing, verification, and freshness validation.
 guidelines:
 - id: CNSWP-173
   title: Verify third party artefacts and open source libraries

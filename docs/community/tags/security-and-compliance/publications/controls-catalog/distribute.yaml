@@ -1,9 +1,3 @@
-title: Distribute
-document-type: Best Practice
-families:
-- id: Distribute
-  title: Distribute
-  description: Guidelines for secure distribution of container images, packages, and artifacts including signing, scanning, and registry security.
 guidelines:
 - id: CNSWP-100
   title: Registries require mutually authenticated TLS for all registry connections

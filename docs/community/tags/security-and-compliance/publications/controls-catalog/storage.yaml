@@ -1,9 +1,3 @@
-title: Storage
-document-type: Best Practice
-families:
-- id: Storage
-  title: Storage
-  description: Guidelines for securing storage, including signing, verification, and freshness validation.
 guidelines:
 - id: CNSWP-127
   title: Storage control plane management interface requires mutual authentication and TLS for connections

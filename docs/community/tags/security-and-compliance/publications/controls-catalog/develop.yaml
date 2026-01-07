@@ -1,9 +1,3 @@
-title: Develop
-document-type: Best Practice
-families:
-- id: Develop
-  title: Develop
-  description: Guidelines for secure development practices including environment management, testing, and code review.
 guidelines:
 - id: CNSWP-63
   title: Establish a dedicated Production environment

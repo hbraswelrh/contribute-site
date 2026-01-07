@@ -1,9 +1,3 @@
-title: Compute
-document-type: Best Practice
-families:
-- id: Compute
-  title: Compute
-  description: Guidelines for securing compute infrastructure including bootstrapping, isolation, monitoring, and runtime security.
 guidelines:
 - id: CNSWP-22
   title: Bootstrapping is employed to verify correct physical and logical location of compute

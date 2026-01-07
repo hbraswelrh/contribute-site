@@ -1,9 +1,3 @@
-title: Deploy
-document-type: Best Practice
-families:
-- id: Deploy
-  title: Deploy
-  description: Guidelines for securing software deployments, ensuring artifact verification, freshness validation, and secure update management.
 guidelines:
 - id: CNSWP-57
   title: trust confirmation verifies the image has a valid signature from an authorized source

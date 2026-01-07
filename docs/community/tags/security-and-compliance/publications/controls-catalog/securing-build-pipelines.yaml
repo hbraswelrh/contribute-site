@@ -1,9 +1,3 @@
-title: Securing Build Pipelines
-document-type: Best Practice
-families:
-- id: Securing Build Pipelines
-  title: Securing Build Pipelines
-  description: Guidelines for securing build pipelines, ensuring cryptographic guarantees, validation, and secure build environments.
 guidelines:
 - id: CNSWP-149
   title: Cryptographically guarantee policy adherence

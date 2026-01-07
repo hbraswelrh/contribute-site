@@ -1,9 +1,3 @@
-title: Access
-document-type: Best Practice
-families:
-- id: Access
-  title: Access Control
-  description: Guidelines for access control models and identity forwarding.
 guidelines:
 - id: CNSWP-1
   title: Secrets are injected at runtime

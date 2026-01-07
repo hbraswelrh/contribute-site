@@ -1,9 +1,3 @@
-title: Securing Artefacts
-document-type: Best Practice
-families:
-- id: Securing Artefacts
-  title: Securing Artefacts
-  description: Guidelines for securing artefacts, including signing, verification, and freshness validation.
 guidelines:
 - id: CNSWP-141
   title: Every step in the build process should be signed/attested for process integrity

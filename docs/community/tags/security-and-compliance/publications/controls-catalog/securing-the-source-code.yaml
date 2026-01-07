@@ -1,9 +1,3 @@
-title: Securing the Source Code
-document-type: Best Practice
-families:
-- id: Securing the Source Code
-  title: Securing the Source Code
-  description: Guidelines for securing the source code, including signing, verification, and freshness validation.
 guidelines:
 - id: CNSWP-182
   title: Commits and tags are signed

@@ -1,9 +1,3 @@
-title: Securing Deployments
-document-type: Best Practice
-families:
-- id: Securing Deployments
-  title: Securing Deployments
-  description: Guidelines for securing software deployments, ensuring artifact verification, freshness validation, and secure update management.
 guidelines:
 - id: CNSWP-170
   title: Ensure clients can perform verification of artefacts and associated metadata

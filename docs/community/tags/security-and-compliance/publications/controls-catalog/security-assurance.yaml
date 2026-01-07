@@ -1,9 +1,3 @@
-title: Security Assurance
-document-type: Best Practice
-families:
-- id: Security Assurance
-  title: Security Assurance
-  description: Guidelines for security assurance, including signing, verification, and freshness validation.
 guidelines:
 - id: CNSWP-115
   title: Network policies enforce east-west network communication within the container deployment is limited to only that which is authorized for access
