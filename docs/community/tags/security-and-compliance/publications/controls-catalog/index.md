@@ -276,6 +276,12 @@ HSMs are used to physically protect cryptographic secrets with an encryption key
 - If this is not possible, software-based credential managers should be used.
 
 
+**See Also**
+
+- [`CNSC-16`](#cnsc-16)
+- [`CNSC-19`](#cnsc-19)
+
+
 ---
 
 
@@ -303,6 +309,12 @@ Secrets should have a short expiration period or time to live
 **Recommendations**
 
 - Leverage tool-specific capabilities of secret manager
+
+
+**See Also**
+
+- [`CNSC-19`](#cnsc-19)
+- [`CNSC-15`](#cnsc-15)
 
 
 ---
@@ -385,6 +397,12 @@ Long-lived secrets adhere to periodic rotation and revocation
 **Recommendations**
 
 - Long-lived secrets are not recommended, but some capabilities require them
+
+
+**See Also**
+
+- [`CNSC-15`](#cnsc-15)
+- [`CNSC-16`](#cnsc-16)
 
 
 ---
