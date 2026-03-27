@@ -112,7 +112,7 @@ Guidelines for access control models and identity forwarding.
 
 Secrets are injected at runtime
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-1` →](./cnsc-nist-800-53-by-family#cnsc-1)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-1`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -128,7 +128,7 @@ Secrets are injected at runtime
 
 ABAC and RBAC are used
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-10` →](./cnsc-nist-800-53-by-family#cnsc-10)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-10`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -149,7 +149,7 @@ End user identity is capable of being accepted, consumed, and forwarded on for c
 - This can be achieved through the use of identity documents and tokens.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-11` →](./cnsc-nist-800-53-by-family#cnsc-11)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-11`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -168,7 +168,7 @@ End user identity is capable of being accepted, consumed, and forwarded on for c
 
 All cluster and workloads operators are authenticated
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-12` →](./cnsc-nist-800-53-by-family#cnsc-12)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-12`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -187,7 +187,7 @@ All cluster and workloads operators are authenticated
 
 Cluster and workloads operate actions are evaluated against access control policies governing context, purpose, and output
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-13` →](./cnsc-nist-800-53-by-family#cnsc-13)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-13`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -203,7 +203,7 @@ Cluster and workloads operate actions are evaluated against access control polic
 
 Identity federation uses multi-factor authentication
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-14` →](./cnsc-nist-800-53-by-family#cnsc-14)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-14`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -227,7 +227,7 @@ HSMs are used to physically protect cryptographic secrets with an encryption key
 - If this is not possible, software-based credential managers should be used.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-15` →](./cnsc-nist-800-53-by-family#cnsc-15)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-15`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -251,7 +251,7 @@ Secrets should have a short expiration period or time to live
 - Leverage tool-specific capabilities of secret manager
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-16` →](./cnsc-nist-800-53-by-family#cnsc-16)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-16`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -275,7 +275,7 @@ Time to live and expiration period on secrets is verified to prevent reuse
 - Leverage tool-specific capabilities of secret manager
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-17` →](./cnsc-nist-800-53-by-family#cnsc-17)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-17`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -294,7 +294,7 @@ Time to live and expiration period on secrets is verified to prevent reuse
 
 Secrets management systems are highly available
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-18` →](./cnsc-nist-800-53-by-family#cnsc-18)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-18`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -318,7 +318,7 @@ Long-lived secrets adhere to periodic rotation and revocation
 - Long-lived secrets are not recommended, but some capabilities require them
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-19` →](./cnsc-nist-800-53-by-family#cnsc-19)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-19`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -334,7 +334,7 @@ Long-lived secrets adhere to periodic rotation and revocation
 
 Applications and workloads are explicitly authorized to communicate with each other using mutual authentication
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-2` →](./cnsc-nist-800-53-by-family#cnsc-2)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-2`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -353,7 +353,7 @@ Applications and workloads are explicitly authorized to communicate with each ot
 
 Secrets are distributed through secured communication channels protected commensurate with the level of access or data they are protecting
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-20` →](./cnsc-nist-800-53-by-family#cnsc-20)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-20`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -369,7 +369,7 @@ Secrets are distributed through secured communication channels protected commens
 
 Identity federation uses multi-factor authentication for human users
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-208` →](./cnsc-nist-800-53-by-family#cnsc-208)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-208`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -393,7 +393,7 @@ Secrets injected at runtime are masked or dropped from logs, audit, or system du
 - Even short lived secrets may be reused if caught in time by an interested attacker. Logs, audit, and systems dumps (i.e. in-memory shared volumes instead of environment variables) are all areas where runtime injected secrets show up
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-21` →](./cnsc-nist-800-53-by-family#cnsc-21)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-21`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -409,7 +409,7 @@ Secrets injected at runtime are masked or dropped from logs, audit, or system du
 
 Keys are rotated frequently
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-3` →](./cnsc-nist-800-53-by-family#cnsc-3)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-3`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -425,7 +425,7 @@ Keys are rotated frequently
 
 Key lifespan is short
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-4` →](./cnsc-nist-800-53-by-family#cnsc-4)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-4`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -446,7 +446,7 @@ Credentials and keys protecting sensitive workloads (health/finance/etc) are gen
 - KMS and HMS are common technologies to achieve this. FIPS 140-2 compliance is strongly suggested. Cloud KMS tends to be FIPS 140-2 Level 2 or greater.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-5` →](./cnsc-nist-800-53-by-family#cnsc-5)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-5`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -462,7 +462,7 @@ Credentials and keys protecting sensitive workloads (health/finance/etc) are gen
 
 Authentication and authorization are determined independently
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-6` →](./cnsc-nist-800-53-by-family#cnsc-6)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-6`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -478,7 +478,7 @@ Authentication and authorization are determined independently
 
 Authentication and authorization are enforced independently
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-7` →](./cnsc-nist-800-53-by-family#cnsc-7)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-7`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -499,7 +499,7 @@ Access control and file permissions are updated in real-time
 - where possible as caching may permit unauthorized access
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-8` →](./cnsc-nist-800-53-by-family#cnsc-8)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-8`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -515,7 +515,7 @@ Access control and file permissions are updated in real-time
 
 Authorization for workloads is granted based on attributes and roles/permissions previously assigned
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-9` →](./cnsc-nist-800-53-by-family#cnsc-9)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-9`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -548,7 +548,7 @@ Bootstrapping is employed to verify correct physical and logical location of com
 - Secure Boot with TPM 2.0 or similar control
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-22` →](./cnsc-nist-800-53-by-family#cnsc-22)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-22`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -572,7 +572,7 @@ Disparate data sensitive workloads are not run on the same host OS kernel
 - There are at least three implementing controls possible: workloads may be  separated by running in a separate cluster, on a separate node, or by implementing pods in independent VMs. It is also possible to emulate the kernel via an application kernel (e.g. gvisor)
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-23` →](./cnsc-nist-800-53-by-family#cnsc-23)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-23`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -588,7 +588,7 @@ Disparate data sensitive workloads are not run on the same host OS kernel
 
 Use a service mesh that eliminates implicit trust through data-in-motion protection (i.e. confidentiality, integrity, authentication, authorization)
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-233` →](./cnsc-nist-800-53-by-family#cnsc-233)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-233`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -612,7 +612,7 @@ Monitor and detect any changes to the initial configurations made in runtime
 - Preventative controls should be the primary control. Detective controls monitoring  filesystem changes should be used to verify primary controls are operating properly.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-24` →](./cnsc-nist-800-53-by-family#cnsc-24)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-24`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -636,7 +636,7 @@ API auditing is enabled with a filter for a specific set of API Groups or verbs
 - API audits of the application, kubernetes API server, and kernel should be implemented.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-25` →](./cnsc-nist-800-53-by-family#cnsc-25)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-25`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -660,7 +660,7 @@ Container specific operating systems are in use
 - A read-only OS with other services disabled. This provides isolation and resource confinement  that enables developers to run isolated applications on a shared host kernel
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-26` →](./cnsc-nist-800-53-by-family#cnsc-26)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-26`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -684,7 +684,7 @@ The hardware root of trust is based in a Trusted Platform Module (TPM) or virtua
 - Ensure HW root of trust extends to the host OS kernel, modules, system images, container runtimes, and all software on the system.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-27` →](./cnsc-nist-800-53-by-family#cnsc-27)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-27`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -708,7 +708,7 @@ Minimize administrative access to the control plane
 - Ensure both users and pods have the minimum necessary access
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-28` →](./cnsc-nist-800-53-by-family#cnsc-28)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-28`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -732,7 +732,7 @@ Object level and resource requests and limits are controlled through cgroups
 - helps prevent exhaustion of node and cluster level resources by one misbehaving workload due to an intentional (e.g., fork bomb attack or cryptocurrency mining) or unintentional (e.g., reading a large file in memory without input validation, horizontal autoscaling to exhaust compute resources) issue
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-29` →](./cnsc-nist-800-53-by-family#cnsc-29)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-29`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -756,7 +756,7 @@ Systems processing alerts are periodically tuned for false positives
 - to avoid alert flooding, fatigue, and false negatives after security incidents that were not detected by the system
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-30` →](./cnsc-nist-800-53-by-family#cnsc-30)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-30`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -780,7 +780,7 @@ All orchestrator control plane components are configured to communicate via mutu
 - In unfederated clusters, the CA should be used exclusively for the current cluster.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-31` →](./cnsc-nist-800-53-by-family#cnsc-31)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-31`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -804,7 +804,7 @@ Only sanctioned capabilities and system calls (e.g. seccomp filters), are allowe
 - Additional tooling should be installed that go beyond k8s capabilities to limit system calls. E.g. Falco.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-32` →](./cnsc-nist-800-53-by-family#cnsc-32)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-32`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -823,7 +823,7 @@ Only sanctioned capabilities and system calls (e.g. seccomp filters), are allowe
 
 Changes to critical mount points and files are prevented, monitored, and alerted
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-33` →](./cnsc-nist-800-53-by-family#cnsc-33)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-33`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -842,7 +842,7 @@ Changes to critical mount points and files are prevented, monitored, and alerted
 
 Runtime configuration control prevents changes to binaries, certificates, and remote access configurations
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-34` →](./cnsc-nist-800-53-by-family#cnsc-34)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-34`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -861,7 +861,7 @@ Runtime configuration control prevents changes to binaries, certificates, and re
 
 Runtime configuration prevents ingress and egress network access for containers to only what is required to operate
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-35` →](./cnsc-nist-800-53-by-family#cnsc-35)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-35`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -880,7 +880,7 @@ Runtime configuration prevents ingress and egress network access for containers 
 
 Policies are defined that restrict communications to only occur between sanctioned microservice pairs
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-36` →](./cnsc-nist-800-53-by-family#cnsc-36)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-36`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -899,7 +899,7 @@ Policies are defined that restrict communications to only occur between sanction
 
 Use a policy agent to control and enforce authorized, signed container images
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-37` →](./cnsc-nist-800-53-by-family#cnsc-37)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-37`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -918,7 +918,7 @@ Use a policy agent to control and enforce authorized, signed container images
 
 Use a policy agent to control provenance assurance for operational workloads
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-38` →](./cnsc-nist-800-53-by-family#cnsc-38)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-38`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -934,7 +934,7 @@ Use a policy agent to control provenance assurance for operational workloads
 
 Use a service mesh that eliminates implicit trust through data-in-motion encryption (data in transit)
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-39` →](./cnsc-nist-800-53-by-family#cnsc-39)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-39`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -958,7 +958,7 @@ Use components that detect, track, aggregate and report system calls and network
 - should be leveraged to look for unexpected or malicious behavior
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-40` →](./cnsc-nist-800-53-by-family#cnsc-40)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-40`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -982,7 +982,7 @@ Workloads should be dynamically scanned to detect malicious or insidious behavio
 - Events such as an extended sleep command that executes data exfiltration from etcd after the workload has been running for X amount of days are not expected in the majority of environments and therefore are not included in security tests. The aspect that workloads can have time or event delayed trojan horses is only detectable by comparing to baseline expected behavior, often discovered during thorough activity and scan monitoring
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-41` →](./cnsc-nist-800-53-by-family#cnsc-41)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-41`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1006,7 +1006,7 @@ Environments are continuously scanned to detect new vulnerabilities in workloads
 - Vulnerabilities are constantly being discovered, just because it wasn't vulnerable at deploy, doesn't mean it won't be vulnerable in two weeks
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-42` →](./cnsc-nist-800-53-by-family#cnsc-42)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-42`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1025,7 +1025,7 @@ Environments are continuously scanned to detect new vulnerabilities in workloads
 
 Actionable audit events are generated that correlate/contextualize data from logs into "information" that can drive decision trees/incident response
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-43` →](./cnsc-nist-800-53-by-family#cnsc-43)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-43`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1044,7 +1044,7 @@ Actionable audit events are generated that correlate/contextualize data from log
 
 Segregation of duties and the principle of least privilege is enforced
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-44` →](./cnsc-nist-800-53-by-family#cnsc-44)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-44`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1063,7 +1063,7 @@ Segregation of duties and the principle of least privilege is enforced
 
 Non-compliant violations are detected based on a pre-configured set of rules defined by the organization's policies
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-45` →](./cnsc-nist-800-53-by-family#cnsc-45)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-45`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1082,7 +1082,7 @@ Non-compliant violations are detected based on a pre-configured set of rules def
 
 Native secret stores encrypt with keys from an external Key Management Store (KMS)
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-46` →](./cnsc-nist-800-53-by-family#cnsc-46)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-46`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1106,7 +1106,7 @@ Native secret stores are not configured for base64 encoding or stored in clear-t
 - Encoding is not encryption
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-47` →](./cnsc-nist-800-53-by-family#cnsc-47)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-47`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1125,7 +1125,7 @@ Native secret stores are not configured for base64 encoding or stored in clear-t
 
 Network traffic to malicious domains is detected and denied
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-48` →](./cnsc-nist-800-53-by-family#cnsc-48)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-48`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1144,7 +1144,7 @@ Network traffic to malicious domains is detected and denied
 
 Use encrypted containers for sensitive sources, methods, and data
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-49` →](./cnsc-nist-800-53-by-family#cnsc-49)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-49`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1163,7 +1163,7 @@ Use encrypted containers for sensitive sources, methods, and data
 
 Use SBOMs to identify current deployments of vulnerable libraries, dependencies, and packages
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-50` →](./cnsc-nist-800-53-by-family#cnsc-50)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-50`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1182,7 +1182,7 @@ Use SBOMs to identify current deployments of vulnerable libraries, dependencies,
 
 Processes must execute only functions explicitly defined in an allow list
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-51` →](./cnsc-nist-800-53-by-family#cnsc-51)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-51`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1201,7 +1201,7 @@ Processes must execute only functions explicitly defined in an allow list
 
 Functions are not be allowed to make changes to critical file system mount points
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-52` →](./cnsc-nist-800-53-by-family#cnsc-52)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-52`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1225,7 +1225,7 @@ Function access is only permitted to sanctioned services
 - Either through networking restrictions or least privilege in permission models
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-53` →](./cnsc-nist-800-53-by-family#cnsc-53)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-53`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1244,7 +1244,7 @@ Function access is only permitted to sanctioned services
 
 Egress network connection is monitored to detect and prevent access to C&C (command and control) and other malicious network domains
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-54` →](./cnsc-nist-800-53-by-family#cnsc-54)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-54`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1268,7 +1268,7 @@ Ingress network inspection is employed detect and remove malicious payloads and 
 - For instance, SQL injection attacks can be detected using inspection.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-55` →](./cnsc-nist-800-53-by-family#cnsc-55)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-55`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1292,7 +1292,7 @@ Serverless functions are run in tenant-based resource or performance isolation f
 - This may impact the performance due to limitations in the address space available to the isolation environment and should be considered for only the most sensitive workloads.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-56` →](./cnsc-nist-800-53-by-family#cnsc-56)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-56`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1317,7 +1317,7 @@ Guidelines for securing software deployments, including artifact verification, r
 
 Clients can perform verification of artefacts and associated metadata
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-170` →](./cnsc-nist-800-53-by-family#cnsc-170)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-170`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1338,7 +1338,7 @@ Clients can verify the freshness of files
 - Ensure clients can access latest versions and can verify if the provided files are out of date
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-171` →](./cnsc-nist-800-53-by-family#cnsc-171)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-171`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1359,7 +1359,7 @@ A framework is used for managing software updates
 - Consider using The Update Framework (TUF) to enforce the updating of software. TUF is a specification for delivering software updates in a secure, reliable and trusted way
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-172` →](./cnsc-nist-800-53-by-family#cnsc-172)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-172`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1378,7 +1378,7 @@ A framework is used for managing software updates
 
 Trust confirmation verifies the image has a valid signature from an authorized source
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-57` →](./cnsc-nist-800-53-by-family#cnsc-57)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-57`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1397,7 +1397,7 @@ Trust confirmation verifies the image has a valid signature from an authorized s
 
 Image runtime policies are enforced prior to deployment
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-58` →](./cnsc-nist-800-53-by-family#cnsc-58)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-58`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1416,7 +1416,7 @@ Image runtime policies are enforced prior to deployment
 
 Image integrity and signature are verified prior to deployment
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-59` →](./cnsc-nist-800-53-by-family#cnsc-59)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-59`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1435,7 +1435,7 @@ Image integrity and signature are verified prior to deployment
 
 Applications provide logs regarding authentication, authorization, actions, and failures
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-60` →](./cnsc-nist-800-53-by-family#cnsc-60)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-60`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1454,7 +1454,7 @@ Applications provide logs regarding authentication, authorization, actions, and 
 
 Forensics capabilities are integrated into an incident response plan and procedures
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-61` →](./cnsc-nist-800-53-by-family#cnsc-61)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-61`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1473,7 +1473,7 @@ Forensics capabilities are integrated into an incident response plan and procedu
 
 AI, ML, or statistical modeling are used for behavioural and heuristic environment analysis to detect unwanted activities
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-62` →](./cnsc-nist-800-53-by-family#cnsc-62)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-62`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1503,7 +1503,7 @@ Secure configuration is implemented as the default state of the system
 - Transitioning towards such a system involves making security a design requirement, inheriting default security configuration and supporting an exception process
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-195` →](./cnsc-nist-800-53-by-family#cnsc-195)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-195`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1519,7 +1519,7 @@ Secure configuration is implemented as the default state of the system
 
 Integrate vulnerability and configuration scanning in both the IDE and at the CI system during pull request
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-259` →](./cnsc-nist-800-53-by-family#cnsc-259)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-259`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1535,7 +1535,7 @@ Integrate vulnerability and configuration scanning in both the IDE and at the CI
 
 Implement at least one other non-author reviewer/approver prior to merging
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-265` →](./cnsc-nist-800-53-by-family#cnsc-265)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-265`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1551,7 +1551,7 @@ Implement at least one other non-author reviewer/approver prior to merging
 
 Continuous integration server is isolated and hardened
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-271` →](./cnsc-nist-800-53-by-family#cnsc-271)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-271`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1575,7 +1575,7 @@ A dedicated production environment is established
 - Ensure that production workloads are in a separate, dedicated environment from non-production workloads. In the context of containers, this can mean separate clusters. In the case of VMs, separate networks.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-63` →](./cnsc-nist-800-53-by-family#cnsc-63)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-63`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1599,7 +1599,7 @@ Dynamic deployments are leveraged for safer releases
 - Blue/Green, Alpha/Beta, Canary, red-black deployments
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-64` →](./cnsc-nist-800-53-by-family#cnsc-64)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-64`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1615,7 +1615,7 @@ Dynamic deployments are leveraged for safer releases
 
 Vulnerability and configuration scanning is integrated in the IDE or at the pull request
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-65` →](./cnsc-nist-800-53-by-family#cnsc-65)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-65`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1634,7 +1634,7 @@ Vulnerability and configuration scanning is integrated in the IDE or at the pull
 
 Dedicated development, testing, and production environments are established
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-66` →](./cnsc-nist-800-53-by-family#cnsc-66)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-66`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1653,7 +1653,7 @@ Dedicated development, testing, and production environments are established
 
 Tests are built for business-critical code
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-67` →](./cnsc-nist-800-53-by-family#cnsc-67)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-67`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1672,7 +1672,7 @@ Tests are built for business-critical code
 
 Tests are built for business-critical infrastructure
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-68` →](./cnsc-nist-800-53-by-family#cnsc-68)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-68`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1691,7 +1691,7 @@ Tests are built for business-critical infrastructure
 
 Test suites are able to be run locally
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-69` →](./cnsc-nist-800-53-by-family#cnsc-69)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-69`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1710,7 +1710,7 @@ Test suites are able to be run locally
 
 Test suites are available to run in a shared environment
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-70` →](./cnsc-nist-800-53-by-family#cnsc-70)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-70`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1726,7 +1726,7 @@ Test suites are available to run in a shared environment
 
 Two non-author reviewers or approvers are required prior to merging
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-71` →](./cnsc-nist-800-53-by-family#cnsc-71)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-71`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1745,7 +1745,7 @@ Two non-author reviewers or approvers are required prior to merging
 
 Code is clean and well commented
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-72` →](./cnsc-nist-800-53-by-family#cnsc-72)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-72`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1764,7 +1764,7 @@ Code is clean and well commented
 
 Full infrastructure tests are used
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-73` →](./cnsc-nist-800-53-by-family#cnsc-73)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-73`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1783,7 +1783,7 @@ Full infrastructure tests are used
 
 Regression tests are used
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-74` →](./cnsc-nist-800-53-by-family#cnsc-74)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-74`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1802,7 +1802,7 @@ Regression tests are used
 
 Test suites are updated against new and emerging threats and developed into security regression tests
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-75` →](./cnsc-nist-800-53-by-family#cnsc-75)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-75`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1821,7 +1821,7 @@ Test suites are updated against new and emerging threats and developed into secu
 
 A dedicated testing environment is established
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-76` →](./cnsc-nist-800-53-by-family#cnsc-76)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-76`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1837,7 +1837,7 @@ A dedicated testing environment is established
 
 Continuous integration server is isolated
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-77` →](./cnsc-nist-800-53-by-family#cnsc-77)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-77`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1856,7 +1856,7 @@ Continuous integration server is isolated
 
 Threat model results are used to determine ROI for test development
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-78` →](./cnsc-nist-800-53-by-family#cnsc-78)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-78`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1884,7 +1884,7 @@ Guidelines for secure distribution of container images, packages, and artifacts 
 
 Registries require mutually authenticated TLS for all registry connections
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-100` →](./cnsc-nist-800-53-by-family#cnsc-100)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-100`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1903,7 +1903,7 @@ Registries require mutually authenticated TLS for all registry connections
 
 Image and metadata are signed
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-101` →](./cnsc-nist-800-53-by-family#cnsc-101)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-101`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1919,7 +1919,7 @@ Image and metadata are signed
 
 Configuration is signed
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-102` →](./cnsc-nist-800-53-by-family#cnsc-102)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-102`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1935,7 +1935,7 @@ Configuration is signed
 
 Package is signed
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-103` →](./cnsc-nist-800-53-by-family#cnsc-103)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-103`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1954,7 +1954,7 @@ Package is signed
 
 Integrity of images is validated
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-104` →](./cnsc-nist-800-53-by-family#cnsc-104)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-104`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1973,7 +1973,7 @@ Integrity of images is validated
 
 Images are scanned for vulnerabilities and malware
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-105` →](./cnsc-nist-800-53-by-family#cnsc-105)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-105`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -1992,7 +1992,7 @@ Images are scanned for vulnerabilities and malware
 
 Image signing key revocation is enabled in the event of compromise
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-106` →](./cnsc-nist-800-53-by-family#cnsc-106)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-106`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2011,7 +2011,7 @@ Image signing key revocation is enabled in the event of compromise
 
 Security updates are prioritized
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-107` →](./cnsc-nist-800-53-by-family#cnsc-107)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-107`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2027,7 +2027,7 @@ Security updates are prioritized
 
 HSMs or credential managers are used for protecting credentials
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-108` →](./cnsc-nist-800-53-by-family#cnsc-108)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-108`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2046,7 +2046,7 @@ HSMs or credential managers are used for protecting credentials
 
 Container image scanning findings are acted upon
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-109` →](./cnsc-nist-800-53-by-family#cnsc-109)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-109`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2065,7 +2065,7 @@ Container image scanning findings are acted upon
 
 Organizational compliance rules are enforced
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-110` →](./cnsc-nist-800-53-by-family#cnsc-110)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-110`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2084,7 +2084,7 @@ Organizational compliance rules are enforced
 
 Incremental hardening of the infrastructure is employed
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-111` →](./cnsc-nist-800-53-by-family#cnsc-111)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-111`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2103,7 +2103,7 @@ Incremental hardening of the infrastructure is employed
 
 Pulls from public registries are controlled and only from authorized engineers or internal registries
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-112` →](./cnsc-nist-800-53-by-family#cnsc-112)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-112`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2127,7 +2127,7 @@ Image encryption is coupled with key management attestation and/or authorization
 - This restricts the image to only be deployed to authorized platforms. Container image authorization is useful for compliance use cases such as geo-fencing or export control and digital rights media management
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-113` →](./cnsc-nist-800-53-by-family#cnsc-113)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-113`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2146,7 +2146,7 @@ Image encryption is coupled with key management attestation and/or authorization
 
 At-risk applications are prioritized for remediation by exploit maturity and vulnerable path presence in addition to the CVSS score
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-114` →](./cnsc-nist-800-53-by-family#cnsc-114)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-114`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2162,7 +2162,7 @@ At-risk applications are prioritized for remediation by exploit maturity and vul
 
 Should software artifacts become untrusted due to compromise or other incident, teams should revoke signing keys to ensure repudiation
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-274` →](./cnsc-nist-800-53-by-family#cnsc-274)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-274`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2178,7 +2178,7 @@ Should software artifacts become untrusted due to compromise or other incident, 
 
 Workload-related configuration is signed
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-297` →](./cnsc-nist-800-53-by-family#cnsc-297)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-297`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2194,7 +2194,7 @@ Workload-related configuration is signed
 
 Workload-related package is signed
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-298` →](./cnsc-nist-800-53-by-family#cnsc-298)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-298`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2210,7 +2210,7 @@ Workload-related package is signed
 
 HSMs or credential managers should be used for protecting credentials. If this is not possible, software-based credential managers should be used.
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-303` →](./cnsc-nist-800-53-by-family#cnsc-303)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-303`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2226,7 +2226,7 @@ HSMs or credential managers should be used for protecting credentials. If this i
 
 Trust is verified
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-79` →](./cnsc-nist-800-53-by-family#cnsc-79)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-79`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2245,7 +2245,7 @@ Trust is verified
 
 Artifacts ready for deployment are managed in a staging or pre-prod registry
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-80` →](./cnsc-nist-800-53-by-family#cnsc-80)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-80`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2269,7 +2269,7 @@ Container images are hardened following best practices
 - Images contain least permissions to remain functional, do not allow for shell, do not include unnecessary libraries and dependencies, do not bind mount files in from the host, etc.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-81` →](./cnsc-nist-800-53-by-family#cnsc-81)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-81`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2293,7 +2293,7 @@ Static application security testing (SAST) is performed
 - Static analysis is performed by dedicated SAST tools as well as linters
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-82` →](./cnsc-nist-800-53-by-family#cnsc-82)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-82`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2312,7 +2312,7 @@ Static application security testing (SAST) is performed
 
 Test suites follow the test pyramid
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-83` →](./cnsc-nist-800-53-by-family#cnsc-83)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-83`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2331,7 +2331,7 @@ Test suites follow the test pyramid
 
 Artifacts undergoing active development are held in a private registry
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-84` →](./cnsc-nist-800-53-by-family#cnsc-84)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-84`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2350,7 +2350,7 @@ Artifacts undergoing active development are held in a private registry
 
 Application manifests are scanned in CI pipeline
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-85` →](./cnsc-nist-800-53-by-family#cnsc-85)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-85`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2369,7 +2369,7 @@ Application manifests are scanned in CI pipeline
 
 CI servers for sensitive workloads are isolated from other workloads
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-86` →](./cnsc-nist-800-53-by-family#cnsc-86)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-86`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2388,7 +2388,7 @@ CI servers for sensitive workloads are isolated from other workloads
 
 Builds requiring elevated privileges run on dedicated servers
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-87` →](./cnsc-nist-800-53-by-family#cnsc-87)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-87`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2407,7 +2407,7 @@ Builds requiring elevated privileges run on dedicated servers
 
 Build policies are enforced on the CI pipeline
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-88` →](./cnsc-nist-800-53-by-family#cnsc-88)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-88`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2426,7 +2426,7 @@ Build policies are enforced on the CI pipeline
 
 Pipeline metadata is signed
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-89` →](./cnsc-nist-800-53-by-family#cnsc-89)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-89`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2445,7 +2445,7 @@ Pipeline metadata is signed
 
 Build stages are verified prior to the next stage executing
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-90` →](./cnsc-nist-800-53-by-family#cnsc-90)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-90`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2464,7 +2464,7 @@ Build stages are verified prior to the next stage executing
 
 Images are scanned within the CI pipeline
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-91` →](./cnsc-nist-800-53-by-family#cnsc-91)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-91`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2488,7 +2488,7 @@ Vulnerability scans are coupled with pipeline compliance rules
 - Prevent insecure images and artifacts from being deployed
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-92` →](./cnsc-nist-800-53-by-family#cnsc-92)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-92`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2507,7 +2507,7 @@ Vulnerability scans are coupled with pipeline compliance rules
 
 Dynamic application security testing (DAST) is performed
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-93` →](./cnsc-nist-800-53-by-family#cnsc-93)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-93`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2526,7 +2526,7 @@ Dynamic application security testing (DAST) is performed
 
 Application instrumentation is employed
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-94` →](./cnsc-nist-800-53-by-family#cnsc-94)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-94`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2550,7 +2550,7 @@ Automated test results map back to requirements
 - Requirements include feature, function, security, and compliance
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-95` →](./cnsc-nist-800-53-by-family#cnsc-95)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-95`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2574,7 +2574,7 @@ Infrastructure security tests are employed
 - firewall rules open to the world, overprivileged Identity & Access Management (IAM) policies, unauthenticated endpoints, etc
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-96` →](./cnsc-nist-800-53-by-family#cnsc-96)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-96`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2598,7 +2598,7 @@ Tests to verify security health are executed at build and deploy time
 - to evaluate any changes or regressions that may have occurred throughout the lifecycle.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-97` →](./cnsc-nist-800-53-by-family#cnsc-97)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-97`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2617,7 +2617,7 @@ Tests to verify security health are executed at build and deploy time
 
 Infrastructure as Code is subject to the same pipeline policy controls as application code
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-98` →](./cnsc-nist-800-53-by-family#cnsc-98)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-98`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2636,7 +2636,7 @@ Infrastructure as Code is subject to the same pipeline policy controls as applic
 
 Security testing is automated
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-99` →](./cnsc-nist-800-53-by-family#cnsc-99)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-99`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2666,7 +2666,7 @@ Every step in the build process is signed and attested for process integrity
 - The signing of artefacts should be performed at each stage of its life cycle. The final artefact bundle should include these collective signatures and itself be signed to give integrity to the completed artefact and all its associated metadata.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-141` →](./cnsc-nist-800-53-by-family#cnsc-141)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-141`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2687,7 +2687,7 @@ Every step in the build process verifies previously generated signatures
 - The integrity and provenance of images, deployment configuration, and application packages included in artefacts should all be validated using the signatures generated by each step in its build process to ensure compliance
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-142` →](./cnsc-nist-800-53-by-family#cnsc-142)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-142`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2708,7 +2708,7 @@ A framework is used to manage signing of artefacts
 - Consider TUF/notary to sign OCI images. Notary makes use of a “root-of-trust” model to delegate trust from a single root to the individual teams or developers who sign artefacts. It uses additional metadata to allow clients to verify the freshness of content in a repository and protect against common attacks on update systems. Clients can make use of public keys to verify the contents of the repository.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-143` →](./cnsc-nist-800-53-by-family#cnsc-143)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-143`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2729,7 +2729,7 @@ A store is used to manage attestations
 - Consider storing in-toto attestations in OCI registries alongside the image. Generated in-toto metadata needs to be stored and tracked for which a database or a dedicated store such as Grafeas can be used.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-144` →](./cnsc-nist-800-53-by-family#cnsc-144)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-144`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2750,7 +2750,7 @@ Artefacts any given party is authorized to certify are limited
 - Trust should not be granted universally or indefinitely. Artefacts or metadata that a given party is trusted to certify should be restricted using selective trust delegations. Trust must expire at predefined intervals, unless renewed as weel as a party must only be trusted to perform the tasks assigned to it to ensure compartmentatlization
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-145` →](./cnsc-nist-800-53-by-family#cnsc-145)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-145`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2771,7 +2771,7 @@ Rotation and revocation of private keys is supported
 - The system must be prepared for when, not if, its private keys are compromised. The ability to rotate and revoke private keys must be built into the distribution mechanism. Additionally, multiple keys must be used for different tasks or roles, and a threshold of keys must be required for important roles. Finally, minimal trust must be placed in high-risk keys like those that are stored online or used in automated roles.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-146` →](./cnsc-nist-800-53-by-family#cnsc-146)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-146`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2792,7 +2792,7 @@ A container registry that supports OCI image-spec images is used
 - An internal image registry should be deployed and configured to support internal artefact distribution with the security properties described in this section.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-147` →](./cnsc-nist-800-53-by-family#cnsc-147)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-147`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2813,7 +2813,7 @@ Artefacts are encrypted before distribution and only authorized platforms have d
 - Ensure contents of the artefact remain confidential in transit and at rest, until it is consumed. These artefacts can be encrypted so that they are accessible by authorized parties, such as the clusters, vulnerability scanners, etc. t is recommended organizations use key management and distribution systems with identity and attestation mechanisms (e.g. SPIFFE/SPIRE)
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-148` →](./cnsc-nist-800-53-by-family#cnsc-148)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-148`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2843,7 +2843,7 @@ Policy adherence is cryptographically guaranteed
 - The presence and output of each build step should be attested during the build. The CNCF maintains the in-toto project that can be used to secure a chain of pipeline stages end-to-end with cryptographic guarantees. Build metadata should be evaluated against the policy template by using tools such as Open Policy Agent.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-149` →](./cnsc-nist-800-53-by-family#cnsc-149)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-149`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2864,7 +2864,7 @@ Environments and dependencies are validated before usage
 - The build environment’s sources and dependencies must come from a secure, trusted source of truth. Checksums and any signatures should be validated both in the downloading or ingestion process, and again by the build worker. This should include validating package manager signatures, checking out specific Git commit hashes, and verifying SHA sums of input sources and binaries. After completing this validation, the downloading process should sign all binaries or libraries it is adding to the secure source
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-150` →](./cnsc-nist-800-53-by-family#cnsc-150)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-150`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2885,7 +2885,7 @@ Runtime security of build workers is validated
 - Out-of-band verification of runtime environment security, as defined by execution of policies using tools such as seccomp, AppArmor, and SELinux, provides defense in depth against attacks on build infrastructure. High privilege kernel capabilities such as debugger, device, and network attachments should be restricted and monitored.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-151` →](./cnsc-nist-800-53-by-family#cnsc-151)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-151`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2906,7 +2906,7 @@ Build artefacts are validated through verifiably reproducible builds
 - A verifiably reproducible build is a build process where, given a source code commit hash and a set of build instructions, an end user should be able to reproduce the built artefact bit for bit.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-152` →](./cnsc-nist-800-53-by-family#cnsc-152)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-152`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2922,7 +2922,7 @@ Build artefacts are validated through verifiably reproducible builds
 
 External requirements from the build process are locked and verified
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-153` →](./cnsc-nist-800-53-by-family#cnsc-153)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-153`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2943,7 +2943,7 @@ Sources of non-determinism are found and eliminated
 - Reproducible-builds.org documents and offers solutions for many of these things. Diffoscope can be used to dig in and find the cause of differences when tracking down sources of non-determinism.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-154` →](./cnsc-nist-800-53-by-family#cnsc-154)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-154`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2964,7 +2964,7 @@ The build environment is recorded
 - Ensure best practices outlined in cloud native security paper are followed to deploy a secure orchestration layer
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-155` →](./cnsc-nist-800-53-by-family#cnsc-155)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-155`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2980,7 +2980,7 @@ The build environment is recorded
 
 Creation of the build environment is automated
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-156` →](./cnsc-nist-800-53-by-family#cnsc-156)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-156`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -2996,7 +2996,7 @@ Creation of the build environment is automated
 
 Builds are distributed across different infrastructure
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-157` →](./cnsc-nist-800-53-by-family#cnsc-157)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-157`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3012,7 +3012,7 @@ Builds are distributed across different infrastructure
 
 Build and related CI/CD steps are automated through a pipeline delivered as code
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-158` →](./cnsc-nist-800-53-by-family#cnsc-158)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-158`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3028,7 +3028,7 @@ Build and related CI/CD steps are automated through a pipeline delivered as code
 
 Pipelines are standardized across projects
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-159` →](./cnsc-nist-800-53-by-family#cnsc-159)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-159`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3044,7 +3044,7 @@ Pipelines are standardized across projects
 
 A secured orchestration platform is provisioned to host the software factory
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-160` →](./cnsc-nist-800-53-by-family#cnsc-160)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-160`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3060,7 +3060,7 @@ A secured orchestration platform is provisioned to host the software factory
 
 Build workers are single use
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-161` →](./cnsc-nist-800-53-by-family#cnsc-161)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-161`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3081,7 +3081,7 @@ Software factory has minimal network connectivity
 - The software factory should have no network connectivity other than to connect to the trusted sources of hardened source code, the dependency repository and code signing infrastructure.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-162` →](./cnsc-nist-800-53-by-family#cnsc-162)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-162`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3097,7 +3097,7 @@ Software factory has minimal network connectivity
 
 Duties of each build worker are segregated
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-163` →](./cnsc-nist-800-53-by-family#cnsc-163)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-163`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3118,7 +3118,7 @@ Build worker environment and commands are passed in
 - Inorder to limit hostile tooling and persistent impants from attackers, a Build Worker should start with a clean and isolated environmment. It should not be able to pull its own environment. Ensure environment variables and commands are explicitly passed to avoid any complicated and opaque build process
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-164` →](./cnsc-nist-800-53-by-family#cnsc-164)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-164`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3139,7 +3139,7 @@ Output is written to a separate secured storage repo
 - The output artefact should be written to a separate shared storage from the inputs. A process separate from the Build Worker should then upload that artefact to an appropriate repository.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-165` →](./cnsc-nist-800-53-by-family#cnsc-165)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-165`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3160,7 +3160,7 @@ Pipeline modification is only allowed through pipeline as code
 - The pipeline configuration (pipeline as code) should be immutable and any modification shouldn't be possible. This prevents attackers from interacting and modifying the configuration. This model then requires appropriate authentication and authorization to be in place for the software and configuration of the pipeline
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-166` →](./cnsc-nist-800-53-by-family#cnsc-166)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-166`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3176,7 +3176,7 @@ Pipeline modification is only allowed through pipeline as code
 
 User roles are defined
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-167` →](./cnsc-nist-800-53-by-family#cnsc-167)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-167`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3192,7 +3192,7 @@ User roles are defined
 
 Established practices are followed for establishing a root of trust from an offline source
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-168` →](./cnsc-nist-800-53-by-family#cnsc-168)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-168`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3208,7 +3208,7 @@ Established practices are followed for establishing a root of trust from an offl
 
 Short-lived workload certificates are used
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-169` →](./cnsc-nist-800-53-by-family#cnsc-169)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-169`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3238,7 +3238,7 @@ Third party artefacts and open source libraries are verified
 - All third party artefacts, open source libraries and any other dependencies should be verified as part of the continuous integration pipeline by validating their checksums against a known good source and validating any cryptographic signatures. Any software ingested must be scanned using Software Composition Analysis (SCA) and pentesting tools to detect whether any vulnerable open-source software is used in the final product.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-173` →](./cnsc-nist-800-53-by-family#cnsc-173)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-173`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3259,7 +3259,7 @@ SBOM is required from third party suppliers
 - Where possible, vendors should be required to provide Software Bills of Materials (SBOMs) containing the explicit details of the software and versions used within the supplied product as it provides a clear and direct link to the dependencies.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-174` →](./cnsc-nist-800-53-by-family#cnsc-174)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-174`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3280,7 +3280,7 @@ Dependencies between open source components are tracked
 - A register should be maintained of a project’s open source components, dependencies and vulnerabilities to help trace any deployed artefacts with new vulnerabilities. One of the most popular open source inventory implementations is OWASP Dependency-Track.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-175` →](./cnsc-nist-800-53-by-family#cnsc-175)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-175`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3296,7 +3296,7 @@ Dependencies between open source components are tracked
 
 Libraries are built based upon source code
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-176` →](./cnsc-nist-800-53-by-family#cnsc-176)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-176`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3317,7 +3317,7 @@ Trusted package managers and repositories are defined and prioritized
 - Organizations should host their own package managers and artefact repositories, and restrict build machines to pull from only those sources.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-177` →](./cnsc-nist-800-53-by-family#cnsc-177)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-177`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3338,7 +3338,7 @@ An immutable SBOM of the code is generated
 - There are currently two well known SBOM specifications: SPDX and CycloneDX
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-178` →](./cnsc-nist-800-53-by-family#cnsc-178)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-178`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3354,7 +3354,7 @@ An immutable SBOM of the code is generated
 
 Software is scanned for vulnerabilities
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-179` →](./cnsc-nist-800-53-by-family#cnsc-179)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-179`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3375,7 +3375,7 @@ Software is scanned for license implications
 - Licensing obligations must also be factored into the ingestion process. The Linux Foundation maintains the Open Compliance Program which hosts several tools to ensure released software meets legal and regulatory compliance requirements.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-180` →](./cnsc-nist-800-53-by-family#cnsc-180)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-180`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3396,7 +3396,7 @@ Software composition analysis is run on ingested software
 - The SCA tool will attempt to use heuristics to identify the direct and transitive dependencies, and can also serve as verification of SBOM content. This data will then be matched against data from a number of data feeds containing vulnerability data to highlight any vulnerabilities in the dependent packages.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-181` →](./cnsc-nist-800-53-by-family#cnsc-181)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-181`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3426,7 +3426,7 @@ Commits and tags are signed
 - GPG keys or S/MIME certificates are used to sign the source code
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-182` →](./cnsc-nist-800-53-by-family#cnsc-182)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-182`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3447,7 +3447,7 @@ Full attestation and verification is enforced for protected branches
 - Branch protection is enabled on the mainline and release branches with force push disabled
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-183` →](./cnsc-nist-800-53-by-family#cnsc-183)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-183`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3468,7 +3468,7 @@ Secrets are not committed to the source code repository unless encrypted
 - Implement tooling to detect secrets or to prevent certain files from being pushed which may contain plaintext sensitive materials, such as via a .gitignore and/or .gitattributes file, client-side hook (pre-commit), server-side hook (pre-receive or update), and/or as a step in the CI process
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-184` →](./cnsc-nist-800-53-by-family#cnsc-184)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-184`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3489,7 +3489,7 @@ Individuals or teams with write access to a repository are defined
 - Implement codeowners (or equivalent)
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-185` →](./cnsc-nist-800-53-by-family#cnsc-185)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-185`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3510,7 +3510,7 @@ Software security scanning and testing is automated
 - Security specific scans should be performed, including Static Application Security Tests (SAST) and Dynamic Application Security Tests (DAST). Both the coverage and results of these tests should be published as part of the repository information to help downstream consumers of software better assess the stability, reliability, and/or suitability of a product or library.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-186` →](./cnsc-nist-800-53-by-family#cnsc-186)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-186`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3531,7 +3531,7 @@ Contribution policies are established and adhered to
 - Define configuration options or configuration rules witthin SCM platforms allow repository administrators to enforce security, hygiene and operational policies.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-187` →](./cnsc-nist-800-53-by-family#cnsc-187)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-187`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3552,7 +3552,7 @@ Roles are defined and aligned to functional responsibilities
 - Define roles by using principle of least privileges to provide access based on function such as Developer, Maintainer, Owner, Reviewer, Approver, and Guest
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-188` →](./cnsc-nist-800-53-by-family#cnsc-188)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-188`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3573,7 +3573,7 @@ An independent four-eyes principle is enforced
 - The author(s) of a request may not also be the approver of the request. At least two reviewers with equal or greater expertise should review & approve the request.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-189` →](./cnsc-nist-800-53-by-family#cnsc-189)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-189`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3594,7 +3594,7 @@ Branch protection rules are used
 - SCM platforms allow the configuration and restriction of source code operations on individual branches. Protection rules can be used to enforce the usage of pull requests with specified precondition and approval rules, ensuring that a human code review process is followed or an automated status checking of a branch occurs. Additionally, protected branches can be used to disallow dangerous use of force pushes, preventing the overwrite of commit histories and potential obfuscation of code changes.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-190` →](./cnsc-nist-800-53-by-family#cnsc-190)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-190`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3610,7 +3610,7 @@ Branch protection rules are used
 
 MFA is enforced for accessing source code repositories
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-191` →](./cnsc-nist-800-53-by-family#cnsc-191)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-191`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3626,7 +3626,7 @@ MFA is enforced for accessing source code repositories
 
 SSH keys are used to provide developers access to source code repositories
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-192` →](./cnsc-nist-800-53-by-family#cnsc-192)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-192`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3647,7 +3647,7 @@ A key rotation policy is maintained
 - It is recommended to implement a key rotation policy to ensure that compromised keys will cease to be usable after a certain period of time. When a private key is known to have been compromised, it should be revoked and replaced immediately to shut off access for any unauthorized user. Organizations may also consider using short lived certificates or keys, which reduces the reliance on certificate revocation systems.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-193` →](./cnsc-nist-800-53-by-family#cnsc-193)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-193`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3668,7 +3668,7 @@ Short-lived or ephemeral credentials are used for machine and service access
 - Short-life credential issuance encourages the use of fine grained permissions and automation in provisioning access tokens. For CI/CD pipeline agents, short-lived access tokens should be considered instead of password-based credentials. The use of very short-lived tokens like OAuth 2.0, OpenID Connect, etc., will help to implement more secure access and increase the security assurance.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-194` →](./cnsc-nist-800-53-by-family#cnsc-194)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-194`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3696,7 +3696,7 @@ Guidelines for security assurance, including network policies, incident response
 
 Network policies enforce east-west network communication within the container deployment is limited to only that which is authorized for access
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-115` →](./cnsc-nist-800-53-by-family#cnsc-115)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-115`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3720,7 +3720,7 @@ Incident response considers cloud native workloads
 - workloads which may not always conform with some underlying assumptions about node isolation (new pod instances could run on a different server), networking (e.g. IP addresses are assigned dynamically) and immutability (e.g. runtime changes to container are not persisted across restarts)
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-116` →](./cnsc-nist-800-53-by-family#cnsc-116)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-116`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3739,7 +3739,7 @@ Incident response considers cloud native workloads
 
 Incident response accounts for appropriate evidence handling and collection of cloud native workloads
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-117` →](./cnsc-nist-800-53-by-family#cnsc-117)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-117`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3758,7 +3758,7 @@ Incident response accounts for appropriate evidence handling and collection of c
 
 Rootless builds are employed
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-118` →](./cnsc-nist-800-53-by-family#cnsc-118)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-118`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3777,7 +3777,7 @@ Rootless builds are employed
 
 Cgroups and system groups are used to isolate workloads and deployments
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-119` →](./cnsc-nist-800-53-by-family#cnsc-119)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-119`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3801,7 +3801,7 @@ MAC implementations are employed
 - SELinux, AppArmor
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-120` →](./cnsc-nist-800-53-by-family#cnsc-120)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-120`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3820,7 +3820,7 @@ MAC implementations are employed
 
 Threat model code and infrastructure
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-121` →](./cnsc-nist-800-53-by-family#cnsc-121)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-121`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3844,7 +3844,7 @@ Entities are able to independently authenticate other identities
 - Public Key Infrastructure
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-122` →](./cnsc-nist-800-53-by-family#cnsc-122)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-122`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3863,7 +3863,7 @@ Entities are able to independently authenticate other identities
 
 Each entity can create proof of who the identity is
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-123` →](./cnsc-nist-800-53-by-family#cnsc-123)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-123`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3882,7 +3882,7 @@ Each entity can create proof of who the identity is
 
 Orchestrator is running on a trusted OS, BIOS, etc
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-124` →](./cnsc-nist-800-53-by-family#cnsc-124)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-124`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3901,7 +3901,7 @@ Orchestrator is running on a trusted OS, BIOS, etc
 
 Orchestrator verifies the claims of a container
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-125` →](./cnsc-nist-800-53-by-family#cnsc-125)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-125`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3920,7 +3920,7 @@ Orchestrator verifies the claims of a container
 
 Orchestrator network policies are used in conjunction with a service mesh
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-126` →](./cnsc-nist-800-53-by-family#cnsc-126)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-126`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3941,7 +3941,7 @@ Supply chain security best practices are adhered to
 - The SSCP controls in this document provide the necessary controls for best practices
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-196` →](./cnsc-nist-800-53-by-family#cnsc-196)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-196`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3962,7 +3962,7 @@ Access to repository and branches is restricted
 - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-197` →](./cnsc-nist-800-53-by-family#cnsc-197)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-197`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -3983,7 +3983,7 @@ Unencrypted credentials or secrets are never stored in the Git repository and se
 - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-198` →](./cnsc-nist-800-53-by-family#cnsc-198)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-198`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -4004,7 +4004,7 @@ Strong identity is enforced with GPG Signed Commits for accountability and trace
 - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-199` →](./cnsc-nist-800-53-by-family#cnsc-199)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-199`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -4025,7 +4025,7 @@ Linear history is required and commit history is maintained by disallowing force
 - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-200` →](./cnsc-nist-800-53-by-family#cnsc-200)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-200`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -4046,7 +4046,7 @@ Branching policy is enforced with main branch protection and code review require
 - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-201` →](./cnsc-nist-800-53-by-family#cnsc-201)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-201`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -4067,7 +4067,7 @@ Vulnerabilities are monitored and Git and GitOps tools are kept up to date
 - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-202` →](./cnsc-nist-800-53-by-family#cnsc-202)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-202`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -4088,7 +4088,7 @@ SSH keys and Personal Access Tokens are rotated and unauthorized access to Git r
 - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-203` →](./cnsc-nist-800-53-by-family#cnsc-203)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-203`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -4109,7 +4109,7 @@ Dedicated non-user technical accounts are used for access with frequently rotate
 - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-204` →](./cnsc-nist-800-53-by-family#cnsc-204)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-204`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -4130,7 +4130,7 @@ Users who can elevate permissions to remove security features are limited to pre
 - The 'Securing the Source Code' SSCP controls provide the necessary GitOps best practices
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-205` →](./cnsc-nist-800-53-by-family#cnsc-205)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-205`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -4158,7 +4158,7 @@ Guidelines for securing storage, including encryption at rest, data availability
 
 Storage control plane management interface requires mutual authentication and TLS for connections
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-127` →](./cnsc-nist-800-53-by-family#cnsc-127)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-127`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -4177,7 +4177,7 @@ Storage control plane management interface requires mutual authentication and TL
 
 Data availability is achieved through parity or mirroring, erasure coding or replicas
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-128` →](./cnsc-nist-800-53-by-family#cnsc-128)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-128`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -4201,7 +4201,7 @@ Hashing and checksums are added to blocks, objects or files
 - primarily designed to detect and recover from corrupted data, but can also add a layer of protection against the tampering of data.
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-129` →](./cnsc-nist-800-53-by-family#cnsc-129)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-129`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -4220,7 +4220,7 @@ Hashing and checksums are added to blocks, objects or files
 
 Data backup storage locations employ like access controls and security policies to that of the data storage source
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-130` →](./cnsc-nist-800-53-by-family#cnsc-130)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-130`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -4239,7 +4239,7 @@ Data backup storage locations employ like access controls and security policies 
 
 Secure erasure adhering to OPAL standards is employed for returned or non-functional devices
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-131` →](./cnsc-nist-800-53-by-family#cnsc-131)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-131`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -4263,7 +4263,7 @@ Encryption at rest considers data path, size, and frequency of access when deter
 - The encryption may be implemented in the storage client or storage server and granularity of the encryption will vary by system (e.g. per volume, per group or global keys)
 
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-132` →](./cnsc-nist-800-53-by-family#cnsc-132)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-132`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -4282,7 +4282,7 @@ Encryption at rest considers data path, size, and frequency of access when deter
 
 Caching is considered for determining encryption requirements in architectures
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-133` →](./cnsc-nist-800-53-by-family#cnsc-133)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-133`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -4301,7 +4301,7 @@ Caching is considered for determining encryption requirements in architectures
 
 Namespaces have defined trust boundaries to cordon access to volumes
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-134` →](./cnsc-nist-800-53-by-family#cnsc-134)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-134`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -4320,7 +4320,7 @@ Namespaces have defined trust boundaries to cordon access to volumes
 
 Security policies are used to prevent containers from accessing volume mounts on worker nodes
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-135` →](./cnsc-nist-800-53-by-family#cnsc-135)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-135`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -4339,7 +4339,7 @@ Security policies are used to prevent containers from accessing volume mounts on
 
 Security policies are used enforce authorized worker node access to volumes
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-136` →](./cnsc-nist-800-53-by-family#cnsc-136)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-136`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -4358,7 +4358,7 @@ Security policies are used enforce authorized worker node access to volumes
 
 Volume UID and GID are inaccessible to containers
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-137` →](./cnsc-nist-800-53-by-family#cnsc-137)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-137`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -4377,7 +4377,7 @@ Volume UID and GID are inaccessible to containers
 
 Artifact registry supports OCI artifacts
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-138` →](./cnsc-nist-800-53-by-family#cnsc-138)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-138`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -4396,7 +4396,7 @@ Artifact registry supports OCI artifacts
 
 Artifact registry supports signed artifacts
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-139` →](./cnsc-nist-800-53-by-family#cnsc-139)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-139`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 
@@ -4415,7 +4415,7 @@ Artifact registry supports signed artifacts
 
 Artifact registry verifies artifacts against organizational policies
 
-**NIST SP 800-53 (by family):** [Guideline mappings for `CNSC-140` →](./cnsc-nist-800-53-by-family#cnsc-140)
+**NIST SP 800-53:** [CNSC to NIST SP 800-53 mapping (`CNSC-140`) →](./cnsc-nist-800-53-mapping#complete-mapping-index)
 
 ---
 

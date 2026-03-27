@@ -28,7 +28,7 @@ Each guideline must have a `group` field matching the group `id` in `groups.yaml
 NIST SP 800-53 mappings live in `cnsc-nist-800-53-mapping.yaml` (Gemara **MappingDocument**). Generation produces two markdown pages:
 
 - `cnsc-nist-800-53-mapping.md` — mapping **document** (metadata, references, source/target, **Complete Mapping Index**).
-- `cnsc-nist-800-53-by-family.md` — **Cloud Native Security Controls Catalog** view of NIST alignments **grouped by family** (matches `index.md` layout). **Mapping entry** cells link to anchors on the mapping document page.
+- `cnsc-nist-800-53-by-family.md` — **Cloud Native Security Controls Catalog** view of NIST alignments **grouped by family** (matches `index.md` layout). The mapping document **Complete Mapping Index** is the flat table of all rows (with stable anchors, no separate mapping-id column).
 
 ## CLI Usage
 

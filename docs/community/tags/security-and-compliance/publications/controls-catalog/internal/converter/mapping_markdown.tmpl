@@ -18,11 +18,11 @@ This document maps the [Cloud Native Security Controls Catalog](./index.md) to N
 
 ## Complete Mapping Index
 
-Mapping entry links on the [Cloud Native Security Controls Catalog page]({{.ByFamilyRel}}) jump to these atomic mapping anchors.
+For NIST alignments by catalog family, see the [Cloud Native Security Controls Catalog]({{.ByFamilyRel}}) page.
 
-| Mapping ID | CNSC guideline | NIST control(s) | Relationship | Remarks |
-|------------|----------------|-----------------|--------------|---------|
-{{range .FlatMappings}}| <a id="{{mappingRowAnchor .ID}}"></a>`{{.ID}}` | `{{.Source}}` | {{targetList .Targets}} | {{.Relationship}} | {{tableCell .Remarks}} |
+| CNSC guideline | Relationship | NIST control(s) | Remarks |
+|----------------|--------------|-----------------|---------|
+{{range .FlatMappings}}| <a id="{{mappingRowAnchor .ID}}"></a>`{{.Source}}` | {{.Relationship}} | {{targetList .Targets}} | {{tableCell .Remarks}} |
 {{end}}
 
 {{if .Remarks}}
@@ -82,9 +82,9 @@ Do not edit manually.
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-{{range .Rows}}| `{{firstTargetEntryID .}}` | {{tableCell .Remarks}} | [`{{.ID}}`]({{$.MappingDocumentRel}}#{{mappingRowAnchor .ID}}) |
+| NIST control | Remarks |
+|--------------|---------|
+{{range .Rows}}| `{{firstTargetEntryID .}}` | {{tableCell .Remarks}} |
 {{end}}
 
 {{else}}*No NIST SP 800-53 mapping row in this document for this guideline.*

@@ -44,9 +44,9 @@ Secrets are injected at runtime
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `IA-5(7)` | Authenticator Management | [`CNSC-1-IA-5-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-1-ia-5-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `IA-5(7)` | Authenticator Management |
 
 
 ---
@@ -67,9 +67,9 @@ ABAC and RBAC are used
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AC-3(13)` | Access Enforcement | [`CNSC-10-AC-3-13`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-10-ac-3-13) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AC-3(13)` | Access Enforcement |
 
 
 ---
@@ -90,9 +90,9 @@ End user identity is capable of being accepted, consumed, and forwarded on for c
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-7(19)` | Boundary Protection | [`CNSC-11-SC-7-19`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-11-sc-7-19) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-7(19)` | Boundary Protection |
 
 
 ---
@@ -116,9 +116,9 @@ All cluster and workloads operators are authenticated
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `IA-7` | Cryptographic Module Authentication | [`CNSC-12-IA-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-12-ia-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `IA-7` | Cryptographic Module Authentication |
 
 
 ---
@@ -142,9 +142,9 @@ Cluster and workloads operate actions are evaluated against access control polic
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `IA-7` | Cryptographic Module Authentication | [`CNSC-13-IA-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-13-ia-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `IA-7` | Cryptographic Module Authentication |
 
 
 ---
@@ -165,9 +165,9 @@ Identity federation uses multi-factor authentication
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `IA-2(1)(2)` | Identification and Authentication (organizational Users) | [`CNSC-14-IA-2-1-2`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-14-ia-2-1-2) |
+| NIST control | Remarks |
+|--------------|---------|
+| `IA-2(1)(2)` | Identification and Authentication (organizational Users) |
 
 
 ---
@@ -191,9 +191,9 @@ HSMs are used to physically protect cryptographic secrets with an encryption key
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AC-4(4)` | Information Flow Enforcement | [`CNSC-15-AC-4-4`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-15-ac-4-4) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AC-4(4)` | Information Flow Enforcement |
 
 
 ---
@@ -217,9 +217,9 @@ Secrets should have a short expiration period or time to live
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-12` | Information Management and Retention | [`CNSC-16-SI-12`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-16-si-12) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-12` | Information Management and Retention |
 
 
 ---
@@ -243,9 +243,9 @@ Time to live and expiration period on secrets is verified to prevent reuse
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AC-16(3)` | Security and Privacy Attributes | [`CNSC-17-AC-16-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-17-ac-16-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AC-16(3)` | Security and Privacy Attributes |
 
 
 ---
@@ -269,9 +269,9 @@ Secrets management systems are highly available
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-12(1)` | Cryptographic Key Establishment and Management | [`CNSC-18-SC-12-1`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-18-sc-12-1) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-12(1)` | Cryptographic Key Establishment and Management |
 
 
 ---
@@ -295,9 +295,9 @@ Long-lived secrets adhere to periodic rotation and revocation
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-12` | Information Management and Retention | [`CNSC-19-SI-12`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-19-si-12) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-12` | Information Management and Retention |
 
 
 ---
@@ -318,9 +318,9 @@ Applications and workloads are explicitly authorized to communicate with each ot
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `IA-9` | NIST SP 800-53 control mapped from CNSC-2 (Mutual Authentication); family: Access. | [`CNSC-2-IA-9`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-2-ia-9) |
+| NIST control | Remarks |
+|--------------|---------|
+| `IA-9` | NIST SP 800-53 control mapped from CNSC-2 (Mutual Authentication); family: Access. |
 
 
 ---
@@ -344,9 +344,9 @@ Secrets are distributed through secured communication channels protected commens
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AC-16` | Security and Privacy Attributes | [`CNSC-20-AC-16`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-20-ac-16) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AC-16` | Security and Privacy Attributes |
 
 
 ---
@@ -367,9 +367,9 @@ Identity federation uses multi-factor authentication for human users
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `IA-2(1)(2)` | Identification and Authentication (organizational Users) | [`CNSC-208-IA-2-1-2`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-208-ia-2-1-2) |
+| NIST control | Remarks |
+|--------------|---------|
+| `IA-2(1)(2)` | Identification and Authentication (organizational Users) |
 
 
 ---
@@ -393,9 +393,9 @@ Secrets injected at runtime are masked or dropped from logs, audit, or system du
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AU-9(3)` | Protection of Audit Information | [`CNSC-21-AU-9-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-21-au-9-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AU-9(3)` | Protection of Audit Information |
 
 
 ---
@@ -416,9 +416,9 @@ Keys are rotated frequently
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-12` | Cryptographic Key Establishment and Management | [`CNSC-3-SC-12`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-3-sc-12) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-12` | Cryptographic Key Establishment and Management |
 
 
 ---
@@ -439,9 +439,9 @@ Key lifespan is short
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-12(3)` | Cryptographic Key Establishment and Management | [`CNSC-4-SC-12-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-4-sc-12-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-12(3)` | Cryptographic Key Establishment and Management |
 
 
 ---
@@ -462,9 +462,9 @@ Credentials and keys protecting sensitive workloads (health/finance/etc) are gen
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `IA-2(12)` | Identification and Authentication (Organizational Users) | [`CNSC-5-IA-2-12`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-5-ia-2-12) |
+| NIST control | Remarks |
+|--------------|---------|
+| `IA-2(12)` | Identification and Authentication (Organizational Users) |
 
 
 ---
@@ -485,9 +485,9 @@ Authentication and authorization are determined independently
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `IA-2(6)` | Identification and Authentication (Organizational Users) | [`CNSC-6-IA-2-6`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-6-ia-2-6) |
+| NIST control | Remarks |
+|--------------|---------|
+| `IA-2(6)` | Identification and Authentication (Organizational Users) |
 
 
 ---
@@ -508,9 +508,9 @@ Authentication and authorization are enforced independently
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `IA-2(6)` | Identification and Authentication (Organizational Users) | [`CNSC-7-IA-2-6`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-7-ia-2-6) |
+| NIST control | Remarks |
+|--------------|---------|
+| `IA-2(6)` | Identification and Authentication (Organizational Users) |
 
 
 ---
@@ -531,9 +531,9 @@ Access control and file permissions are updated in real-time
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-4(2)` | System Monitoring | [`CNSC-8-SI-4-2`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-8-si-4-2) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-4(2)` | System Monitoring |
 
 
 ---
@@ -554,9 +554,9 @@ Authorization for workloads is granted based on attributes and roles/permissions
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AC-3(13)` | Access Enforcement | [`CNSC-9-AC-3-13`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-9-ac-3-13) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AC-3(13)` | Access Enforcement |
 
 
 ---
@@ -589,9 +589,9 @@ Bootstrapping is employed to verify correct physical and logical location of com
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-7(9)` | Software, Firmware, and Information Integrity | [`CNSC-22-SI-7-9`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-22-si-7-9) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-7(9)` | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -615,9 +615,9 @@ Disparate data sensitive workloads are not run on the same host OS kernel
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-7` | Boundary Protection | [`CNSC-23-SC-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-23-sc-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-7` | Boundary Protection |
 
 
 ---
@@ -638,9 +638,9 @@ Use a service mesh that eliminates implicit trust through data-in-motion protect
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-7` | Boundary Protection | [`CNSC-233-SC-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-233-sc-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-7` | Boundary Protection |
 
 
 ---
@@ -664,10 +664,10 @@ Monitor and detect any changes to the initial configurations made in runtime
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-2(2)` | Baseline Configuration, Automation Support for Accuracy and Currency | [`CNSC-24-CM-2-2`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-24-cm-2-2) |
-| `CM-3(7)` | Configuration Change Control, Review System Changes | [`CNSC-24-CM-3-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-24-cm-3-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-2(2)` | Baseline Configuration, Automation Support for Accuracy and Currency |
+| `CM-3(7)` | Configuration Change Control, Review System Changes |
 
 
 ---
@@ -691,9 +691,9 @@ API auditing is enabled with a filter for a specific set of API Groups or verbs
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AU-2` | Event Logging | [`CNSC-25-AU-2`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-25-au-2) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AU-2` | Event Logging |
 
 
 ---
@@ -717,10 +717,10 @@ Container specific operating systems are in use
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-2` | Baseline Configuration | [`CNSC-26-CM-2`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-26-cm-2) |
-| `CM-7` | Least Functionality | [`CNSC-26-CM-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-26-cm-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-2` | Baseline Configuration |
+| `CM-7` | Least Functionality |
 
 
 ---
@@ -744,9 +744,9 @@ The hardware root of trust is based in a Trusted Platform Module (TPM) or virtua
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-7` | Software, Firmware, and Information Integrity | [`CNSC-27-SI-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-27-si-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-7` | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -770,9 +770,9 @@ Minimize administrative access to the control plane
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AC-6` | Least Privilege | [`CNSC-28-AC-6`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-28-ac-6) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AC-6` | Least Privilege |
 
 
 ---
@@ -796,10 +796,10 @@ Object level and resource requests and limits are controlled through cgroups
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-7(16)` | Software, Firmware, and Information Integrity, Time Limit on Process Execution Without Supervision | [`CNSC-29-SI-7-16`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-29-si-7-16) |
-| `SI-7(17)` | Software, Firmware, and Information Integrity, Runtime Application Self-protection | [`CNSC-29-SI-7-17`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-29-si-7-17) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-7(16)` | Software, Firmware, and Information Integrity, Time Limit on Process Execution Without Supervision |
+| `SI-7(17)` | Software, Firmware, and Information Integrity, Runtime Application Self-protection |
 
 
 ---
@@ -823,9 +823,9 @@ Systems processing alerts are periodically tuned for false positives
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-4(13)` | System Monitoring, Analyze Traffic and Event Patterns | [`CNSC-30-SI-4-13`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-30-si-4-13) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-4(13)` | System Monitoring, Analyze Traffic and Event Patterns |
 
 
 ---
@@ -849,9 +849,9 @@ All orchestrator control plane components are configured to communicate via mutu
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AC-3` | Access Enforcement | [`CNSC-31-AC-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-31-ac-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AC-3` | Access Enforcement |
 
 
 ---
@@ -875,10 +875,10 @@ Only sanctioned capabilities and system calls (e.g. seccomp filters), are allowe
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-2` | Baseline Configuration | [`CNSC-32-CM-2`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-32-cm-2) |
-| `CM-7` | Least Functionality | [`CNSC-32-CM-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-32-cm-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-2` | Baseline Configuration |
+| `CM-7` | Least Functionality |
 
 
 ---
@@ -902,9 +902,9 @@ Changes to critical mount points and files are prevented, monitored, and alerted
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-5` | Access Restrictions for Change | [`CNSC-33-CM-5`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-33-cm-5) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-5` | Access Restrictions for Change |
 
 
 ---
@@ -928,9 +928,9 @@ Runtime configuration control prevents changes to binaries, certificates, and re
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-5` | Access Restrictions for Change | [`CNSC-34-CM-5`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-34-cm-5) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-5` | Access Restrictions for Change |
 
 
 ---
@@ -954,9 +954,9 @@ Runtime configuration prevents ingress and egress network access for containers 
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-7` | Boundary Protection | [`CNSC-35-SC-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-35-sc-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-7` | Boundary Protection |
 
 
 ---
@@ -980,9 +980,9 @@ Policies are defined that restrict communications to only occur between sanction
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-7` | Boundary Protection | [`CNSC-36-SC-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-36-sc-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-7` | Boundary Protection |
 
 
 ---
@@ -1006,9 +1006,9 @@ Use a policy agent to control and enforce authorized, signed container images
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-5` | Access Restrictions for Change | [`CNSC-37-CM-5`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-37-cm-5) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-5` | Access Restrictions for Change |
 
 
 ---
@@ -1032,9 +1032,9 @@ Use a policy agent to control provenance assurance for operational workloads
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-5` | Access Restrictions for Change | [`CNSC-38-CM-5`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-38-cm-5) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-5` | Access Restrictions for Change |
 
 
 ---
@@ -1055,9 +1055,9 @@ Use a service mesh that eliminates implicit trust through data-in-motion encrypt
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-7` | Boundary Protection | [`CNSC-39-SC-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-39-sc-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-7` | Boundary Protection |
 
 
 ---
@@ -1081,9 +1081,9 @@ Use components that detect, track, aggregate and report system calls and network
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-4` | System Monitoring | [`CNSC-40-SI-4`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-40-si-4) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-4` | System Monitoring |
 
 
 ---
@@ -1107,9 +1107,9 @@ Workloads should be dynamically scanned to detect malicious or insidious behavio
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-3` | Malicious Code Protection | [`CNSC-41-SI-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-41-si-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-3` | Malicious Code Protection |
 
 
 ---
@@ -1133,9 +1133,9 @@ Environments are continuously scanned to detect new vulnerabilities in workloads
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `RA-5` | Vulnerability Monitoring and Scanning | [`CNSC-42-RA-5`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-42-ra-5) |
+| NIST control | Remarks |
+|--------------|---------|
+| `RA-5` | Vulnerability Monitoring and Scanning |
 
 
 ---
@@ -1159,9 +1159,9 @@ Actionable audit events are generated that correlate/contextualize data from log
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AU-3` | Content of Audit Records | [`CNSC-43-AU-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-43-au-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AU-3` | Content of Audit Records |
 
 
 ---
@@ -1185,9 +1185,9 @@ Segregation of duties and the principle of least privilege is enforced
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AC-6` | Least Privilege | [`CNSC-44-AC-6`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-44-ac-6) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AC-6` | Least Privilege |
 
 
 ---
@@ -1211,9 +1211,9 @@ Non-compliant violations are detected based on a pre-configured set of rules def
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-7` | Software, Firmware, and Information Integrity | [`CNSC-45-SI-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-45-si-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-7` | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -1237,9 +1237,9 @@ Native secret stores encrypt with keys from an external Key Management Store (KM
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-12(3)` | Systems and Communication Protection | [`CNSC-46-SC-12-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-46-sc-12-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-12(3)` | Systems and Communication Protection |
 
 
 ---
@@ -1263,9 +1263,9 @@ Native secret stores are not configured for base64 encoding or stored in clear-t
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-12(3)` | Systems and Communication Protection | [`CNSC-47-SC-12-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-47-sc-12-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-12(3)` | Systems and Communication Protection |
 
 
 ---
@@ -1289,9 +1289,9 @@ Network traffic to malicious domains is detected and denied
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-4` | System Monitoring | [`CNSC-48-SI-4`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-48-si-4) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-4` | System Monitoring |
 
 
 ---
@@ -1315,9 +1315,9 @@ Use encrypted containers for sensitive sources, methods, and data
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-28` | Protection of Information at Rest | [`CNSC-49-SC-28`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-49-sc-28) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-28` | Protection of Information at Rest |
 
 
 ---
@@ -1341,9 +1341,9 @@ Use SBOMs to identify current deployments of vulnerable libraries, dependencies,
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-8` | System Component Inventory | [`CNSC-50-CM-8`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-50-cm-8) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-8` | System Component Inventory |
 
 
 ---
@@ -1367,10 +1367,10 @@ Processes must execute only functions explicitly defined in an allow list
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-2` | Baseline Configuration | [`CNSC-51-CM-2`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-51-cm-2) |
-| `CM-7` | Least Functionality | [`CNSC-51-CM-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-51-cm-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-2` | Baseline Configuration |
+| `CM-7` | Least Functionality |
 
 
 ---
@@ -1394,9 +1394,9 @@ Functions are not be allowed to make changes to critical file system mount point
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-5` | Access Restrictions for Change | [`CNSC-52-CM-5`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-52-cm-5) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-5` | Access Restrictions for Change |
 
 
 ---
@@ -1420,10 +1420,10 @@ Function access is only permitted to sanctioned services
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-2` | Baseline Configuration | [`CNSC-53-CM-2`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-53-cm-2) |
-| `CM-7` | Least Functionality | [`CNSC-53-CM-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-53-cm-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-2` | Baseline Configuration |
+| `CM-7` | Least Functionality |
 
 
 ---
@@ -1447,9 +1447,9 @@ Egress network connection is monitored to detect and prevent access to C&C (comm
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-4` | System Monitoring | [`CNSC-54-SI-4`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-54-si-4) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-4` | System Monitoring |
 
 
 ---
@@ -1473,9 +1473,9 @@ Ingress network inspection is employed detect and remove malicious payloads and 
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-4` | System Monitoring | [`CNSC-55-SI-4`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-55-si-4) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-4` | System Monitoring |
 
 
 ---
@@ -1499,9 +1499,9 @@ Serverless functions are run in tenant-based resource or performance isolation f
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-7(21)` | Boundary Protection, Isolation of System Components | [`CNSC-56-SC-7-21`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-56-sc-7-21) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-7(21)` | Boundary Protection, Isolation of System Components |
 
 
 ---
@@ -1531,9 +1531,9 @@ Clients can perform verification of artefacts and associated metadata
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-7` | Software, Firmware, and Information Integrity | [`CNSC-170-SI-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-170-si-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-7` | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -1554,9 +1554,9 @@ Clients can verify the freshness of files
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-7` | Software, Firmware, and Information Integrity | [`CNSC-171-SI-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-171-si-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-7` | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -1596,10 +1596,10 @@ Trust confirmation verifies the image has a valid signature from an authorized s
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SR-4(3)` | Provenance, Validate as Genuine and Not Altered | [`CNSC-57-SR-4-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-57-sr-4-3) |
-| `SR-4(4)` | Provenance, Supply Chain Integrity - Pedigree | [`CNSC-57-SR-4-4`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-57-sr-4-4) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SR-4(3)` | Provenance, Validate as Genuine and Not Altered |
+| `SR-4(4)` | Provenance, Supply Chain Integrity - Pedigree |
 
 
 ---
@@ -1623,9 +1623,9 @@ Image runtime policies are enforced prior to deployment
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-7(17)` | Software, Firmware, and Information Integrity, Runtime Application Self-Protection | [`CNSC-58-SI-7-17`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-58-si-7-17) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-7(17)` | Software, Firmware, and Information Integrity, Runtime Application Self-Protection |
 
 
 ---
@@ -1649,10 +1649,10 @@ Image integrity and signature are verified prior to deployment
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SR-4(3)` | Provenance, Validate as Genuine and Not Altered | [`CNSC-59-SR-4-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-59-sr-4-3) |
-| `SR-4(4)` | Provenance, Supply Chain Integrity - Pedigree | [`CNSC-59-SR-4-4`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-59-sr-4-4) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SR-4(3)` | Provenance, Validate as Genuine and Not Altered |
+| `SR-4(4)` | Provenance, Supply Chain Integrity - Pedigree |
 
 
 ---
@@ -1676,9 +1676,9 @@ Applications provide logs regarding authentication, authorization, actions, and 
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-3` | Configuration Change Control | [`CNSC-60-CM-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-60-cm-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-3` | Configuration Change Control |
 
 
 ---
@@ -1721,9 +1721,9 @@ AI, ML, or statistical modeling are used for behavioural and heuristic environme
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-3` | System and Information Integrity | [`CNSC-62-SI-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-62-si-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-3` | System and Information Integrity |
 
 
 ---
@@ -1753,9 +1753,9 @@ Secure configuration is implemented as the default state of the system
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-8(23)` | Security and Privacy Engineering Principles, Secure Defaults | [`CNSC-195-SA-8-23`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-195-sa-8-23) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-8(23)` | Security and Privacy Engineering Principles, Secure Defaults |
 
 
 ---
@@ -1776,9 +1776,9 @@ Integrate vulnerability and configuration scanning in both the IDE and at the CI
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-11(1)` | Developer Testing and Evaluation \| Static Code Analysis | [`CNSC-259-SA-11-1`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-259-sa-11-1) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-11(1)` | Developer Testing and Evaluation \| Static Code Analysis |
 
 
 ---
@@ -1799,9 +1799,9 @@ Implement at least one other non-author reviewer/approver prior to merging
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-11(4)` | Developer Testing and Evaluation \| Manual Code Reviews | [`CNSC-265-SA-11-4`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-265-sa-11-4) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-11(4)` | Developer Testing and Evaluation \| Manual Code Reviews |
 
 
 ---
@@ -1822,9 +1822,9 @@ Continuous integration server is isolated and hardened
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-39` | Process Isolation | [`CNSC-271-SC-39`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-271-sc-39) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-39` | Process Isolation |
 
 
 ---
@@ -1848,9 +1848,9 @@ A dedicated production environment is established
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-3(1)` | System Development Life Cycle \| Manage preproduction environment | [`CNSC-63-SA-3-1`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-63-sa-3-1) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-3(1)` | System Development Life Cycle \| Manage preproduction environment |
 
 
 ---
@@ -1874,9 +1874,9 @@ Dynamic deployments are leveraged for safer releases
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-8(31)` | Security and Privacy Engineering Principles \| Secure System Modification | [`CNSC-64-SA-8-31`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-64-sa-8-31) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-8(31)` | Security and Privacy Engineering Principles \| Secure System Modification |
 
 
 ---
@@ -1897,9 +1897,9 @@ Vulnerability and configuration scanning is integrated in the IDE or at the pull
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-11(1)` | Developer Testing and Evaluation \| Static Code Analysis | [`CNSC-65-SA-11-1`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-65-sa-11-1) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-11(1)` | Developer Testing and Evaluation \| Static Code Analysis |
 
 
 ---
@@ -1923,9 +1923,9 @@ Dedicated development, testing, and production environments are established
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-15` | Development Process, Standards, and Tools | [`CNSC-66-SA-15`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-66-sa-15) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-15` | Development Process, Standards, and Tools |
 
 
 ---
@@ -1949,9 +1949,9 @@ Tests are built for business-critical code
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-11` | Developer Testing and Evaluation | [`CNSC-67-SA-11`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-67-sa-11) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-11` | Developer Testing and Evaluation |
 
 
 ---
@@ -1975,9 +1975,9 @@ Tests are built for business-critical infrastructure
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-11` | Developer Testing and Evaluation | [`CNSC-68-SA-11`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-68-sa-11) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-11` | Developer Testing and Evaluation |
 
 
 ---
@@ -2001,9 +2001,9 @@ Test suites are able to be run locally
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-11` | Developer Testing and Evaluation | [`CNSC-69-SA-11`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-69-sa-11) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-11` | Developer Testing and Evaluation |
 
 
 ---
@@ -2027,9 +2027,9 @@ Test suites are available to run in a shared environment
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-11` | Developer Testing and Evaluation | [`CNSC-70-SA-11`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-70-sa-11) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-11` | Developer Testing and Evaluation |
 
 
 ---
@@ -2050,9 +2050,9 @@ Two non-author reviewers or approvers are required prior to merging
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-11(4)` | Developer Testing and Evaluation \| Manual Code Reviews | [`CNSC-71-SA-11-4`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-71-sa-11-4) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-11(4)` | Developer Testing and Evaluation \| Manual Code Reviews |
 
 
 ---
@@ -2095,9 +2095,9 @@ Full infrastructure tests are used
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-11` | Developer Testing and Evaluation | [`CNSC-73-SA-11`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-73-sa-11) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-11` | Developer Testing and Evaluation |
 
 
 ---
@@ -2121,9 +2121,9 @@ Regression tests are used
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-11` | Developer Testing and Evaluation | [`CNSC-74-SA-11`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-74-sa-11) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-11` | Developer Testing and Evaluation |
 
 
 ---
@@ -2147,9 +2147,9 @@ Test suites are updated against new and emerging threats and developed into secu
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-11` | Developer Testing and Evaluation | [`CNSC-75-SA-11`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-75-sa-11) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-11` | Developer Testing and Evaluation |
 
 
 ---
@@ -2173,9 +2173,9 @@ A dedicated testing environment is established
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-3(1)` | System Development Life Cycle \| Manage preproduction environment | [`CNSC-76-SA-3-1`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-76-sa-3-1) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-3(1)` | System Development Life Cycle \| Manage preproduction environment |
 
 
 ---
@@ -2196,9 +2196,9 @@ Continuous integration server is isolated
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-39` | Process Isolation | [`CNSC-77-SC-39`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-77-sc-39) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-39` | Process Isolation |
 
 
 ---
@@ -2222,9 +2222,9 @@ Threat model results are used to determine ROI for test development
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-11(2)` | Developer Testing and Evaluation \| Threat Modeling and Vulnerability Analyses | [`CNSC-78-SA-11-2`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-78-sa-11-2) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-11(2)` | Developer Testing and Evaluation \| Threat Modeling and Vulnerability Analyses |
 
 
 ---
@@ -2257,9 +2257,9 @@ Registries require mutually authenticated TLS for all registry connections
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `IA-3(1)` | Cryptographic Bidirectional Authentication | [`CNSC-100-IA-3-1`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-100-ia-3-1) |
+| NIST control | Remarks |
+|--------------|---------|
+| `IA-3(1)` | Cryptographic Bidirectional Authentication |
 
 
 ---
@@ -2283,9 +2283,9 @@ Image and metadata are signed
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-7` | Software, Firmware, and Information Integrity | [`CNSC-101-SI-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-101-si-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-7` | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -2306,9 +2306,9 @@ Configuration is signed
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-7` | Software, Firmware, and Information Integrity | [`CNSC-102-SI-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-102-si-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-7` | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -2329,9 +2329,9 @@ Package is signed
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-7` | Software, Firmware, and Information Integrity | [`CNSC-103-SI-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-103-si-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-7` | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -2355,9 +2355,9 @@ Integrity of images is validated
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-7` | System and Information Integrity | [`CNSC-104-SI-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-104-si-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-7` | System and Information Integrity |
 
 
 ---
@@ -2381,10 +2381,10 @@ Images are scanned for vulnerabilities and malware
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `RA-5` | Vulnerability Monitoring and Scanning | [`CNSC-105-RA-5`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-105-ra-5) |
-| `SA-3` | System Development Life Cycle | [`CNSC-105-SA-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-105-sa-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `RA-5` | Vulnerability Monitoring and Scanning |
+| `SA-3` | System Development Life Cycle |
 
 
 ---
@@ -2408,9 +2408,9 @@ Image signing key revocation is enabled in the event of compromise
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-7` | System and Information Integrity | [`CNSC-106-SI-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-106-si-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-7` | System and Information Integrity |
 
 
 ---
@@ -2434,9 +2434,9 @@ Security updates are prioritized
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-2(3)` | System and Information Integrity | [`CNSC-107-SI-2-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-107-si-2-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-2(3)` | System and Information Integrity |
 
 
 ---
@@ -2457,9 +2457,9 @@ HSMs or credential managers are used for protecting credentials
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-12(3)` | Systems and Communication Protection | [`CNSC-108-SC-12-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-108-sc-12-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-12(3)` | Systems and Communication Protection |
 
 
 ---
@@ -2483,9 +2483,9 @@ Container image scanning findings are acted upon
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-2(3)` | System and Information Integrity | [`CNSC-109-SI-2-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-109-si-2-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-2(3)` | System and Information Integrity |
 
 
 ---
@@ -2509,9 +2509,9 @@ Organizational compliance rules are enforced
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `PL-1` | Policy and Procedures | [`CNSC-110-PL-1`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-110-pl-1) |
+| NIST control | Remarks |
+|--------------|---------|
+| `PL-1` | Policy and Procedures |
 
 
 ---
@@ -2554,9 +2554,9 @@ Pulls from public registries are controlled and only from authorized engineers o
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AC-6(3)` | Least Privilege | [`CNSC-112-AC-6-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-112-ac-6-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AC-6(3)` | Least Privilege |
 
 
 ---
@@ -2580,10 +2580,10 @@ Image encryption is coupled with key management attestation and/or authorization
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-12(2)` | Cryptographic Key Establishment and Management \| Symmetric and Asymmetric Keys | [`CNSC-113-SC-12-2`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-113-sc-12-2) |
-| `SC-12(3)` | Cryptographic Key Establishment and Management \| Symmetric and Asymmetric Keys | [`CNSC-113-SC-12-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-113-sc-12-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-12(2)` | Cryptographic Key Establishment and Management \| Symmetric and Asymmetric Keys |
+| `SC-12(3)` | Cryptographic Key Establishment and Management \| Symmetric and Asymmetric Keys |
 
 
 ---
@@ -2607,9 +2607,9 @@ At-risk applications are prioritized for remediation by exploit maturity and vul
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-2(3)` | System and Information Integrity | [`CNSC-114-SI-2-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-114-si-2-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-2(3)` | System and Information Integrity |
 
 
 ---
@@ -2646,9 +2646,9 @@ Workload-related configuration is signed
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-7` | Software, Firmware, and Information Integrity | [`CNSC-297-SI-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-297-si-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-7` | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -2669,9 +2669,9 @@ Workload-related package is signed
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-7` | Software, Firmware, and Information Integrity | [`CNSC-298-SI-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-298-si-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-7` | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -2692,9 +2692,9 @@ HSMs or credential managers should be used for protecting credentials. If this i
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-12(3)` | Systems and Communication Protection | [`CNSC-303-SC-12-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-303-sc-12-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-12(3)` | Systems and Communication Protection |
 
 
 ---
@@ -2829,9 +2829,9 @@ Application manifests are scanned in CI pipeline
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `RA-5` | Vulnerability Monitoring and Scanning | [`CNSC-85-RA-5`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-85-ra-5) |
+| NIST control | Remarks |
+|--------------|---------|
+| `RA-5` | Vulnerability Monitoring and Scanning |
 
 
 ---
@@ -2855,9 +2855,9 @@ CI servers for sensitive workloads are isolated from other workloads
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-39` | Process Isolation | [`CNSC-86-SC-39`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-86-sc-39) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-39` | Process Isolation |
 
 
 ---
@@ -2881,9 +2881,9 @@ Builds requiring elevated privileges run on dedicated servers
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-39` | Process Isolation | [`CNSC-87-SC-39`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-87-sc-39) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-39` | Process Isolation |
 
 
 ---
@@ -2907,9 +2907,9 @@ Build policies are enforced on the CI pipeline
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-1` | Policy and Procedures | [`CNSC-88-SA-1`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-88-sa-1) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-1` | Policy and Procedures |
 
 
 ---
@@ -2933,9 +2933,9 @@ Pipeline metadata is signed
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-7` | Software, Firmware, and Information Integrity | [`CNSC-89-SI-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-89-si-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-7` | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -2959,9 +2959,9 @@ Build stages are verified prior to the next stage executing
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-7` | Software, Firmware, and Information Integrity | [`CNSC-90-SI-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-90-si-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-7` | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -2985,9 +2985,9 @@ Images are scanned within the CI pipeline
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `RA-5` | Vulnerability Monitoring and Scanning | [`CNSC-91-RA-5`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-91-ra-5) |
+| NIST control | Remarks |
+|--------------|---------|
+| `RA-5` | Vulnerability Monitoring and Scanning |
 
 
 ---
@@ -3011,9 +3011,9 @@ Vulnerability scans are coupled with pipeline compliance rules
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-1` | Policy and Procedures | [`CNSC-92-SA-1`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-92-sa-1) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-1` | Policy and Procedures |
 
 
 ---
@@ -3037,9 +3037,9 @@ Dynamic application security testing (DAST) is performed
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-11(8)` | Interactive Application Security Testing | [`CNSC-93-SA-11-8`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-93-sa-11-8) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-11(8)` | Interactive Application Security Testing |
 
 
 ---
@@ -3063,9 +3063,9 @@ Application instrumentation is employed
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-4` | System Monitoring | [`CNSC-94-SI-4`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-94-si-4) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-4` | System Monitoring |
 
 
 ---
@@ -3127,9 +3127,9 @@ Tests to verify security health are executed at build and deploy time
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-4` | System Monitoring | [`CNSC-97-SI-4`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-97-si-4) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-4` | System Monitoring |
 
 
 ---
@@ -3172,10 +3172,10 @@ Security testing is automated
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CA-8` | Penetration Testing | [`CNSC-99-CA-8`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-99-ca-8) |
-| `SA-11` | Developer Testing and Evaluation | [`CNSC-99-SA-11`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-99-sa-11) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CA-8` | Penetration Testing |
+| `SA-11` | Developer Testing and Evaluation |
 
 
 ---
@@ -3205,10 +3205,10 @@ Every step in the build process is signed and attested for process integrity
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-1` | Policy and Procedures | [`CNSC-141-SI-1`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-141-si-1) |
-| `SI-7` | Software, Firmware, and Information Integrity | [`CNSC-141-SI-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-141-si-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-1` | Policy and Procedures |
+| `SI-7` | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -3229,10 +3229,10 @@ Every step in the build process verifies previously generated signatures
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-1` | Policy and Procedures | [`CNSC-142-SI-1`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-142-si-1) |
-| `SI-7` | Software, Firmware, and Information Integrity | [`CNSC-142-SI-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-142-si-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-1` | Policy and Procedures |
+| `SI-7` | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -3253,9 +3253,9 @@ A framework is used to manage signing of artefacts
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `IA-5` | Authenticator Management | [`CNSC-143-IA-5`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-143-ia-5) |
+| NIST control | Remarks |
+|--------------|---------|
+| `IA-5` | Authenticator Management |
 
 
 ---
@@ -3276,9 +3276,9 @@ A store is used to manage attestations
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AC-4(6)` | Information Flow Enforcement, Metadata | [`CNSC-144-AC-4-6`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-144-ac-4-6) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AC-4(6)` | Information Flow Enforcement, Metadata |
 
 
 ---
@@ -3299,9 +3299,9 @@ Artefacts any given party is authorized to certify are limited
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AC-6` | Least Privilege | [`CNSC-145-AC-6`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-145-ac-6) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AC-6` | Least Privilege |
 
 
 ---
@@ -3322,9 +3322,9 @@ Rotation and revocation of private keys is supported
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-12` | Cryptographic Key Establishment and Management | [`CNSC-146-SC-12`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-146-sc-12) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-12` | Cryptographic Key Establishment and Management |
 
 
 ---
@@ -3361,13 +3361,13 @@ Artefacts are encrypted before distribution and only authorized platforms have d
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `IA-5` | Authenticator Management | [`CNSC-148-IA-5`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-148-ia-5) |
-| `SC-12` | Cryptographic Key Establishment and Management | [`CNSC-148-SC-12`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-148-sc-12) |
-| `SC-13` | Cryptographic Protection | [`CNSC-148-SC-13`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-148-sc-13) |
-| `SC-28(1)` | Protection of Information at Rest, Cryptographic Protection | [`CNSC-148-SC-28-1`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-148-sc-28-1) |
-| `SC-8` | Transmission Confidentiality and Integrity | [`CNSC-148-SC-8`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-148-sc-8) |
+| NIST control | Remarks |
+|--------------|---------|
+| `IA-5` | Authenticator Management |
+| `SC-12` | Cryptographic Key Establishment and Management |
+| `SC-13` | Cryptographic Protection |
+| `SC-28(1)` | Protection of Information at Rest, Cryptographic Protection |
+| `SC-8` | Transmission Confidentiality and Integrity |
 
 
 ---
@@ -3397,9 +3397,9 @@ Policy adherence is cryptographically guaranteed
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-3(6)` | Configuration Change Control | [`CNSC-149-CM-3-6`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-149-cm-3-6) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-3(6)` | Configuration Change Control |
 
 
 ---
@@ -3420,9 +3420,9 @@ Environments and dependencies are validated before usage
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-3(2)` | Configuration Change Control | [`CNSC-150-CM-3-2`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-150-cm-3-2) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-3(2)` | Configuration Change Control |
 
 
 ---
@@ -3443,9 +3443,9 @@ Runtime security of build workers is validated
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-3(4)` | NIST SP 800-53 control mapped from CNSC-151 (Build Worker Runtime Security); family: Securing Build Pipelines. | [`CNSC-151-CM-3-4`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-151-cm-3-4) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-3(4)` | NIST SP 800-53 control mapped from CNSC-151 (Build Worker Runtime Security); family: Securing Build Pipelines. |
 
 
 ---
@@ -3466,9 +3466,9 @@ Build artefacts are validated through verifiably reproducible builds
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-3(4)` | NIST SP 800-53 control mapped from CNSC-152 (Reproducible Builds); family: Securing Build Pipelines. | [`CNSC-152-CM-3-4`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-152-cm-3-4) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-3(4)` | NIST SP 800-53 control mapped from CNSC-152 (Reproducible Builds); family: Securing Build Pipelines. |
 
 
 ---
@@ -3489,9 +3489,9 @@ External requirements from the build process are locked and verified
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-3(2)` | NIST SP 800-53 control mapped from CNSC-153 (External Requirement Verification); family: Securing Build Pipelines. | [`CNSC-153-CM-3-2`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-153-cm-3-2) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-3(2)` | NIST SP 800-53 control mapped from CNSC-153 (External Requirement Verification); family: Securing Build Pipelines. |
 
 
 ---
@@ -3528,9 +3528,9 @@ The build environment is recorded
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-3(1)` | NIST SP 800-53 control mapped from CNSC-155 (Build Environment Recording); family: Securing Build Pipelines. | [`CNSC-155-CM-3-1`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-155-cm-3-1) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-3(1)` | NIST SP 800-53 control mapped from CNSC-155 (Build Environment Recording); family: Securing Build Pipelines. |
 
 
 ---
@@ -3551,9 +3551,9 @@ Creation of the build environment is automated
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-3(3)` | NIST SP 800-53 control mapped from CNSC-156 (Build Environment Automation); family: Securing Build Pipelines. | [`CNSC-156-CM-3-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-156-cm-3-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-3(3)` | NIST SP 800-53 control mapped from CNSC-156 (Build Environment Automation); family: Securing Build Pipelines. |
 
 
 ---
@@ -3574,9 +3574,9 @@ Builds are distributed across different infrastructure
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-3(3)` | NIST SP 800-53 control mapped from CNSC-157 (Build Distribution); family: Securing Build Pipelines. | [`CNSC-157-CM-3-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-157-cm-3-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-3(3)` | NIST SP 800-53 control mapped from CNSC-157 (Build Distribution); family: Securing Build Pipelines. |
 
 
 ---
@@ -3597,9 +3597,9 @@ Build and related CI/CD steps are automated through a pipeline delivered as code
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-3` | System Development Life Cycle | [`CNSC-158-SA-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-158-sa-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-3` | System Development Life Cycle |
 
 
 ---
@@ -3652,9 +3652,9 @@ Build workers are single use
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AC-2` | Account Management | [`CNSC-161-AC-2`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-161-ac-2) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AC-2` | Account Management |
 
 
 ---
@@ -3675,9 +3675,9 @@ Software factory has minimal network connectivity
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-7(3)` | Boundary Protection | [`CNSC-162-SC-7-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-162-sc-7-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-7(3)` | Boundary Protection |
 
 
 ---
@@ -3698,9 +3698,9 @@ Duties of each build worker are segregated
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AC-5` | Separation of Duties | [`CNSC-163-AC-5`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-163-ac-5) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AC-5` | Separation of Duties |
 
 
 ---
@@ -3721,9 +3721,9 @@ Build worker environment and commands are passed in
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-2(2)` | Baseline Configuration | [`CNSC-164-CM-2-2`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-164-cm-2-2) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-2(2)` | Baseline Configuration |
 
 
 ---
@@ -3744,9 +3744,9 @@ Output is written to a separate secured storage repo
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AU-9(2)` | Protection of Audit Information | [`CNSC-165-AU-9-2`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-165-au-9-2) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AU-9(2)` | Protection of Audit Information |
 
 
 ---
@@ -3783,9 +3783,9 @@ User roles are defined
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AC-2` | Account Management | [`CNSC-167-AC-2`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-167-ac-2) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AC-2` | Account Management |
 
 
 ---
@@ -3806,9 +3806,9 @@ Established practices are followed for establishing a root of trust from an offl
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-17` | Public Key Infrastructure Certificates | [`CNSC-168-SC-17`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-168-sc-17) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-17` | Public Key Infrastructure Certificates |
 
 
 ---
@@ -3829,9 +3829,9 @@ Short-lived workload certificates are used
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-23(5)` | Session Authenticity | [`CNSC-169-SC-23-5`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-169-sc-23-5) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-23(5)` | Session Authenticity |
 
 
 ---
@@ -3861,9 +3861,9 @@ Third party artefacts and open source libraries are verified
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-11` | Developer Testing and Evaluation | [`CNSC-173-SA-11`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-173-sa-11) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-11` | Developer Testing and Evaluation |
 
 
 ---
@@ -3884,9 +3884,9 @@ SBOM is required from third party suppliers
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-8` | Information System Component Inventory | [`CNSC-174-CM-8`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-174-cm-8) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-8` | Information System Component Inventory |
 
 
 ---
@@ -3907,9 +3907,9 @@ Dependencies between open source components are tracked
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-10` | Software Usage Restrictions | [`CNSC-175-CM-10`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-175-cm-10) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-10` | Software Usage Restrictions |
 
 
 ---
@@ -3978,9 +3978,9 @@ Software is scanned for vulnerabilities
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `RA-5` | Vulnerability Monitoring and Scanning | [`CNSC-179-RA-5`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-179-ra-5) |
+| NIST control | Remarks |
+|--------------|---------|
+| `RA-5` | Vulnerability Monitoring and Scanning |
 
 
 ---
@@ -4001,9 +4001,9 @@ Software is scanned for license implications
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-10` | Software Usage Restrictions | [`CNSC-180-CM-10`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-180-cm-10) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-10` | Software Usage Restrictions |
 
 
 ---
@@ -4024,9 +4024,9 @@ Software composition analysis is run on ingested software
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-11(1)(8)` | Developer Testing and Evaluation | [`CNSC-181-SA-11-1-8`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-181-sa-11-1-8) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-11(1)(8)` | Developer Testing and Evaluation |
 
 
 ---
@@ -4056,9 +4056,9 @@ Commits and tags are signed
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-7` | Software, Firmware, and information integrity | [`CNSC-182-SI-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-182-si-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-7` | Software, Firmware, and information integrity |
 
 
 ---
@@ -4079,9 +4079,9 @@ Full attestation and verification is enforced for protected branches
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AC-6(3)` | Least Privilege | [`CNSC-183-AC-6-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-183-ac-6-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AC-6(3)` | Least Privilege |
 
 
 ---
@@ -4102,9 +4102,9 @@ Secrets are not committed to the source code repository unless encrypted
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-12(3)` | Systems and Communication Protection | [`CNSC-184-SC-12-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-184-sc-12-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-12(3)` | Systems and Communication Protection |
 
 
 ---
@@ -4125,9 +4125,9 @@ Individuals or teams with write access to a repository are defined
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `PL-1` | Policy and Procedures | [`CNSC-185-PL-1`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-185-pl-1) |
+| NIST control | Remarks |
+|--------------|---------|
+| `PL-1` | Policy and Procedures |
 
 
 ---
@@ -4148,9 +4148,9 @@ Software security scanning and testing is automated
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `RA-5` | Vulnerability Monitoring and Scanning | [`CNSC-186-RA-5`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-186-ra-5) |
+| NIST control | Remarks |
+|--------------|---------|
+| `RA-5` | Vulnerability Monitoring and Scanning |
 
 
 ---
@@ -4171,9 +4171,9 @@ Contribution policies are established and adhered to
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `PL-1` | Policy and Procedures | [`CNSC-187-PL-1`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-187-pl-1) |
+| NIST control | Remarks |
+|--------------|---------|
+| `PL-1` | Policy and Procedures |
 
 
 ---
@@ -4194,9 +4194,9 @@ Roles are defined and aligned to functional responsibilities
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `PL-1` | Policy and Procedures | [`CNSC-188-PL-1`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-188-pl-1) |
+| NIST control | Remarks |
+|--------------|---------|
+| `PL-1` | Policy and Procedures |
 
 
 ---
@@ -4217,9 +4217,9 @@ An independent four-eyes principle is enforced
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-11` | Developer Testing and Evaluation | [`CNSC-189-SA-11`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-189-sa-11) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-11` | Developer Testing and Evaluation |
 
 
 ---
@@ -4240,9 +4240,9 @@ Branch protection rules are used
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-8` | Security Engineering Principles | [`CNSC-190-SA-8`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-190-sa-8) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-8` | Security Engineering Principles |
 
 
 ---
@@ -4263,9 +4263,9 @@ MFA is enforced for accessing source code repositories
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `IA-2(1)` | Identification and Authentication (organizational Users) | [`CNSC-191-IA-2-1`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-191-ia-2-1) |
+| NIST control | Remarks |
+|--------------|---------|
+| `IA-2(1)` | Identification and Authentication (organizational Users) |
 
 
 ---
@@ -4286,9 +4286,9 @@ SSH keys are used to provide developers access to source code repositories
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AC-1` | Remote Access | [`CNSC-192-AC-1`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-192-ac-1) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AC-1` | Remote Access |
 
 
 ---
@@ -4309,9 +4309,9 @@ A key rotation policy is maintained
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AC-2(1)` | Prerequisites and criteria for group and role membership are defined. | [`CNSC-193-AC-2-1`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-193-ac-2-1) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AC-2(1)` | Prerequisites and criteria for group and role membership are defined. |
 
 
 ---
@@ -4332,9 +4332,9 @@ Short-lived or ephemeral credentials are used for machine and service access
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AC-2(1)` | Usage of automated mechanisms to create, enable, modify, disable, and remove accounts. | [`CNSC-194-AC-2-1`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-194-ac-2-1) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AC-2(1)` | Usage of automated mechanisms to create, enable, modify, disable, and remove accounts. |
 
 
 ---
@@ -4367,9 +4367,9 @@ Network policies enforce east-west network communication within the container de
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AC-6(3)` | Least Privilege, Network Access to Privileged Commands | [`CNSC-115-AC-6-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-115-ac-6-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AC-6(3)` | Least Privilege, Network Access to Privileged Commands |
 
 
 ---
@@ -4393,11 +4393,11 @@ Incident response considers cloud native workloads
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CA-7` | Continuous Monitoring | [`CNSC-116-CA-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-116-ca-7) |
-| `IR-4` | Incident Handling, Automated Incident Handling Processes | [`CNSC-116-IR-4`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-116-ir-4) |
-| `IR-4(5)` | Incident Handling, Automated Disabling of System | [`CNSC-116-IR-4-5`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-116-ir-4-5) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CA-7` | Continuous Monitoring |
+| `IR-4` | Incident Handling, Automated Incident Handling Processes |
+| `IR-4(5)` | Incident Handling, Automated Disabling of System |
 
 
 ---
@@ -4421,9 +4421,9 @@ Incident response accounts for appropriate evidence handling and collection of c
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `IR-5(1)` | Incident Monitoring, Automated Tracking, Data Collection, and Analysis | [`CNSC-117-IR-5-1`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-117-ir-5-1) |
+| NIST control | Remarks |
+|--------------|---------|
+| `IR-5(1)` | Incident Monitoring, Automated Tracking, Data Collection, and Analysis |
 
 
 ---
@@ -4485,9 +4485,9 @@ MAC implementations are employed
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AC-3(3)` | Access Enforcement, Mandatory Access Control | [`CNSC-120-AC-3-3`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-120-ac-3-3) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AC-3(3)` | Access Enforcement, Mandatory Access Control |
 
 
 ---
@@ -4511,9 +4511,9 @@ Threat model code and infrastructure
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-11(2)` | Developer Testing and Evaluation, Threat Modeling and Vulnerability Analyses | [`CNSC-121-SA-11-2`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-121-sa-11-2) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-11(2)` | Developer Testing and Evaluation, Threat Modeling and Vulnerability Analyses |
 
 
 ---
@@ -4537,9 +4537,9 @@ Entities are able to independently authenticate other identities
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `IA-9` | Service Identification and Authentication | [`CNSC-122-IA-9`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-122-ia-9) |
+| NIST control | Remarks |
+|--------------|---------|
+| `IA-9` | Service Identification and Authentication |
 
 
 ---
@@ -4563,9 +4563,9 @@ Each entity can create proof of who the identity is
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `IA-9` | Service Identification and Authentication | [`CNSC-123-IA-9`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-123-ia-9) |
+| NIST control | Remarks |
+|--------------|---------|
+| `IA-9` | Service Identification and Authentication |
 
 
 ---
@@ -4589,9 +4589,9 @@ Orchestrator is running on a trusted OS, BIOS, etc
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-14` | Signed Components | [`CNSC-124-CM-14`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-124-cm-14) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-14` | Signed Components |
 
 
 ---
@@ -4615,9 +4615,9 @@ Orchestrator verifies the claims of a container
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-6` | Security and Privacy Function Verification | [`CNSC-125-SI-6`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-125-si-6) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-6` | Security and Privacy Function Verification |
 
 
 ---
@@ -4829,9 +4829,9 @@ Storage control plane management interface requires mutual authentication and TL
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-8` | Transmission Confidentiality and Integrity | [`CNSC-127-SC-8`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-127-sc-8) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-8` | Transmission Confidentiality and Integrity |
 
 
 ---
@@ -4855,9 +4855,9 @@ Data availability is achieved through parity or mirroring, erasure coding or rep
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SI-13` | Predictable Failure Prevention | [`CNSC-128-SI-13`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-128-si-13) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SI-13` | Predictable Failure Prevention |
 
 
 ---
@@ -4881,10 +4881,10 @@ Hashing and checksums are added to blocks, objects or files
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-7` | Least Functionality | [`CNSC-129-CM-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-129-cm-7) |
-| `SI-7` | Software, Firmware, and Information Integrity | [`CNSC-129-SI-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-129-si-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-7` | Least Functionality |
+| `SI-7` | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -4908,10 +4908,10 @@ Data backup storage locations employ like access controls and security policies 
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SA-9` | External System Services | [`CNSC-130-SA-9`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-130-sa-9) |
-| `SC-30` | Concealment and Misdirection | [`CNSC-130-SC-30`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-130-sc-30) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SA-9` | External System Services |
+| `SC-30` | Concealment and Misdirection |
 
 
 ---
@@ -4935,10 +4935,10 @@ Secure erasure adhering to OPAL standards is employed for returned or non-functi
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CP-9` | System Backup | [`CNSC-131-CP-9`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-131-cp-9) |
-| `MP-6` | Media Sanitization | [`CNSC-131-MP-6`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-131-mp-6) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CP-9` | System Backup |
+| `MP-6` | Media Sanitization |
 
 
 ---
@@ -4962,9 +4962,9 @@ Encryption at rest considers data path, size, and frequency of access when deter
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `SC-28` | Protection of Information at Rest | [`CNSC-132-SC-28`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-132-sc-28) |
+| NIST control | Remarks |
+|--------------|---------|
+| `SC-28` | Protection of Information at Rest |
 
 
 ---
@@ -5026,11 +5026,11 @@ Security policies are used to prevent containers from accessing volume mounts on
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-6` | Configuration Settings | [`CNSC-135-CM-6`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-135-cm-6) |
-| `SA-8` | Security and Privacy Engineering Principles | [`CNSC-135-SA-8`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-135-sa-8) |
-| `SC-7` | Boundary Protection | [`CNSC-135-SC-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-135-sc-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-6` | Configuration Settings |
+| `SA-8` | Security and Privacy Engineering Principles |
+| `SC-7` | Boundary Protection |
 
 
 ---
@@ -5054,11 +5054,11 @@ Security policies are used enforce authorized worker node access to volumes
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-6` | Configuration Settings | [`CNSC-136-CM-6`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-136-cm-6) |
-| `SA-8` | Security and Privacy Engineering Principles | [`CNSC-136-SA-8`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-136-sa-8) |
-| `SC-7` | Boundary Protection | [`CNSC-136-SC-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-136-sc-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-6` | Configuration Settings |
+| `SA-8` | Security and Privacy Engineering Principles |
+| `SC-7` | Boundary Protection |
 
 
 ---
@@ -5082,11 +5082,11 @@ Volume UID and GID are inaccessible to containers
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AC-16` | Security and Privacy Attributes | [`CNSC-137-AC-16`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-137-ac-16) |
-| `AC-4` | Information Flow Enforcement | [`CNSC-137-AC-4`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-137-ac-4) |
-| `SI-7` | Software, Firmware, and Information Integrity | [`CNSC-137-SI-7`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-137-si-7) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AC-16` | Security and Privacy Attributes |
+| `AC-4` | Information Flow Enforcement |
+| `SI-7` | Software, Firmware, and Information Integrity |
 
 
 ---
@@ -5129,9 +5129,9 @@ Artifact registry supports signed artifacts
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `CM-14` | Signed Components | [`CNSC-139-CM-14`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-139-cm-14) |
+| NIST control | Remarks |
+|--------------|---------|
+| `CM-14` | Signed Components |
 
 
 ---
@@ -5155,10 +5155,10 @@ Artifact registry verifies artifacts against organizational policies
 
 **`NIST-800-53`**
 
-| NIST control | Remarks | Mapping entry |
-|--------------|---------|---------------|
-| `AU-10` | Non-repudiation | [`CNSC-140-AU-10`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-140-au-10) |
-| `CM-6` | Configuration Settings | [`CNSC-140-CM-6`](./cnsc-nist-800-53-mapping#mapping-row-cnsc-140-cm-6) |
+| NIST control | Remarks |
+|--------------|---------|
+| `AU-10` | Non-repudiation |
+| `CM-6` | Configuration Settings |
 
 
 ---
