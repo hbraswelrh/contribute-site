@@ -5,11 +5,11 @@ This guide covers Gemara format, file organization, and CLI usage for the contro
 This catalog is expressed in **Gemara Layer 1** (Guidance Catalog).
 See [Gemara Documentation](https://gemara.openssf.org/) for specification and schema details.
 
-## File Breakdown by Family
+## File breakdown by group
 
-Controls are organized into 11 families. Each family has a dedicated YAML file:
+Guidelines are organized into 11 groups (`groups.yaml`). Each group has a dedicated YAML file:
 
-| Family File                     | Family ID                  | Family Name              |
+| File                            | Group ID                   | Group title              |
 |---------------------------------|----------------------------|--------------------------|
 | `access.yaml`                   | `Access`                   | Access Control           |
 | `compute.yaml`                  | `Compute`                  | Compute                  |
@@ -23,7 +23,12 @@ Controls are organized into 11 families. Each family has a dedicated YAML file:
 | `security-assurance.yaml`       | `Security Assurance`       | Security Assurance       |
 | `storage.yaml`                  | `Storage`                  | Storage                  |
 
-Each guideline in a family file must have a `family` field matching the Family ID exactly (case-sensitive).
+Each guideline must have a `group` field matching the group `id` in `groups.yaml` exactly (case-sensitive).
+
+NIST SP 800-53 mappings live in `cnsc-nist-800-53-mapping.yaml` (Gemara **MappingDocument**). Generation produces two markdown pages:
+
+- `cnsc-nist-800-53-mapping.md` — mapping **document** (metadata, references, source/target, **Complete Mapping Index**).
+- `cnsc-nist-800-53-by-family.md` — **Cloud Native Security Controls Catalog** view of NIST alignments **grouped by family** (matches `index.md` layout). **Mapping entry** cells link to anchors on the mapping document page.
 
 ## CLI Usage
 
@@ -45,13 +50,25 @@ go run cmd/catalog/main.go -yaml catalog.yaml
 
 ### Generate Markdown
 
-Generates markdown from YAML files:
+Generates the catalog page and both NIST mapping pages:
 
 ```bash
 go run cmd/catalog/main.go -md index.md
 ```
 
-**Output**: Creates `index.md` with formatted markdown for website rendering.
+**Output**:
+
+- `index.md` — Cloud Native Security Controls Catalog (GuidanceCatalog).
+- `cnsc-nist-800-53-mapping.md` — Gemara mapping document (from `cnsc-nist-800-53-mapping.yaml`).
+- `cnsc-nist-800-53-by-family.md` — NIST tables grouped by catalog family (YAML + catalog for layout).
+
+To skip either mapping output, pass `-mapping-md=""` and/or `-mapping-by-family-md=""`.
+
+Regenerate only the mapping pages (leave `index.md` unchanged):
+
+```bash
+go run cmd/catalog/main.go -yaml "" -md "" -mapping-md cnsc-nist-800-53-mapping.md -mapping-by-family-md cnsc-nist-800-53-by-family.md
+```
 
 ### Generate Both YAML and Markdown
 
@@ -70,4 +87,4 @@ go run cmd/catalog/main.go -dir /path/to/catalog -yaml catalog.yaml -md index.md
 - Control ID: `CNSC-{number}` (e.g., `CNSC-1`, `CNSC-200`)
 - Statement ID: `CNSC-{number}.{sub}` (e.g., `CNSC-1.1`, `CNSC-200.2`)
 
-IDs must be unique across all family files. Use sequential numbering within each family.
+IDs must be unique across all group YAML files. Use sequential numbering within each group.

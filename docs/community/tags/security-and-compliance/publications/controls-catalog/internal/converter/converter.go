@@ -16,67 +16,141 @@ import (
 //go:embed markdown.tmpl
 var markdownTemplate string
 
-// ToGemara loads all family YAML files and concatenates them into a single GuidanceCatalog.
-func ToGemara(catalogDir string, familyOrder []string) (*gemara.GuidanceCatalog, error) {
-	metadataFile := filepath.Join(catalogDir, "metadata.yaml")
-	var metadataDoc gemara.GuidanceCatalog
-	if err := metadataDoc.LoadFile("file://" + metadataFile); err != nil {
-		return nil, fmt.Errorf("failed to load metadata.yaml: %w", err)
-	}
+// DefaultGroupFileOrder is the merge order for per-group YAML files (basename without .yaml).
+var DefaultGroupFileOrder = []string{
+	"access",
+	"compute",
+	"deploy",
+	"develop",
+	"distribute",
+	"securing-artefacts",
+	"securing-build-pipelines",
+	"securing-materials",
+	"securing-the-source-code",
+	"security-assurance",
+	"storage",
+}
 
-	familiesFile := filepath.Join(catalogDir, "families.yaml")
-	familiesData, err := os.ReadFile(familiesFile)
+// catalogYAMLRoot matches the on-disk metadata.yaml shape (Gemara v1.0.0-rc.1–style).
+type catalogYAMLRoot struct {
+	Title    string `yaml:"title"`
+	Type     string `yaml:"type"`
+	Metadata struct {
+		ID                  string                    `yaml:"id"`
+		Type                string                    `yaml:"type"`
+		GemaraVersion       string                    `yaml:"gemara-version"`
+		Version             string                    `yaml:"version"`
+		Description         string                    `yaml:"description"`
+		Author              gemara.Actor              `yaml:"author"`
+		MappingReferences   []gemara.MappingReference `yaml:"mapping-references"`
+		ApplicabilityGroups []struct {
+			ID          string `yaml:"id"`
+			Title       string `yaml:"title"`
+			Description string `yaml:"description"`
+		} `yaml:"applicability-groups"`
+	} `yaml:"metadata"`
+}
+
+type groupsYAML struct {
+	Groups []gemara.Family `yaml:"groups"`
+}
+
+// guidelineYAML matches per-file guidelines (group, not family).
+type guidelineYAML struct {
+	ID              string   `yaml:"id"`
+	Title           string   `yaml:"title"`
+	Objective       string   `yaml:"objective"`
+	State           string   `yaml:"state"`
+	Group           string   `yaml:"group"`
+	Applicability   []string `yaml:"applicability"`
+	Recommendations []string `yaml:"recommendations"`
+}
+
+func (g guidelineYAML) toGemara() gemara.Guideline {
+	return gemara.Guideline{
+		Id:              g.ID,
+		Title:           g.Title,
+		Objective:       g.Objective,
+		Family:          g.Group,
+		Applicability:   g.Applicability,
+		Recommendations: g.Recommendations,
+	}
+}
+
+// ToGemara loads metadata.yaml, groups.yaml, and per-group guideline files into a GuidanceCatalog.
+// groupFileOrder lists per-group file basenames (without .yaml); use DefaultGroupFileOrder for normal builds.
+func ToGemara(catalogDir string, groupFileOrder []string) (*gemara.GuidanceCatalog, error) {
+	metadataPath := filepath.Join(catalogDir, "metadata.yaml")
+	rawMeta, err := os.ReadFile(metadataPath)
 	if err != nil {
-		return nil, fmt.Errorf("failed to read families.yaml: %w", err)
+		return nil, fmt.Errorf("read metadata.yaml: %w", err)
 	}
 
-	var familiesDoc struct {
-		Families []gemara.Family `yaml:"families"`
+	var root catalogYAMLRoot
+	if err := yaml.Unmarshal(rawMeta, &root); err != nil {
+		return nil, fmt.Errorf("parse metadata.yaml: %w", err)
 	}
-	if err := yaml.Unmarshal(familiesData, &familiesDoc); err != nil {
-		return nil, fmt.Errorf("failed to parse families.yaml: %w", err)
+
+	md := gemara.Metadata{
+		Id:                root.Metadata.ID,
+		Version:           root.Metadata.Version,
+		Description:       root.Metadata.Description,
+		Author:            root.Metadata.Author,
+		MappingReferences: root.Metadata.MappingReferences,
+	}
+	for _, ag := range root.Metadata.ApplicabilityGroups {
+		md.ApplicabilityCategories = append(md.ApplicabilityCategories, gemara.Category{
+			Id:          ag.ID,
+			Title:       ag.Title,
+			Description: ag.Description,
+		})
+	}
+
+	groupsPath := filepath.Join(catalogDir, "groups.yaml")
+	groupsData, err := os.ReadFile(groupsPath)
+	if err != nil {
+		return nil, fmt.Errorf("read groups.yaml: %w", err)
+	}
+	var groupsDoc groupsYAML
+	if err := yaml.Unmarshal(groupsData, &groupsDoc); err != nil {
+		return nil, fmt.Errorf("parse groups.yaml: %w", err)
 	}
 
 	var allGuidelines []gemara.Guideline
-
-	for _, familyID := range familyOrder {
-		familyFilePath := filepath.Join(catalogDir, fmt.Sprintf("%s.yaml", familyID))
-
-		if _, err := os.Stat(familyFilePath); os.IsNotExist(err) {
+	for _, slug := range groupFileOrder {
+		p := filepath.Join(catalogDir, fmt.Sprintf("%s.yaml", slug))
+		if _, err := os.Stat(p); os.IsNotExist(err) {
 			continue
 		}
-
-		data, err := os.ReadFile(familyFilePath)
+		data, err := os.ReadFile(p)
 		if err != nil {
-			return nil, fmt.Errorf("failed to read %s: %w", familyFilePath, err)
+			return nil, fmt.Errorf("read %s: %w", p, err)
 		}
-
-		var familyData struct {
-			Guidelines []gemara.Guideline `yaml:"guidelines"`
+		var file struct {
+			Guidelines []guidelineYAML `yaml:"guidelines"`
 		}
-		if err := yaml.Unmarshal(data, &familyData); err != nil {
-			return nil, fmt.Errorf("failed to parse %s: %w", familyFilePath, err)
+		if err := yaml.Unmarshal(data, &file); err != nil {
+			return nil, fmt.Errorf("parse %s: %w", p, err)
 		}
-
-		allGuidelines = append(allGuidelines, familyData.Guidelines...)
+		for _, g := range file.Guidelines {
+			allGuidelines = append(allGuidelines, g.toGemara())
+		}
 	}
 
 	sort.Slice(allGuidelines, func(i, j int) bool {
 		return allGuidelines[i].Id < allGuidelines[j].Id
 	})
 
-	doc := &gemara.GuidanceCatalog{
-		Title:        metadataDoc.Title,
-		Metadata:     metadataDoc.Metadata,
-		GuidanceType: metadataDoc.GuidanceType,
-		Families:     familiesDoc.Families,
+	return &gemara.GuidanceCatalog{
+		Title:        root.Title,
+		GuidanceType: gemara.GuidanceType(root.Type),
+		Metadata:     md,
+		Families:     groupsDoc.Groups,
 		Guidelines:   allGuidelines,
-	}
-
-	return doc, nil
+	}, nil
 }
 
-// familyWithGuidelines represents a family with its associated guidelines for template rendering.
+// familyWithGuidelines represents a group (family in go-gemara) with its guidelines for template rendering.
 type familyWithGuidelines struct {
 	gemara.Family
 	Guidelines []gemara.Guideline
@@ -84,32 +158,31 @@ type familyWithGuidelines struct {
 
 // templateData holds the data structure for the markdown template.
 type templateData struct {
-	FamiliesWithGuidelines []familyWithGuidelines
-	ApplicabilityTitles    map[string]string
+	GroupsWithGuidelines []familyWithGuidelines
+	ApplicabilityTitles  map[string]string
 }
 
 // ToMarkdown converts a GuidanceCatalog to Markdown format for website rendering.
-func ToMarkdown(doc *gemara.GuidanceCatalog) (string, error) {
-	familyGuidelines := make(map[string][]gemara.Guideline)
+func ToMarkdown(doc *gemara.GuidanceCatalog, catalogDir string) (string, error) {
+	byGroup := make(map[string][]gemara.Guideline)
 	for _, guideline := range doc.Guidelines {
 		if guideline.Family != "" {
-			familyGuidelines[guideline.Family] = append(familyGuidelines[guideline.Family], guideline)
+			byGroup[guideline.Family] = append(byGroup[guideline.Family], guideline)
 		}
 	}
-
-	for familyID := range familyGuidelines {
-		sort.Slice(familyGuidelines[familyID], func(i, j int) bool {
-			return familyGuidelines[familyID][i].Id < familyGuidelines[familyID][j].Id
+	for gid := range byGroup {
+		sort.Slice(byGroup[gid], func(i, j int) bool {
+			return byGroup[gid][i].Id < byGroup[gid][j].Id
 		})
 	}
 
-	var familiesWithGuidelines []familyWithGuidelines
-	for _, family := range doc.Families {
-		guidelines, hasGuidelines := familyGuidelines[family.Id]
-		if hasGuidelines && len(guidelines) > 0 {
-			familiesWithGuidelines = append(familiesWithGuidelines, familyWithGuidelines{
-				Family:     family,
-				Guidelines: guidelines,
+	var groupsWithGuidelines []familyWithGuidelines
+	for _, grp := range doc.Families {
+		gl, ok := byGroup[grp.Id]
+		if ok && len(gl) > 0 {
+			groupsWithGuidelines = append(groupsWithGuidelines, familyWithGuidelines{
+				Family:     grp,
+				Guidelines: gl,
 			})
 		}
 	}
@@ -118,10 +191,15 @@ func ToMarkdown(doc *gemara.GuidanceCatalog) (string, error) {
 	for _, cat := range doc.Metadata.ApplicabilityCategories {
 		applicabilityTitles[cat.Id] = cat.Title
 	}
+	if catalogDir != "" {
+		if err := mergeApplicabilityGroupTitles(filepath.Join(catalogDir, "metadata.yaml"), applicabilityTitles); err != nil {
+			return "", err
+		}
+	}
 
 	data := templateData{
-		FamiliesWithGuidelines: familiesWithGuidelines,
-		ApplicabilityTitles:    applicabilityTitles,
+		GroupsWithGuidelines: groupsWithGuidelines,
+		ApplicabilityTitles:  applicabilityTitles,
 	}
 
 	tmpl, err := template.New("markdown").Funcs(template.FuncMap{
@@ -148,4 +226,37 @@ func ToMarkdown(doc *gemara.GuidanceCatalog) (string, error) {
 	}
 
 	return b.String(), nil
+}
+
+// metadataApplicabilityGroups mirrors optional metadata.applicability-groups in metadata.yaml.
+type metadataApplicabilityGroups struct {
+	Metadata struct {
+		ApplicabilityGroups []struct {
+			Id    string `yaml:"id"`
+			Title string `yaml:"title"`
+		} `yaml:"applicability-groups"`
+	} `yaml:"metadata"`
+}
+
+func mergeApplicabilityGroupTitles(metadataPath string, titles map[string]string) error {
+	data, err := os.ReadFile(metadataPath)
+	if err != nil {
+		if os.IsNotExist(err) {
+			return nil
+		}
+		return fmt.Errorf("read metadata for applicability-groups: %w", err)
+	}
+	var ext metadataApplicabilityGroups
+	if err := yaml.Unmarshal(data, &ext); err != nil {
+		return fmt.Errorf("parse applicability-groups: %w", err)
+	}
+	for _, g := range ext.Metadata.ApplicabilityGroups {
+		if g.Id == "" {
+			continue
+		}
+		if _, exists := titles[g.Id]; !exists && g.Title != "" {
+			titles[g.Id] = g.Title
+		}
+	}
+	return nil
 }

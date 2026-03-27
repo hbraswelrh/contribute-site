@@ -8,6 +8,29 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+/**
+ * @param {import('@docusaurus/plugin-content-docs').SidebarItem[]} items
+ * @param {(docId: string) => boolean} shouldOmitDoc
+ * @returns {import('@docusaurus/plugin-content-docs').SidebarItem[]}
+ */
+function filterSidebarItems(items, shouldOmitDoc) {
+  return items
+    .map((item) => {
+      if (item.type === 'doc' && shouldOmitDoc(item.id)) {
+        return null;
+      }
+      if (item.type === 'category' && item.items?.length) {
+        const nextItems = filterSidebarItems(item.items, shouldOmitDoc);
+        if (nextItems.length === 0) {
+          return null;
+        }
+        return { ...item, items: nextItems };
+      }
+      return item;
+    })
+    .filter(Boolean);
+}
+
 const TECHDOCS_EDIT_BASE = 'https://github.com/cncf/techdocs/edit/main/docs';
 const TECHDOCS_ANALYSES_EDIT_BASE = 'https://github.com/cncf/techdocs/edit/main/analyses';
 const LOCAL_EDIT_BASE = 'https://github.com/cncf/contribute-site/edit/main/docs';
@@ -76,6 +99,14 @@ const config = {
           routeBasePath: '/', // Serve the docs at the site's root
           sidebarPath: './sidebars.js',
           exclude: ['**/README.md'], // Exclude README.md files from being rendered as docs
+          // Keep cnsc-nist-800-53-by-family routable (deep links from the catalog) but out of the sidebar
+          // so it does not duplicate "Cloud Native Security Controls Catalog" in the nav.
+          async sidebarItemsGenerator({ defaultSidebarItemsGenerator, ...args }) {
+            const items = await defaultSidebarItemsGenerator(args);
+            return filterSidebarItems(items, (docId) =>
+              typeof docId === 'string' && docId.includes('cnsc-nist-800-53-by-family'),
+            );
+          },
         },
         blog: {
           showReadingTime: true,

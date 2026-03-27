@@ -7,7 +7,7 @@ metadata:
   type: MappingDocument
   gemara-version: '1.0.0-rc.1'
   version: 1.0.0
-  description: Derived mapping from the CNCF contribute-site Cloud Native Security Controls Catalog (CNSC guidelines) to NIST SP 800-53 Rev. 5 control identifiers, as recorded in each guideline's guideline-mappings.
+  description: This document maps the Cloud Native Security Controls Catalog to NIST 800-53 SP Rev.5 Guidelines.
   author:
     id: tag-sc
     name: TAG Security and Compliance

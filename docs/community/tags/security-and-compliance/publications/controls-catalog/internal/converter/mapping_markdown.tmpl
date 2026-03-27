@@ -1,0 +1,97 @@
+{{- define "mappingDocument" -}}
+---
+title: {{.Title}}
+sidebar_position: 7
+toc_max_heading_level: 3
+---
+
+<!--
+Auto-generated from cnsc-nist-800-53-mapping.yaml.
+Do not edit manually.
+
+  go run cmd/catalog/main.go -md index.md
+-->
+
+# {{.Title}}
+
+This document maps the [Cloud Native Security Controls Catalog](./index.md) to NIST 800-53 SP Rev.5 Guidelines.
+
+## Complete Mapping Index
+
+Mapping entry links on the [Cloud Native Security Controls Catalog page]({{.ByFamilyRel}}) jump to these atomic mapping anchors.
+
+| Mapping ID | CNSC guideline | NIST control(s) | Relationship | Remarks |
+|------------|----------------|-----------------|--------------|---------|
+{{range .FlatMappings}}| <a id="{{mappingRowAnchor .ID}}"></a>`{{.ID}}` | `{{.Source}}` | {{targetList .Targets}} | {{.Relationship}} | {{tableCell .Remarks}} |
+{{end}}
+
+{{if .Remarks}}
+## Document remarks
+
+{{.Remarks}}
+{{end}}
+{{- end -}}
+
+{{- define "mappingByFamily" -}}
+---
+title: Cloud Native Security Controls Catalog — NIST mappings by family
+sidebar_position: 8
+toc_max_heading_level: 3
+---
+
+<!--
+Auto-generated from cnsc-nist-800-53-mapping.yaml plus catalog guidelines (for family grouping).
+Do not edit manually.
+
+  go run cmd/catalog/main.go -md index.md
+-->
+
+# Cloud Native Security Controls Catalog
+
+## Guideline families (NIST mappings)
+
+**Jump to a section:**
+
+{{range $i, $f := .Families}}{{if $i}} · {{end}}[{{$f.Title}}](#{{anchor $f.Id}}){{end}}.
+
+---
+
+{{range .Families}}
+<a id="{{anchor .Id}}"></a>
+
+## {{.Title}}
+
+{{if .Description}}{{.Description}}
+
+{{end}}{{range .Guidelines}}
+
+<a id="{{lower .Id}}"></a>
+
+### {{.Title}} | `{{.Id}}`
+{{if .Applicability}}{{if eq (len .Applicability) 1}}**Originating Document**: `{{applicabilityTitle (index .Applicability 0) $.ApplicabilityTitles}}`
+{{else}}**Originating Document**:
+{{range .Applicability}}- `{{applicabilityTitle . $.ApplicabilityTitles}}`
+{{end}}
+{{end}}{{end}}
+
+{{if .Objective}}**Objective**
+
+{{.Objective}}
+
+{{end}}{{if .Rows}}**Guideline Mappings**
+
+**`NIST-800-53`**
+
+| NIST control | Remarks | Mapping entry |
+|--------------|---------|---------------|
+{{range .Rows}}| `{{firstTargetEntryID .}}` | {{tableCell .Remarks}} | [`{{.ID}}`]({{$.MappingDocumentRel}}#{{mappingRowAnchor .ID}}) |
+{{end}}
+
+{{else}}*No NIST SP 800-53 mapping row in this document for this guideline.*
+
+{{end}}---
+
+{{end}}
+
+{{end}}
+{{- end -}}
