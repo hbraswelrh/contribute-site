@@ -9,7 +9,6 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/gemaraproj/go-gemara"
 	"github.com/goccy/go-yaml"
 )
 
@@ -31,31 +30,88 @@ var DefaultGroupFileOrder = []string{
 	"storage",
 }
 
-// catalogYAMLRoot matches the on-disk metadata.yaml shape (Gemara v1.0.0-rc.1–style).
+// Actor is metadata.author (Gemara-style Layer 1 catalog).
+type Actor struct {
+	Id   string `yaml:"id"`
+	Name string `yaml:"name"`
+	Type string `yaml:"type"`
+}
+
+// MappingReference is an external framework reference (e.g. NIST).
+type MappingReference struct {
+	Id          string `yaml:"id"`
+	Title       string `yaml:"title"`
+	Version     string `yaml:"version"`
+	URL         string `yaml:"url,omitempty"`
+	Description string `yaml:"description,omitempty"`
+}
+
+// Category is an applicability group (originating document).
+type Category struct {
+	Id          string `yaml:"id"`
+	Title       string `yaml:"title"`
+	Description string `yaml:"description,omitempty"`
+}
+
+// Metadata holds catalog-level metadata for templates and merged YAML export.
+type Metadata struct {
+	Id                      string             `yaml:"id"`
+	Type                    string             `yaml:"type,omitempty"`
+	Version                 string             `yaml:"version"`
+	GemaraVersion           string             `yaml:"gemara-version,omitempty"`
+	Description             string             `yaml:"description"`
+	Author                  Actor              `yaml:"author"`
+	MappingReferences       []MappingReference `yaml:"mapping-references,omitempty"`
+	ApplicabilityCategories []Category         `yaml:"applicability-categories,omitempty"`
+}
+
+// Family is one security domain group from groups.yaml (shown as a “family” on the site).
+type Family struct {
+	Id          string `yaml:"id"`
+	Title       string `yaml:"title"`
+	Description string `yaml:"description"`
+}
+
+// Guideline is one catalog entry.
+type Guideline struct {
+	Id              string   `yaml:"id"`
+	Title           string   `yaml:"title"`
+	Objective       string   `yaml:"objective"`
+	Family          string   `yaml:"family"`
+	Applicability   []string `yaml:"applicability,omitempty"`
+	Recommendations []string `yaml:"recommendations,omitempty"`
+}
+
+// Catalog is the merged in-memory catalog used for markdown and optional Layer 1 YAML export.
+type Catalog struct {
+	Title      string      `yaml:"title"`
+	Metadata   Metadata    `yaml:"metadata"`
+	Type       string      `yaml:"type"`
+	Families   []Family    `yaml:"families"`
+	Guidelines []Guideline `yaml:"guidelines"`
+}
+
+// catalogYAMLRoot matches metadata.yaml on disk (applicability uses applicability-groups).
 type catalogYAMLRoot struct {
 	Title    string `yaml:"title"`
 	Type     string `yaml:"type"`
 	Metadata struct {
-		ID                  string                    `yaml:"id"`
-		Type                string                    `yaml:"type"`
-		GemaraVersion       string                    `yaml:"gemara-version"`
-		Version             string                    `yaml:"version"`
-		Description         string                    `yaml:"description"`
-		Author              gemara.Actor              `yaml:"author"`
-		MappingReferences   []gemara.MappingReference `yaml:"mapping-references"`
-		ApplicabilityGroups []struct {
-			ID          string `yaml:"id"`
-			Title       string `yaml:"title"`
-			Description string `yaml:"description"`
-		} `yaml:"applicability-groups"`
+		Id                  string             `yaml:"id"`
+		Type                string             `yaml:"type"`
+		GemaraVersion       string             `yaml:"gemara-version"`
+		Version             string             `yaml:"version"`
+		Description         string             `yaml:"description"`
+		Author              Actor              `yaml:"author"`
+		MappingReferences   []MappingReference `yaml:"mapping-references"`
+		ApplicabilityGroups []Category         `yaml:"applicability-groups"`
 	} `yaml:"metadata"`
 }
 
 type groupsYAML struct {
-	Groups []gemara.Family `yaml:"groups"`
+	Groups []Family `yaml:"groups"`
 }
 
-// guidelineYAML matches per-file guidelines (group, not family).
+// guidelineYAML matches per-file guidelines (field group → Guideline.Family).
 type guidelineYAML struct {
 	ID              string   `yaml:"id"`
 	Title           string   `yaml:"title"`
@@ -66,8 +122,8 @@ type guidelineYAML struct {
 	Recommendations []string `yaml:"recommendations"`
 }
 
-func (g guidelineYAML) toGemara() gemara.Guideline {
-	return gemara.Guideline{
+func (g guidelineYAML) toGuideline() Guideline {
+	return Guideline{
 		Id:              g.ID,
 		Title:           g.Title,
 		Objective:       g.Objective,
@@ -77,9 +133,9 @@ func (g guidelineYAML) toGemara() gemara.Guideline {
 	}
 }
 
-// ToGemara loads metadata.yaml, groups.yaml, and per-group guideline files into a GuidanceCatalog.
+// LoadCatalog reads metadata.yaml, groups.yaml, and per-group guideline files into a Catalog.
 // groupFileOrder lists per-group file basenames (without .yaml); use DefaultGroupFileOrder for normal builds.
-func ToGemara(catalogDir string, groupFileOrder []string) (*gemara.GuidanceCatalog, error) {
+func LoadCatalog(catalogDir string, groupFileOrder []string) (*Catalog, error) {
 	metadataPath := filepath.Join(catalogDir, "metadata.yaml")
 	rawMeta, err := os.ReadFile(metadataPath)
 	if err != nil {
@@ -91,16 +147,18 @@ func ToGemara(catalogDir string, groupFileOrder []string) (*gemara.GuidanceCatal
 		return nil, fmt.Errorf("parse metadata.yaml: %w", err)
 	}
 
-	md := gemara.Metadata{
-		Id:                root.Metadata.ID,
+	md := Metadata{
+		Id:                root.Metadata.Id,
+		Type:              root.Metadata.Type,
 		Version:           root.Metadata.Version,
+		GemaraVersion:     root.Metadata.GemaraVersion,
 		Description:       root.Metadata.Description,
 		Author:            root.Metadata.Author,
 		MappingReferences: root.Metadata.MappingReferences,
 	}
 	for _, ag := range root.Metadata.ApplicabilityGroups {
-		md.ApplicabilityCategories = append(md.ApplicabilityCategories, gemara.Category{
-			Id:          ag.ID,
+		md.ApplicabilityCategories = append(md.ApplicabilityCategories, Category{
+			Id:          ag.Id,
 			Title:       ag.Title,
 			Description: ag.Description,
 		})
@@ -116,7 +174,7 @@ func ToGemara(catalogDir string, groupFileOrder []string) (*gemara.GuidanceCatal
 		return nil, fmt.Errorf("parse groups.yaml: %w", err)
 	}
 
-	var allGuidelines []gemara.Guideline
+	var allGuidelines []Guideline
 	for _, slug := range groupFileOrder {
 		p := filepath.Join(catalogDir, fmt.Sprintf("%s.yaml", slug))
 		if _, err := os.Stat(p); os.IsNotExist(err) {
@@ -133,7 +191,7 @@ func ToGemara(catalogDir string, groupFileOrder []string) (*gemara.GuidanceCatal
 			return nil, fmt.Errorf("parse %s: %w", p, err)
 		}
 		for _, g := range file.Guidelines {
-			allGuidelines = append(allGuidelines, g.toGemara())
+			allGuidelines = append(allGuidelines, g.toGuideline())
 		}
 	}
 
@@ -141,19 +199,19 @@ func ToGemara(catalogDir string, groupFileOrder []string) (*gemara.GuidanceCatal
 		return allGuidelines[i].Id < allGuidelines[j].Id
 	})
 
-	return &gemara.GuidanceCatalog{
-		Title:        root.Title,
-		GuidanceType: gemara.GuidanceType(root.Type),
-		Metadata:     md,
-		Families:     groupsDoc.Groups,
-		Guidelines:   allGuidelines,
+	return &Catalog{
+		Title:      root.Title,
+		Type:       root.Type,
+		Metadata:   md,
+		Families:   groupsDoc.Groups,
+		Guidelines: allGuidelines,
 	}, nil
 }
 
-// familyWithGuidelines represents a group (family in go-gemara) with its guidelines for template rendering.
+// familyWithGuidelines is one group plus its guidelines for template rendering.
 type familyWithGuidelines struct {
-	gemara.Family
-	Guidelines []gemara.Guideline
+	Family
+	Guidelines []Guideline
 }
 
 // templateData holds the data structure for the markdown template.
@@ -162,9 +220,9 @@ type templateData struct {
 	ApplicabilityTitles  map[string]string
 }
 
-// ToMarkdown converts a GuidanceCatalog to Markdown format for website rendering.
-func ToMarkdown(doc *gemara.GuidanceCatalog, catalogDir string) (string, error) {
-	byGroup := make(map[string][]gemara.Guideline)
+// ToMarkdown converts a Catalog to Markdown for the site.
+func ToMarkdown(doc *Catalog, catalogDir string) (string, error) {
+	byGroup := make(map[string][]Guideline)
 	for _, guideline := range doc.Guidelines {
 		if guideline.Family != "" {
 			byGroup[guideline.Family] = append(byGroup[guideline.Family], guideline)

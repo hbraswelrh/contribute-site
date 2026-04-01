@@ -3,13 +3,13 @@ package converter
 import (
 	_ "embed"
 	"fmt"
+	"html"
 	"os"
 	"path/filepath"
 	"sort"
 	"strings"
 	"text/template"
 
-	"github.com/gemaraproj/go-gemara"
 	"github.com/goccy/go-yaml"
 )
 
@@ -83,6 +83,21 @@ type mappingRowView struct {
 	Targets                           []mappingTargetEntry
 }
 
+// MergedFlatPart is one atomic YAML mapping row grouped under a single CNSC guideline.
+type MergedFlatPart struct {
+	Targets   []mappingTargetEntry
+	Remarks   string
+	MappingID string
+}
+
+// MergedFlatRow is one Cross-walked Controls table row (one CNSC guideline, possibly several NIST lines).
+type MergedFlatRow struct {
+	Source         string
+	Relationship   string
+	Parts          []MergedFlatPart
+	MappingIDs     []string
+}
+
 // mappingPageFamily is one catalog family with guidelines and optional NIST rows.
 type mappingPageFamily struct {
 	Id, Title, Description string
@@ -93,6 +108,7 @@ type mappingPageGuideline struct {
 	Id, Title, Objective string
 	Applicability        []string
 	Rows                 []mappingRowView
+	MergedParts          []MergedFlatPart // same rows as NIST lines for merged table rendering
 }
 
 type mappingPageTemplateData struct {
@@ -102,7 +118,7 @@ type mappingPageTemplateData struct {
 	SourceReference     mappingRefView
 	TargetReference     mappingRefView
 	Families            []mappingPageFamily
-	FlatMappings        []mappingRowView
+	FlatMappingsMerged  []MergedFlatRow
 	ApplicabilityTitles map[string]string
 	// Relative page links (no .md suffix), e.g. ./cnsc-nist-800-53-mapping
 	MappingDocumentRel string
@@ -146,8 +162,8 @@ func mappingRowAnchor(mappingID string) string {
 }
 
 // buildMappingFamilies groups catalog guidelines by family and attaches NIST rows by CNSC id.
-func buildMappingFamilies(cat *gemara.GuidanceCatalog, rowsBySource map[string][]mappingRowView) []mappingPageFamily {
-	byGroup := make(map[string][]gemara.Guideline)
+func buildMappingFamilies(cat *Catalog, rowsBySource map[string][]mappingRowView) []mappingPageFamily {
+	byGroup := make(map[string][]Guideline)
 	for _, g := range cat.Guidelines {
 		if g.Family != "" {
 			byGroup[g.Family] = append(byGroup[g.Family], g)
@@ -177,6 +193,7 @@ func buildMappingFamilies(cat *gemara.GuidanceCatalog, rowsBySource map[string][
 				Objective:     g.Objective,
 				Applicability: g.Applicability,
 				Rows:          rows,
+				MergedParts:   rowViewsToMergedParts(rows),
 			})
 		}
 		out = append(out, mappingPageFamily{
@@ -202,6 +219,121 @@ func sortFlatMappings(rows []mappingRowView) {
 	})
 }
 
+func rowViewsToMergedParts(rows []mappingRowView) []MergedFlatPart {
+	var p []MergedFlatPart
+	for _, r := range rows {
+		p = append(p, MergedFlatPart{
+			Targets:   r.Targets,
+			Remarks:   r.Remarks,
+			MappingID: r.ID,
+		})
+	}
+	return p
+}
+
+func mergeFlatMappingsBySource(rows []mappingRowView) []MergedFlatRow {
+	bySource := make(map[string][]mappingRowView)
+	for _, r := range rows {
+		bySource[r.Source] = append(bySource[r.Source], r)
+	}
+	sources := make([]string, 0, len(bySource))
+	for s := range bySource {
+		sources = append(sources, s)
+	}
+	sort.Strings(sources)
+
+	var out []MergedFlatRow
+	for _, src := range sources {
+		group := bySource[src]
+		sort.Slice(group, func(i, j int) bool {
+			a, b := firstTargetEntryID(group[i]), firstTargetEntryID(group[j])
+			if a != b {
+				return a < b
+			}
+			return group[i].ID < group[j].ID
+		})
+
+		relSet := make(map[string]struct{})
+		for _, r := range group {
+			if strings.TrimSpace(r.Relationship) != "" {
+				relSet[r.Relationship] = struct{}{}
+			}
+		}
+		rels := make([]string, 0, len(relSet))
+		for rs := range relSet {
+			rels = append(rels, rs)
+		}
+		sort.Strings(rels)
+		relDisplay := strings.Join(rels, "; ")
+		if relDisplay == "" {
+			relDisplay = "—"
+		}
+
+		var parts []MergedFlatPart
+		var ids []string
+		for _, r := range group {
+			parts = append(parts, MergedFlatPart{
+				Targets:   r.Targets,
+				Remarks:   r.Remarks,
+				MappingID: r.ID,
+			})
+			ids = append(ids, r.ID)
+		}
+		out = append(out, MergedFlatRow{
+			Source:       src,
+			Relationship: relDisplay,
+			Parts:        parts,
+			MappingIDs:   ids,
+		})
+	}
+	return out
+}
+
+// mergedNISTCell renders the NIST control(s) column: one line per YAML mapping when a CNSC has several rows (controls only).
+func mergedNISTCell(parts []MergedFlatPart) string {
+	if len(parts) == 0 {
+		return "—"
+	}
+	if len(parts) == 1 {
+		return targetEntryIDs(parts[0].Targets)
+	}
+	var b strings.Builder
+	for i, p := range parts {
+		if i > 0 {
+			b.WriteString("<br />")
+		}
+		b.WriteString(targetEntryIDs(p.Targets))
+	}
+	// Pipe characters in cell text break markdown pipe tables even inside HTML fragments.
+	return strings.ReplaceAll(b.String(), "|", "\\|")
+}
+
+// mergedRemarksCell renders the Remarks column; multiple mappings become a bulleted list.
+func mergedRemarksCell(parts []MergedFlatPart) string {
+	if len(parts) == 0 {
+		return "—"
+	}
+	if len(parts) == 1 {
+		return tableCell(parts[0].Remarks)
+	}
+	var b strings.Builder
+	b.WriteString("<ul>")
+	for _, p := range parts {
+		rem := strings.TrimSpace(strings.ReplaceAll(p.Remarks, "\n", " "))
+		if rem == "" {
+			rem = "—"
+		} else {
+			rem = html.EscapeString(rem)
+		}
+		rem = strings.ReplaceAll(rem, "|", "\\|")
+		b.WriteString("<li>")
+		b.WriteString(rem)
+		b.WriteString("</li>")
+	}
+	b.WriteString("</ul>")
+	return b.String()
+}
+
 func mappingTemplateFuncMap() template.FuncMap {
 	return template.FuncMap{
 		"targetList":         targetEntryIDs,
@@ -209,6 +341,8 @@ func mappingTemplateFuncMap() template.FuncMap {
 		"firstTargetEntryID": firstTargetEntryID,
 		"anchor":             anchorID,
 		"mappingRowAnchor":   mappingRowAnchor,
+		"mergedNISTCell":     mergedNISTCell,
+		"mergedRemarksCell":  mergedRemarksCell,
 		"lower":              strings.ToLower,
 		"applicabilityTitle": func(id string, titles map[string]string) string {
 			if title, ok := titles[id]; ok {
@@ -238,7 +372,7 @@ func buildMappingPageData(catalogDir, mappingYAMLPath string) (mappingPageTempla
 		return mappingPageTemplateData{}, fmt.Errorf("parse mapping yaml: %w", err)
 	}
 
-	cat, err := ToGemara(catalogDir, DefaultGroupFileOrder)
+	cat, err := LoadCatalog(catalogDir, DefaultGroupFileOrder)
 	if err != nil {
 		return mappingPageTemplateData{}, fmt.Errorf("load catalog for mapping page: %w", err)
 	}
@@ -257,6 +391,7 @@ func buildMappingPageData(catalogDir, mappingYAMLPath string) (mappingPageTempla
 		flat = append(flat, r)
 	}
 	sortFlatMappings(flat)
+	flatMerged := mergeFlatMappingsBySource(flat)
 
 	var refs []mappingRefTableRow
 	for _, r := range mapDoc.Metadata.MappingReferences {
@@ -290,7 +425,7 @@ func buildMappingPageData(catalogDir, mappingYAMLPath string) (mappingPageTempla
 		SourceReference:     mappingRefView{ReferenceID: mapDoc.SourceReference.ReferenceID, EntryType: mapDoc.SourceReference.EntryType},
 		TargetReference:     mappingRefView{ReferenceID: mapDoc.TargetReference.ReferenceID, EntryType: mapDoc.TargetReference.EntryType},
 		Families:            buildMappingFamilies(cat, rowsBySource),
-		FlatMappings:        flat,
+		FlatMappingsMerged:  flatMerged,
 		ApplicabilityTitles: applicabilityTitles,
 	}, nil
 }

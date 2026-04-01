@@ -666,8 +666,7 @@ Monitor and detect any changes to the initial configurations made in runtime
 
 | NIST control | Remarks |
 |--------------|---------|
-| `CM-2(2)` | Baseline Configuration, Automation Support for Accuracy and Currency |
-| `CM-3(7)` | Configuration Change Control, Review System Changes |
+| `CM-2(2)`<br />`CM-3(7)` | <ul><li>Baseline Configuration, Automation Support for Accuracy and Currency</li><li>Configuration Change Control, Review System Changes</li></ul> |
 
 
 ---
@@ -719,8 +718,7 @@ Container specific operating systems are in use
 
 | NIST control | Remarks |
 |--------------|---------|
-| `CM-2` | Baseline Configuration |
-| `CM-7` | Least Functionality |
+| `CM-2`<br />`CM-7` | <ul><li>Baseline Configuration</li><li>Least Functionality</li></ul> |
 
 
 ---
@@ -798,8 +796,7 @@ Object level and resource requests and limits are controlled through cgroups
 
 | NIST control | Remarks |
 |--------------|---------|
-| `SI-7(16)` | Software, Firmware, and Information Integrity, Time Limit on Process Execution Without Supervision |
-| `SI-7(17)` | Software, Firmware, and Information Integrity, Runtime Application Self-protection |
+| `SI-7(16)`<br />`SI-7(17)` | <ul><li>Software, Firmware, and Information Integrity, Time Limit on Process Execution Without Supervision</li><li>Software, Firmware, and Information Integrity, Runtime Application Self-protection</li></ul> |
 
 
 ---
@@ -877,8 +874,7 @@ Only sanctioned capabilities and system calls (e.g. seccomp filters), are allowe
 
 | NIST control | Remarks |
 |--------------|---------|
-| `CM-2` | Baseline Configuration |
-| `CM-7` | Least Functionality |
+| `CM-2`<br />`CM-7` | <ul><li>Baseline Configuration</li><li>Least Functionality</li></ul> |
 
 
 ---
@@ -1369,8 +1365,7 @@ Processes must execute only functions explicitly defined in an allow list
 
 | NIST control | Remarks |
 |--------------|---------|
-| `CM-2` | Baseline Configuration |
-| `CM-7` | Least Functionality |
+| `CM-2`<br />`CM-7` | <ul><li>Baseline Configuration</li><li>Least Functionality</li></ul> |
 
 
 ---
@@ -1422,8 +1417,7 @@ Function access is only permitted to sanctioned services
 
 | NIST control | Remarks |
 |--------------|---------|
-| `CM-2` | Baseline Configuration |
-| `CM-7` | Least Functionality |
+| `CM-2`<br />`CM-7` | <ul><li>Baseline Configuration</li><li>Least Functionality</li></ul> |
 
 
 ---
@@ -1598,8 +1592,7 @@ Trust confirmation verifies the image has a valid signature from an authorized s
 
 | NIST control | Remarks |
 |--------------|---------|
-| `SR-4(3)` | Provenance, Validate as Genuine and Not Altered |
-| `SR-4(4)` | Provenance, Supply Chain Integrity - Pedigree |
+| `SR-4(3)`<br />`SR-4(4)` | <ul><li>Provenance, Validate as Genuine and Not Altered</li><li>Provenance, Supply Chain Integrity - Pedigree</li></ul> |
 
 
 ---
@@ -1651,8 +1644,7 @@ Image integrity and signature are verified prior to deployment
 
 | NIST control | Remarks |
 |--------------|---------|
-| `SR-4(3)` | Provenance, Validate as Genuine and Not Altered |
-| `SR-4(4)` | Provenance, Supply Chain Integrity - Pedigree |
+| `SR-4(3)`<br />`SR-4(4)` | <ul><li>Provenance, Validate as Genuine and Not Altered</li><li>Provenance, Supply Chain Integrity - Pedigree</li></ul> |
 
 
 ---
@@ -2383,8 +2375,7 @@ Images are scanned for vulnerabilities and malware
 
 | NIST control | Remarks |
 |--------------|---------|
-| `RA-5` | Vulnerability Monitoring and Scanning |
-| `SA-3` | System Development Life Cycle |
+| `RA-5`<br />`SA-3` | <ul><li>Vulnerability Monitoring and Scanning</li><li>System Development Life Cycle</li></ul> |
 
 
 ---
@@ -2582,8 +2573,7 @@ Image encryption is coupled with key management attestation and/or authorization
 
 | NIST control | Remarks |
 |--------------|---------|
-| `SC-12(2)` | Cryptographic Key Establishment and Management \| Symmetric and Asymmetric Keys |
-| `SC-12(3)` | Cryptographic Key Establishment and Management \| Symmetric and Asymmetric Keys |
+| `SC-12(2)`<br />`SC-12(3)` | <ul><li>Cryptographic Key Establishment and Management \| Symmetric and Asymmetric Keys</li><li>Cryptographic Key Establishment and Management \| Symmetric and Asymmetric Keys</li></ul> |
 
 
 ---
@@ -3174,8 +3164,7 @@ Security testing is automated
 
 | NIST control | Remarks |
 |--------------|---------|
-| `CA-8` | Penetration Testing |
-| `SA-11` | Developer Testing and Evaluation |
+| `CA-8`<br />`SA-11` | <ul><li>Penetration Testing</li><li>Developer Testing and Evaluation</li></ul> |
 
 
 ---
@@ -3207,8 +3196,7 @@ Every step in the build process is signed and attested for process integrity
 
 | NIST control | Remarks |
 |--------------|---------|
-| `SI-1` | Policy and Procedures |
-| `SI-7` | Software, Firmware, and Information Integrity |
+| `SI-1`<br />`SI-7` | <ul><li>Policy and Procedures</li><li>Software, Firmware, and Information Integrity</li></ul> |
 
 
 ---
@@ -3231,8 +3219,7 @@ Every step in the build process verifies previously generated signatures
 
 | NIST control | Remarks |
 |--------------|---------|
-| `SI-1` | Policy and Procedures |
-| `SI-7` | Software, Firmware, and Information Integrity |
+| `SI-1`<br />`SI-7` | <ul><li>Policy and Procedures</li><li>Software, Firmware, and Information Integrity</li></ul> |
 
 
 ---
@@ -3363,11 +3350,7 @@ Artefacts are encrypted before distribution and only authorized platforms have d
 
 | NIST control | Remarks |
 |--------------|---------|
-| `IA-5` | Authenticator Management |
-| `SC-12` | Cryptographic Key Establishment and Management |
-| `SC-13` | Cryptographic Protection |
-| `SC-28(1)` | Protection of Information at Rest, Cryptographic Protection |
-| `SC-8` | Transmission Confidentiality and Integrity |
+| `IA-5`<br />`SC-12`<br />`SC-13`<br />`SC-28(1)`<br />`SC-8` | <ul><li>Authenticator Management</li><li>Cryptographic Key Establishment and Management</li><li>Cryptographic Protection</li><li>Protection of Information at Rest, Cryptographic Protection</li><li>Transmission Confidentiality and Integrity</li></ul> |
 
 
 ---
@@ -4395,9 +4378,7 @@ Incident response considers cloud native workloads
 
 | NIST control | Remarks |
 |--------------|---------|
-| `CA-7` | Continuous Monitoring |
-| `IR-4` | Incident Handling, Automated Incident Handling Processes |
-| `IR-4(5)` | Incident Handling, Automated Disabling of System |
+| `CA-7`<br />`IR-4`<br />`IR-4(5)` | <ul><li>Continuous Monitoring</li><li>Incident Handling, Automated Incident Handling Processes</li><li>Incident Handling, Automated Disabling of System</li></ul> |
 
 
 ---
@@ -4883,8 +4864,7 @@ Hashing and checksums are added to blocks, objects or files
 
 | NIST control | Remarks |
 |--------------|---------|
-| `CM-7` | Least Functionality |
-| `SI-7` | Software, Firmware, and Information Integrity |
+| `CM-7`<br />`SI-7` | <ul><li>Least Functionality</li><li>Software, Firmware, and Information Integrity</li></ul> |
 
 
 ---
@@ -4910,8 +4890,7 @@ Data backup storage locations employ like access controls and security policies 
 
 | NIST control | Remarks |
 |--------------|---------|
-| `SA-9` | External System Services |
-| `SC-30` | Concealment and Misdirection |
+| `SA-9`<br />`SC-30` | <ul><li>External System Services</li><li>Concealment and Misdirection</li></ul> |
 
 
 ---
@@ -4937,8 +4916,7 @@ Secure erasure adhering to OPAL standards is employed for returned or non-functi
 
 | NIST control | Remarks |
 |--------------|---------|
-| `CP-9` | System Backup |
-| `MP-6` | Media Sanitization |
+| `CP-9`<br />`MP-6` | <ul><li>System Backup</li><li>Media Sanitization</li></ul> |
 
 
 ---
@@ -5028,9 +5006,7 @@ Security policies are used to prevent containers from accessing volume mounts on
 
 | NIST control | Remarks |
 |--------------|---------|
-| `CM-6` | Configuration Settings |
-| `SA-8` | Security and Privacy Engineering Principles |
-| `SC-7` | Boundary Protection |
+| `CM-6`<br />`SA-8`<br />`SC-7` | <ul><li>Configuration Settings</li><li>Security and Privacy Engineering Principles</li><li>Boundary Protection</li></ul> |
 
 
 ---
@@ -5056,9 +5032,7 @@ Security policies are used enforce authorized worker node access to volumes
 
 | NIST control | Remarks |
 |--------------|---------|
-| `CM-6` | Configuration Settings |
-| `SA-8` | Security and Privacy Engineering Principles |
-| `SC-7` | Boundary Protection |
+| `CM-6`<br />`SA-8`<br />`SC-7` | <ul><li>Configuration Settings</li><li>Security and Privacy Engineering Principles</li><li>Boundary Protection</li></ul> |
 
 
 ---
@@ -5084,9 +5058,7 @@ Volume UID and GID are inaccessible to containers
 
 | NIST control | Remarks |
 |--------------|---------|
-| `AC-16` | Security and Privacy Attributes |
-| `AC-4` | Information Flow Enforcement |
-| `SI-7` | Software, Firmware, and Information Integrity |
+| `AC-16`<br />`AC-4`<br />`SI-7` | <ul><li>Security and Privacy Attributes</li><li>Information Flow Enforcement</li><li>Software, Firmware, and Information Integrity</li></ul> |
 
 
 ---
@@ -5157,8 +5129,7 @@ Artifact registry verifies artifacts against organizational policies
 
 | NIST control | Remarks |
 |--------------|---------|
-| `AU-10` | Non-repudiation |
-| `CM-6` | Configuration Settings |
+| `AU-10`<br />`CM-6` | <ul><li>Non-repudiation</li><li>Configuration Settings</li></ul> |
 
 
 ---

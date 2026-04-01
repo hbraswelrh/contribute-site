@@ -108,3 +108,19 @@
 .navbar__logo:not(#\#):not(#\#) {
   height: 2.5rem;
 }
+
+/* CNSC ↔ NIST mapping docs only: Remarks column vertically centered, left-aligned. */
+.markdown:has(#cross-walked-controls) table tr > th:last-child,
+.markdown:has(#cross-walked-controls) table tr > td:last-child,
+.markdown:has(#guideline-families-nist-mappings) table tr > th:last-child,
+.markdown:has(#guideline-families-nist-mappings) table tr > td:last-child {
+  vertical-align: middle;
+  text-align: left;
+}
+
+.markdown:has(#cross-walked-controls) table tr > td:last-child ul,
+.markdown:has(#guideline-families-nist-mappings) table tr > td:last-child ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  text-align: left;
+}

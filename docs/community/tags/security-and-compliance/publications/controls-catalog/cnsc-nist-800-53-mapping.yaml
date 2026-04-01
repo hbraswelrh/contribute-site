@@ -1,7 +1,7 @@
 # Gemara Layer: MappingDocument (#MappingDocument). Source: family YAML guideline-mappings (NIST-800-53).
 # Schema: Gemara v1.0.0-rc.1 — https://github.com/gemaraproj/gemara/releases/tag/v1.0.0-rc.1
 # Validate: cue vet -c -d '#MappingDocument' github.com/gemaraproj/gemara@v1.0.0-rc.1 this-file.yaml
-title: Cloud Native Security Controls (CNSC) to NIST SP 800-53 Rev. 5 mapping
+title: Cloud Native Security Controls (CNSC) to NIST SP 800-53 Rev. 5 Mapping
 metadata:
   id: CNSC-NIST-800-53-MAPPING
   type: MappingDocument

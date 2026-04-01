@@ -6,7 +6,6 @@ import (
 	"os"
 
 	"github.com/cncf/contribute-site/controls-catalog/internal/converter"
-	"github.com/gemaraproj/go-gemara"
 	"github.com/goccy/go-yaml"
 )
 
@@ -27,10 +26,10 @@ func main() {
 		os.Exit(1)
 	}
 
-	var doc *gemara.GuidanceCatalog
+	var doc *converter.Catalog
 	if *outputYAML != "" || *outputMD != "" {
 		var err error
-		doc, err = converter.ToGemara(*catalogDir, converter.DefaultGroupFileOrder)
+		doc, err = converter.LoadCatalog(*catalogDir, converter.DefaultGroupFileOrder)
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "Error: %v\n", err)
 			os.Exit(1)
