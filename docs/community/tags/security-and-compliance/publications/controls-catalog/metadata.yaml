@@ -1,0 +1,15 @@
+metadata:
+  id: CNSWP
+  description: Guidelines for access control, authentication, authorization, secrets management, and key management.
+  author:
+    id: tag-sc
+    name: TAG Security and Compliance
+    type: Software-Assisted
+  version: 1.0.0
+  mapping-references:
+  - id: NIST-800-53
+    title: NIST SP 800-53r5
+    version: rev5
+    url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+title: Cloud Native Security Controls Catalog
+document-type: Best Practice

@@ -1,0 +1,62 @@
+guidelines:
+- id: CNSWP-57
+  title: trust confirmation verifies the image has a valid signature from an authorized source
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SR-4(3)
+      remarks: (3) Provenance
+  family: Deploy
+  statements:
+  - id: CNSWP-57.1
+    text: Sign images and artifacts to ensure integrity and authenticity.
+- id: CNSWP-59
+  title: Image integrity and signature are verifying prior to deployment
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SR-4(3)
+      remarks: (3) Provenance
+  family: Deploy
+  statements:
+  - id: CNSWP-59.1
+    text: Sign images and artifacts to ensure integrity and authenticity.
+- id: CNSWP-58
+  title: Image runtime policies are enforced prior to deployment
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-7(17)
+      remarks: (17) Software, Firmware, and Information Integrity
+  family: Deploy
+  statements:
+  - id: CNSWP-58.1
+    text: Implement image runtime policies are enforced prior to deployment.
+- id: CNSWP-60
+  title: Applications provide logs regarding authentication, authorization, actions, and failures
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: CM-3
+      remarks: Configuration Change Control
+  family: Deploy
+  statements:
+  - id: CNSWP-60.1
+    text: Implement applications provide logs regarding authentication, authorization, actions, and failures.
+- id: CNSWP-61
+  title: Forensics capabilities are integrated into an incident response plan and procedures
+  family: Deploy
+  statements:
+  - id: CNSWP-61.1
+    text: Integrate forensics capabilities into incident response plans and procedures.
+- id: CNSWP-62
+  title: AI, ML, or statistical modeling are used for behavioural and heuristic environment analysis
+  guideline-mappings:
+  - reference-id: NIST-800-53
+    entries:
+    - reference-id: SI-3
+      remarks: System and Information Integrity
+  family: Deploy
+  statements:
+  - id: CNSWP-62.1
+    text: Implement ai, ml, or statistical modeling are used for behavioural and heuristic environment analysis.
